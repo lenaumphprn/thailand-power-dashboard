@@ -10,6 +10,10 @@ from intelligence import seed_intelligence, refresh_watchers, generate_digest, e
 def run_build():
     subprocess.run([sys.executable,str(ROOT/'build_dashboard.py')],check=True,cwd=ROOT)
 
+def run_consistency_audit():
+    p=subprocess.run([sys.executable,str(ROOT/'consistency_audit.py')],cwd=ROOT,capture_output=True,text=True)
+    return p.returncode,p.stdout.strip(),p.stderr.strip()
+
 def run_provenance_audit():
     p=subprocess.run([sys.executable,str(ROOT/'provenance_audit.py')],cwd=ROOT,capture_output=True,text=True)
     return p.returncode,p.stdout.strip(),p.stderr.strip()
@@ -46,6 +50,9 @@ def main():
         # Source fetch failures are warnings, not blocks: keep last verified data.
         if not blocks:
             run_build(); result['dashboard']=str(ROOT/'data'/'thailand_power_renewables_pulse_live.html')
+            crc,cout,cerr=run_consistency_audit(); result['consistency_audit']={'returncode':crc,'stdout':cout,'stderr':cerr}
+            if crc!=0:
+                blocks.append(('BLOCK','CONSISTENCY','dashboard single-source-of-truth consistency audit failed')); result['qa']=result['qa']+[blocks[-1]]
             prc,pout,perr=run_provenance_audit(); result['provenance_audit']={'returncode':prc,'stdout':pout,'stderr':perr}
             if prc!=0:
                 blocks.append(('BLOCK','PROVENANCE','public-source provenance audit failed')); result['qa']=result['qa']+[blocks[-1]]

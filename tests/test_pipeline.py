@@ -2,7 +2,7 @@ import csv, json, tempfile, unittest
 from pathlib import Path
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from pipeline import thai_year_to_ad, parse_erc_ft_html, transform_demand, transform_generation, DB, seed, qa, export_dashboard, ROOT
+from pipeline import thai_year_to_ad, parse_erc_ft_html, parse_egat_peak_html, transform_demand, transform_generation, DB, seed, qa, export_dashboard, ROOT
 
 class PipelineTests(unittest.TestCase):
     def test_thai_year(self):
@@ -26,9 +26,21 @@ class PipelineTests(unittest.TestCase):
         with open(ROOT/'fixtures'/'eppo_generation_sample.csv',newline='') as f:
             rows=list(csv.DictReader(f))
         g=transform_generation(rows,cfg)
-        self.assertAlmostEqual(g['gas_share'],54.0)
-        self.assertAlmostEqual(g['re_share'],15.0)
+        # Latest year is aggregated YTD through Feb, not Feb alone.
+        self.assertEqual(g['month'],2)
+        self.assertAlmostEqual(g['gas_share'],60.0)
+        self.assertAlmostEqual(g['re_share'],13.0)
+        self.assertAlmostEqual(g['prior_fy_gas_share'],50.0)
         self.assertEqual(g['qa'],'pass')
+
+    def test_egat_peak_parser(self):
+        out=parse_egat_peak_html((ROOT/'fixtures'/'egat_peak_sample.html').read_text())
+        self.assertAlmostEqual(out['peak_mw'],35991.6)
+        self.assertEqual(out['peak_date'],'2026-04-22')
+        self.assertAlmostEqual(out['prior_year_peak_mw'],34568.3)
+        self.assertAlmostEqual(out['latest_monthly_peak_mw'],32764.1)
+        self.assertEqual(out['latest_monthly_peak_date'],'2026-07-20')
+        self.assertAlmostEqual(out['latest_monthly_change_pct'],-6.25)
 
     def test_renewable_funnel_and_basis(self):
         with tempfile.TemporaryDirectory() as td:

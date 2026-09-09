@@ -49,10 +49,12 @@ def main():
     if not HTML.exists(): add(rows,'BLOCK','dashboard','html','FAIL','', 'Generated dashboard missing')
     else:
         h=HTML.read_text(); soup=BeautifulSoup(h,'html.parser')
-        assurance='All quantitative figures use publicly available sources' in soup.get_text(' ',strip=True)
+        assurance=('Every quantitative figure is linked directly to its public source' in soup.get_text(' ',strip=True) or 'All quantitative figures use publicly available sources' in soup.get_text(' ',strip=True))
         embedded=soup.select_one('#figure-provenance') is not None
         add(rows,'PASS' if assurance else 'BLOCK','dashboard','source_assurance','PASS' if assurance else 'FAIL','', 'Visible public-source policy present')
         add(rows,'PASS' if embedded else 'BLOCK','dashboard','embedded_manifest','PASS' if embedded else 'FAIL','', 'Figure provenance manifest embedded in HTML')
+        consistency=(ROOT/'data'/'consistency_audit.csv').exists()
+        add(rows,'PASS' if consistency else 'BLOCK','dashboard','consistency_audit','PASS' if consistency else 'FAIL','', 'Consistency audit generated before publication')
         for tag in soup(['script','style']): tag.decompose()
         low=soup.get_text(' ',strip=True).lower()
         forbidden=[p for p in ['illustrative market value','model estimate:','assumed market value','placeholder market value'] if p in low]

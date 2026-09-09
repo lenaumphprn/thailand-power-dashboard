@@ -241,9 +241,13 @@ def transform_demand(rows: list[dict]):
     prev=sum(v for (y,m),v in monthly.items() if y==latest_y-1 and m<=latest_m)
     if prev<=0: raise ValueError("prior-year comparison missing")
     growth=(cur/prev-1)*100
+    fy_prev=sum(v for (y,m),v in monthly.items() if y==latest_y-1)
+    fy_prev2=sum(v for (y,m),v in monthly.items() if y==latest_y-2)
+    fy_prev_growth=((fy_prev/fy_prev2-1)*100) if fy_prev>0 and fy_prev2>0 else None
     if abs(growth)>15: qa='warn' 
     else: qa='pass'
-    return {'year':latest_y,'month':latest_m,'ytd':cur,'prior_ytd':prev,'growth_pct':growth,'qa':qa,'monthly':monthly}
+    return {'year':latest_y,'month':latest_m,'ytd':cur,'prior_ytd':prev,'growth_pct':growth,'qa':qa,'monthly':monthly,
+            'prior_fy_total':fy_prev,'prior_prior_fy_total':fy_prev2,'prior_fy_growth_pct':fy_prev_growth}
 
 def classify_fuel(name: str, config: dict):
     n=normalize_key(name)
@@ -252,19 +256,98 @@ def classify_fuel(name: str, config: dict):
     return 'other'
 
 def transform_generation(rows: list[dict], config: dict):
+    """Return latest-year YTD generation mix plus prior-FY benchmark.
+
+    EPPO publishes monthly fuel volumes. The dashboard's current generation mix is YTD
+    through the latest available month, not the latest month alone. Prior full-year
+    shares are retained only as an explicitly labelled comparator.
+    """
     buckets={}
     for r,y,m,q in _period_rows(rows):
-        fcol=_find_col(r,['Fuel Type','Fuel','ชนิดเชื้อเพลิง','เชื้อเพลิง']); fuel=str(r.get(fcol,'')) if fcol else ''
+        fcol=_find_col(r,['Fuel Type','Fuel','ชนิดเชื้อเพลิง','เชื้อเพลิง'])
+        fuel=str(r.get(fcol,'')) if fcol else ''
         buckets.setdefault((y,m),[]).append((fuel,q))
-    latest=max(buckets)
-    vals=buckets[latest]; total=sum(q for _,q in vals)
-    classes={}
-    for fuel,q in vals: classes[classify_fuel(fuel,config)]=classes.get(classify_fuel(fuel,config),0)+q
-    shares={k:(v/total*100 if total else 0) for k,v in classes.items()}
+    if not buckets: raise ValueError('no generation rows')
+    latest_y=max(y for y,m in buckets)
+    latest_m=max(m for y,m in buckets if y==latest_y)
+    total_alias={'total','grand total','รวม','รวมทั้งสิ้น','total generation'}
+
+    def aggregate(year:int, max_month:int|None=None):
+        classes={}; explicit_total=0.0; has_total=False
+        for (y,m),vals in buckets.items():
+            if y!=year or (max_month is not None and m>max_month): continue
+            for fuel,q in vals:
+                n=normalize_key(fuel)
+                if n in total_alias or n.startswith('total '):
+                    explicit_total += q; has_total=True; continue
+                cls=classify_fuel(fuel,config)
+                classes[cls]=classes.get(cls,0.0)+q
+        category_total=sum(classes.values())
+        total=explicit_total if has_total and explicit_total>0 else category_total
+        # Guard against a malformed total row. Shares must reconcile to category sum.
+        if has_total and category_total>0 and not (0.98 <= category_total/total <= 1.02):
+            total=category_total
+        shares={k:(v/total*100 if total else 0.0) for k,v in classes.items()}
+        if total and abs(sum(shares.values())-100)>1.0:
+            raise ValueError(f'generation shares do not reconcile: {sum(shares.values()):.2f}%')
+        return {'total':total,'classes':classes,'shares':shares}
+
+    cur=aggregate(latest_y,latest_m)
+    prior_same=aggregate(latest_y-1,latest_m)
+    prior_fy=aggregate(latest_y-1,None)
+    shares=cur['shares']; pf=prior_fy['shares']
     re_share=shares.get('renewable',0)+shares.get('hydro',0)
-    gas_share=shares.get('gas',0); imp_share=shares.get('imports',0)
-    qa='pass' if 99.0 <= sum(shares.values()) <= 101.0 else 'block'
-    return {'year':latest[0],'month':latest[1],'total':total,'classes':classes,'shares':shares,'re_share':re_share,'gas_share':gas_share,'import_share':imp_share,'qa':qa}
+    prior_re=pf.get('renewable',0)+pf.get('hydro',0)
+    gas_share=shares.get('gas',0); prior_gas=pf.get('gas',0)
+    cur_gas=cur['classes'].get('gas',0); prev_gas=prior_same['classes'].get('gas',0)
+    gas_yoy=((cur_gas/prev_gas-1)*100) if prev_gas>0 else None
+    qa='pass' if cur['total']>0 and 99.0 <= sum(shares.values()) <= 101.0 else 'block'
+    return {
+      'year':latest_y,'month':latest_m,'total':cur['total'],'classes':cur['classes'],'shares':shares,
+      're_share':re_share,'gas_share':gas_share,'import_share':shares.get('imports',0),'qa':qa,
+      'prior_fy_shares':pf,'prior_fy_re_share':prior_re,'prior_fy_gas_share':prior_gas,
+      'gas_generation_yoy_pct':gas_yoy
+    }
+
+
+def parse_egat_peak_html(html: str):
+    """Parse current-year EGAT system peak and latest monthly peak from the public page."""
+    if BeautifulSoup is None: raise RuntimeError('bs4 unavailable')
+    text=BeautifulSoup(html,'html.parser').get_text(' ',strip=True)
+    # Latest monthly sentence: month, date, BE year, time, MW, absolute move, percent move.
+    mm=re.search(
+      r'เดือน(มกราคม|กุมภาพันธ์|มีนาคม|เมษายน|พฤษภาคม|มิถุนายน|กรกฎาคม|สิงหาคม|กันยายน|ตุลาคม|พฤศจิกายน|ธันวาคม).*?'
+      r'วันที่\s*(\d{1,2})\s*\1?[^\d]{0,20}(?:พ\.ศ\.)?\s*(\d{4}).*?เวลา\s*(\d{1,2})[.:](\d{2}).*?'
+      r'([\d,]+\.\d+)\s*เมกะวัตต์.*?(เพิ่มขึ้น|ลดลง).*?([\d,]+\.\d+)\s*เมกะวัตต์.*?ร้อยละ\s*([\d.]+)',
+      text)
+    # The date portion on the page does not repeat the month name after "วันที่"; use a looser fallback.
+    if not mm:
+        mm=re.search(
+          r'เดือน(มกราคม|กุมภาพันธ์|มีนาคม|เมษายน|พฤษภาคม|มิถุนายน|กรกฎาคม|สิงหาคม|กันยายน|ตุลาคม|พฤศจิกายน|ธันวาคม).*?'
+          r'วันที่\s*(\d{1,2})\s+\S+\s+(?:พ\.ศ\.)?\s*(\d{4}).*?เวลา\s*(\d{1,2})[.:](\d{2}).*?'
+          r'([\d,]+\.\d+)\s*เมกะวัตต์.*?(เพิ่มขึ้น|ลดลง).*?([\d,]+\.\d+)\s*เมกะวัตต์.*?ร้อยละ\s*([\d.]+)',
+          text)
+    # Annual current-year peak sentence.
+    am=re.search(
+      r'ส่วนความต้องการพลังไฟฟ้าสูงสุดของระบบ\s*กฟผ\..*?วันที่\s*(\d{1,2})\s+' 
+      r'(มกราคม|กุมภาพันธ์|มีนาคม|เมษายน|พฤษภาคม|มิถุนายน|กรกฎาคม|สิงหาคม|กันยายน|ตุลาคม|พฤศจิกายน|ธันวาคม)\s+' 
+      r'(?:พ\.ศ\.)?\s*(\d{4}).*?เวลา\s*(\d{1,2})[.:](\d{2}).*?([\d,]+\.\d+)\s*เมกะวัตต์', text)
+    if not am: raise ValueError('EGAT annual system peak not found')
+    d,mon,by,hh,mi,val=am.groups(); y=thai_year_to_ad(int(by)); peak_date=date(y,THAI_MONTHS[mon],int(d)).isoformat(); peak=float(val.replace(',',''))
+    out={'peak_mw':peak,'peak_date':peak_date,'peak_time':f'{int(hh):02d}:{mi}'}
+    # Match the immediately prior calendar year's stated peak, not the current-year 'ปี' token.
+    prior_be=str((y-1)+543)
+    prior=re.search(r'ปี\s*'+re.escape(prior_be)+r'.*?วันที่\s*(\d{1,2})\s+\S+.*?([\d,]+\.\d+)\s*เมกะวัตต์',text)
+    if prior:
+        _,pv=prior.groups(); out['prior_year_peak_mw']=float(pv.replace(',','')); out['prior_year']=y-1
+        if out['prior_year_peak_mw']>0: out['growth_pct']=(peak/out['prior_year_peak_mw']-1)*100
+    if mm:
+        mon,d,by,hh,mi,val,direction,abs_move,pct=mm.groups(); ly=thai_year_to_ad(int(by)); move=float(pct)
+        if direction=='ลดลง': move=-move
+        out.update({'latest_month':THAI_MONTHS[mon],'latest_monthly_peak_mw':float(val.replace(',','')),
+                    'latest_monthly_peak_date':date(ly,THAI_MONTHS[mon],int(d)).isoformat(),
+                    'latest_monthly_peak_time':f'{int(hh):02d}:{mi}','latest_monthly_change_pct':move})
+    return out
 
 
 def parse_erc_ft_html(html: str):
@@ -309,19 +392,39 @@ def refresh_live(db: DB, config: dict):
     try:
         rows=fetch_ckan_records(http,config,'demand'); t=transform_demand(rows)
         ps=date(t['year'],1,1).isoformat(); pe=month_end(t['year'],t['month']).isoformat()
-        new_obs += db.add_observation({'metric_id':'K01','period_start':ps,'period_end':pe,'value':t['growth_pct'],'unit':'% YoY','source_id':'S01','publication_date':date.today().isoformat(),'scope_version':'v1.0','qa_status':t['qa'],'note':f"YTD demand {t['ytd']:.2f}; prior {t['prior_ytd']:.2f}", 'details':{'ytd_gwh':t['ytd'],'prior_ytd_gwh':t['prior_ytd']}})
+        new_obs += db.add_observation({'metric_id':'K01','period_start':ps,'period_end':pe,'value':t['growth_pct'],'unit':'% YoY','source_id':'S01','publication_date':date.today().isoformat(),'scope_version':'v1.0','qa_status':t['qa'],'note':f"YTD demand {t['ytd']:.2f}; prior {t['prior_ytd']:.2f}", 'details':{'ytd_gwh':t['ytd'],'prior_ytd_gwh':t['prior_ytd'],'fy2025_growth_pct':t.get('prior_fy_growth_pct')}})
         if t['qa']=='warn': warnings.append('K01 demand growth >15%')
     except Exception as e: warnings.append('S01 demand: '+str(e))
-    # EPPO generation
+    # EPPO generation - latest-year YTD mix, not latest month alone.
     checked+=1
     try:
         rows=fetch_ckan_records(http,config,'generation'); t=transform_generation(rows,config)
-        ps=date(t['year'],t['month'],1).isoformat(); pe=month_end(t['year'],t['month']).isoformat()
+        ps=date(t['year'],1,1).isoformat(); pe=month_end(t['year'],t['month']).isoformat()
         if t['qa']=='block': blocks.append('K03/K05 generation shares failed reconciliation')
         else:
-            new_obs += db.add_observation({'metric_id':'K03','period_start':ps,'period_end':pe,'value':t['re_share'],'unit':'% of generation','source_id':'S02','publication_date':date.today().isoformat(),'scope_version':'v1.0','qa_status':'pass','details':{'renewable_pct':t['shares'].get('renewable',0),'hydro_pct':t['shares'].get('hydro',0),'other_pct':100-t['re_share']}})
-            new_obs += db.add_observation({'metric_id':'K05','period_start':ps,'period_end':pe,'value':t['gas_share'],'unit':'% of generation','source_id':'S02','publication_date':date.today().isoformat(),'scope_version':'v1.0','qa_status':'pass'})
+            sh=t['shares']; pf=t['prior_fy_shares']
+            current_label=('H1 '+str(t['year'])) if t['month']==6 else (('FY'+str(t['year'])) if t['month']==12 else f"Jan-{month_end(t['year'],t['month']).strftime('%b')} {t['year']}")
+            re_details={'renewable_pct':sh.get('renewable',0),'hydro_pct':sh.get('hydro',0),'gas_pct':sh.get('gas',0),
+                        'coal_lignite_pct':sh.get('coal_lignite',0),'oil_pct':sh.get('oil',0),'imports_pct':sh.get('imports',0),
+                        'other_fuels_pct':sh.get('other',0),'other_pct':100-t['re_share'],'ytd_generation_gwh':t['total'],
+                        'prior_fy_re_hydro_pct':t['prior_fy_re_share'],'prior_fy_gas_pct':t['prior_fy_gas_share'],
+                        'prior_period_label':f"FY{t['year']-1}",'period_label':current_label}
+            gas_details={'prior_share_pct':t['prior_fy_gas_share'],'prior_period_label':f"FY{t['year']-1}",
+                         'share_change_ppt':t['gas_share']-t['prior_fy_gas_share'],'renewable_pct':sh.get('renewable',0),
+                         'hydro_pct':sh.get('hydro',0),'re_hydro_pct':t['re_share'],'period_label':current_label}
+            if t['gas_generation_yoy_pct'] is not None: gas_details['gas_generation_yoy_pct']=t['gas_generation_yoy_pct']
+            src='https://catalog.eppo.go.th/dataset/dataset_11_27'
+            new_obs += db.add_observation({'metric_id':'K03','period_start':ps,'period_end':pe,'value':t['re_share'],'unit':'% of generation','source_id':'S02','publication_date':date.today().isoformat(),'scope_version':'v1.0','qa_status':'pass','raw_source_ref':src,'details':re_details})
+            new_obs += db.add_observation({'metric_id':'K05','period_start':ps,'period_end':pe,'value':t['gas_share'],'unit':'% of generation','source_id':'S02','publication_date':date.today().isoformat(),'scope_version':'v1.0','qa_status':'pass','raw_source_ref':src,'details':gas_details})
     except Exception as e: warnings.append('S02 generation: '+str(e))
+    # EGAT current-year system peak + latest monthly peak context.
+    checked+=1
+    try:
+        u=config.get('egat',{}).get('peak_url','https://www.egat.co.th/home/statistics-demand-latest/')
+        t=parse_egat_peak_html(http.get(u).text)
+        det={k:v for k,v in t.items() if k not in ('peak_mw','peak_date')}
+        new_obs += db.add_observation({'metric_id':'K02','period_start':t['peak_date'][:4]+'-01-01','period_end':t['peak_date'],'value':t['peak_mw'],'unit':'MW','source_id':'S07','publication_date':date.today().isoformat(),'scope_version':'v1.0','qa_status':'pass','raw_source_ref':u,'details':det})
+    except Exception as e: warnings.append('S07 EGAT peak: '+str(e))
     # ERC Ft
     checked+=1
     try:
@@ -376,7 +479,7 @@ def export_dashboard(db: DB, out_path: Path=DEFAULT_EXPORT):
             obj['metrics'][mid]['source_name']=(sr['source_name'] if sr else None)
             obj['metrics'][mid]['source_tier']=(sr['tier'] if sr else None)
             obj['metrics'][mid]['provenance_type']='DIRECT_PUBLIC'
-    t=latest_applicable_tariff(db,'2026-09-08')
+    t=latest_applicable_tariff(db)
     if t: obj['applicable_tariff_event']={k:t[k] for k in t.keys()}
     rows=db.conn.execute("SELECT o.period_start,o.period_end,o.value,COALESCE(o.raw_source_ref,s.url) source_url FROM metric_observation o LEFT JOIN source_registry s ON o.source_id=s.source_id WHERE o.metric_id='K07' ORDER BY o.period_start").fetchall()
     obj['ft_history']=[dict(r) for r in rows]

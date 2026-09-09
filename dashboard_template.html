@@ -194,6 +194,13 @@ a:hover{text-decoration:underline}
 .funnel-step.current{background:#f2f7fb;border-color:#c9dbea}
 .stage-note{font-size:10px;color:var(--muted);line-height:1.45;margin-top:8px}
 @media(max-width:680px){.funnel-grid{grid-template-columns:1fr}}
+
+/* Source-linked figures */
+a.figure-source{color:inherit;text-decoration:none;border-bottom:1px dotted rgba(23,59,99,.35);cursor:pointer}
+a.figure-source:hover{color:var(--blue);border-bottom-color:var(--blue);text-decoration:none}
+.source-scope svg{cursor:pointer}
+.source-scope[data-source-url] .bar-track,.source-scope[data-source-url] .segment-track{cursor:pointer}
+.source-hint{font-size:9.5px;color:#98a2b3;margin-left:5px;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -209,7 +216,7 @@ a:hover{text-decoration:underline}
 <button class="tab" data-page="economics">Economics &amp; policy</button>
 <button class="tab" data-page="power101">Thailand Power 101</button>
 </div>
-<div class="refresh"><b>Refreshed 8 Sep 2026</b><br/>Official sources; each metric has its own “as of” date</div>
+<div class="refresh"><b>Refreshed 9 Sep 2026</b><br/>Public sources; each metric has its own “as of” date</div>
 </div>
 </div>
 <div class="shell">
@@ -219,79 +226,57 @@ a:hover{text-decoration:underline}
 <div class="hero-main">
 <div class="kicker" style="color:#a8d1ef">Monday scan • refreshed weekly</div>
 <h2>Thailand’s power market has re-accelerated in 2026.</h2>
-<p>Electricity consumption was up <b>6.0% YoY in Jan–May</b> after a 2.8% decline in 2025, while the EGAT-system peak reached a new high in April. Policy direction is simultaneously shifting toward a cleaner and more open system through PDP2026, Direct PPA, UGT and grid-flexibility measures.</p>
+<p>Electricity consumption was up <a class="figure-source" href="https://catalog.eppo.go.th/dataset/dataset_11_37" rel="noopener" target="_blank" title="Open EPPO public source">6.0% YoY in Jan–Jun</a> after a <a class="figure-source" href="https://catalog.eppo.go.th/dataset/dataset_11_37" rel="noopener" target="_blank" title="Open EPPO public source">2.8% decline in 2025</a>, while the EGAT-system peak reached a new high in April. Policy direction is simultaneously shifting toward a cleaner and more open system through PDP2026, Direct PPA, UGT and grid-flexibility measures.</p>
 </div>
-
 </div>
-<div class="source-assurance"><b>Source policy:</b> All quantitative figures use publicly available sources. Comparisons marked as changes are calculated only from published source values; no model-estimated or illustrative market figures are used.</div>
+<div class="source-assurance"><b>Source policy:</b> Every quantitative figure is linked directly to its public source. Derived comparisons use only published source values. Click any number or chart to open the underlying source.</div>
 <div class="section-title"><h2>State of the market</h2><div class="sub">Six signals that frame demand, system pressure, transition progress and power economics. Each carries its own data date.</div></div>
 <div class="kpi-grid">
-<div class="kpi" data-kpi="demand"><div class="kpi-label">Power demand</div><div class="kpi-value">+6.0%</div><div class="kpi-delta up">Jan-May vs prior year</div><div class="kpi-explain">How fast national electricity consumption is growing.</div><div class="kpi-context compare-band"><div class="compare-cell"><span>FY2025</span><b>-2.8%</b></div><div class="compare-arrow">→</div><div class="compare-cell current"><span>2026 YTD</span><b>+6.0%</b></div></div><div class="asof">As of May-26 - EPPO - 90,751 GWh</div></div>
-<div class="kpi" data-kpi="peak"><div class="kpi-label">EGAT system peak</div><div class="kpi-value">36.0 <span class="kpi-unit">GW</span></div><div class="kpi-delta up">+4.1% vs 2025 peak</div><div class="kpi-explain">Highest system load; a signal of capacity and grid pressure.</div><div class="kpi-context compare-band"><div class="compare-cell"><span>2025 peak</span><b>34.6 GW</b></div><div class="compare-arrow">→</div><div class="compare-cell current"><span>2026 YTD</span><b>36.0 GW</b></div></div><div class="asof">22 Apr-26 - EGAT - 35,991.6 MW</div></div>
-<div class="kpi" data-kpi="regen"><div class="kpi-label">RE generation share</div><div class="kpi-value">13.8%</div><div class="kpi-delta flat">10.4% RE + 3.4% hydro</div><div class="kpi-explain">Share of actual electricity supplied by renewables, not just installed capacity.</div><div class="kpi-context"><div class="segment-track"><span style="width:10.4%;background:#5aa982"></span><span style="width:3.4%;background:#7bb7d7"></span><span style="width:86.2%;background:#e4e8ec"></span></div><div class="segment-legend"><span><b>13.8%</b> RE + hydro</span><span>86.2% other</span></div></div><div class="asof">FY2025 - EPPO - incl. hydro</div></div>
-<div class="kpi" data-kpi="recap"><div class="kpi-label">Grid-connected RE at COD</div><div class="kpi-value">10.3 <span class="kpi-unit">GW</span></div><div class="kpi-delta flat">10,298 MW contracted-sale capacity</div><div class="kpi-explain">Renewable projects at commercial operation and selling into EGAT / MEA / PEA.</div><div class="kpi-context mini-breakdown"><span>COD 10.30 GW</span><span>PPA, not COD 5.83 GW</span><span>Accepted 1.25 GW</span></div><div class="asof">30 Jun-25 - ERC - contracted-sale MW basis</div></div>
-<div class="kpi" data-kpi="gas"><div class="kpi-label">Gas share of generation</div><div class="kpi-value">54.2%</div><div class="kpi-delta down">Gas generation -9.6% YoY</div><div class="kpi-explain">How dependent the power system remains on natural gas.</div><div class="kpi-context"><div class="segment-track"><span style="width:54.2%;background:#4d6f8e"></span><span style="width:45.8%;background:#e4e8ec"></span></div><div class="segment-legend"><span><b>54.2%</b> gas</span><span>45.8% other</span></div></div><div class="asof">FY2025 - EPPO</div></div>
-<div class="kpi" data-kpi="tariff"><div class="kpi-label">Average billed tariff</div><div class="kpi-value">3.86 <span class="kpi-unit">THB/kWh</span></div><div class="kpi-delta down">↓ from 3.95 • Ft remains 16.23 sat/kWh</div><div class="kpi-explain">Latest broad billed-rate benchmark after the Sep-26 tariff-structure change.</div><div class="kpi-context compare-band"><div class="compare-cell"><span>Prior headline</span><b>3.95</b></div><div class="compare-arrow">→</div><div class="compare-cell current"><span>From Sep-26</span><b>3.86</b></div></div><div class="asof">Effective Sep-26 - ERC - avg. all categories</div></div>
+<div class="kpi source-scope" data-kpi="demand" data-source-title="Open public source" data-source-url="https://catalog.eppo.go.th/dataset/dataset_11_37"><div class="kpi-label">Power demand</div><div class="kpi-value">+6.0%</div><div class="kpi-delta up">2026 YTD through 2026-06</div><div class="kpi-explain">How fast national electricity consumption is growing.</div><div class="kpi-context compare-band"><div class="compare-cell"><span>FY2025</span><b>-2.8%</b></div><div class="compare-arrow">→</div><div class="compare-cell current"><span>2026 YTD</span><b>+6.0%</b></div></div><div class="asof">As of 2026-06-30 - EPPO - 109,846 GWh<span class="source-hint">↗ click figures for source</span></div></div>
+<div class="kpi source-scope" data-kpi="peak" data-source-title="Open public source" data-source-url="https://www.egat.co.th/home/statistics-demand-latest/"><div class="kpi-label">EGAT system peak</div><div class="kpi-value">36.0 <span class="kpi-unit">GW</span></div><div class="kpi-delta up">+4.1% vs 2025 peak</div><div class="kpi-explain">Highest system load; a signal of capacity and grid pressure.</div><div class="kpi-context compare-band"><div class="compare-cell"><span>2025 peak</span><b>34.6 GW</b></div><div class="compare-arrow">→</div><div class="compare-cell current"><span>2026 YTD</span><b>36.0 GW</b></div></div><div class="asof">Peak 2026-04-22 - EGAT - 35,991.6 MW<span class="source-hint">↗ click figures for source</span></div></div>
+<div class="kpi source-scope" data-kpi="regen" data-source-title="Open public source" data-source-url="https://catalog.eppo.go.th/dataset/dataset_11_27"><div class="kpi-label">RE generation share</div><div class="kpi-value">12.9%</div><div class="kpi-delta flat">10.0% RE + 2.9% hydro</div><div class="kpi-explain">Share of actual electricity supplied by renewables, not just installed capacity.</div><div class="kpi-context"><div class="segment-track"><span style="width:10.0%;background:#5aa982"></span><span style="width:2.9%;background:#7bb7d7"></span><span style="width:87.1%;background:#e4e8ec"></span></div><div class="segment-legend"><span><b>12.9%</b> RE + hydro</span><span>87.1% other</span></div></div><div class="asof">As of 2026-06-30 - EPPO - incl. hydro<span class="source-hint">↗ click figures for source</span></div></div>
+<div class="kpi source-scope" data-kpi="recap" data-source-title="Open public source" data-source-url="https://www.erc.or.th/th/annual-report/3801"><div class="kpi-label">Grid-connected RE at COD</div><div class="kpi-value">10.3 <span class="kpi-unit">GW</span></div><div class="kpi-delta flat">10,298 MW contracted-sale capacity</div><div class="kpi-explain">Renewable projects at commercial operation and selling into EGAT / MEA / PEA.</div><div class="kpi-context mini-breakdown"><span>COD 10.30 GW</span><span>PPA, not COD 5.83 GW</span><span>Accepted 1.25 GW</span></div><div class="asof">As of 2025-06-30 - ERC - COD, contracted-sale MW<span class="source-hint">↗ click figures for source</span></div></div>
+<div class="kpi source-scope" data-kpi="gas" data-source-title="Open public source" data-source-url="https://catalog.eppo.go.th/dataset/dataset_11_27"><div class="kpi-label">Gas share of generation</div><div class="kpi-value">61.7%</div><div class="kpi-delta up">+7.5 ppt vs FY2025</div><div class="kpi-explain">How dependent the power system remains on natural gas.</div><div class="kpi-context"><div class="compare-band"><div class="compare-cell"><span>FY2025</span><b>54.2%</b></div><div class="compare-arrow">→</div><div class="compare-cell current"><span>H1 2026</span><b>61.7%</b></div></div><div class="segment-track" style="margin-top:8px"><span style="width:61.7%;background:#4d6f8e"></span><span style="width:38.3%;background:#e4e8ec"></span></div><div class="segment-legend"><span><b>61.7%</b> gas</span><span>38.3% other</span></div></div><div class="asof">As of 2026-06-30 - EPPO<span class="source-hint">↗ click figures for source</span></div></div>
+<div class="kpi source-scope" data-kpi="tariff" data-source-title="Open public source" data-source-url="https://www.erc.or.th/th/news-release/3472"><div class="kpi-label">Average billed tariff</div><div class="kpi-value">3.86 <span class="kpi-unit">THB/kWh</span></div><div class="kpi-delta down">Latest applicable ERC-stated average</div><div class="kpi-explain">Latest broad billed-rate benchmark after the Sep-26 tariff-structure change.</div><div class="kpi-context compare-band"><div class="compare-cell"><span>Prior headline</span><b>3.95</b></div><div class="compare-arrow">→</div><div class="compare-cell current"><span>From Sep-26</span><b>3.86</b></div></div><div class="asof">Effective 2026-09-01 - ERC - average billed rate across all categories<span class="source-hint">↗ click figures for source</span></div></div>
 </div>
 <div class="section-title"><h2>Developments shaping the market</h2><div class="sub">Recent policy, market-design and project moves worth knowing.</div></div>
-<div class="news-grid">
-<article class="news">
-<div class="news-num">1</div><div class="tagline"><span class="pill high">High impact</span><span class="pill policy">PDP2026</span></div>
-<h3>Draft PDP2026 sets the next clean-power build cycle</h3>
-<p>The common 2026–2037 pathway includes <b>+27.0 GW of solar + wind</b> and 14.5 GW of BESS across the draft scenarios.</p>
-<p class="so-what"><b>Why it matters:</b> this frames the next major wave of generation, storage and grid investment.</p>
-</article>
-<article class="news">
-<div class="news-num">2</div><div class="tagline"><span class="pill high">High impact</span><span class="pill policy">Direct PPA</span></div>
-<h3>Direct PPA is moving beyond the original data-centre pilot</h3>
-<p>Policy direction now extends direct renewable procurement via TPA toward <b>broader industrial users</b>; final grid-use charges and implementation rules remain the key watch.</p>
-<p class="so-what"><b>Why it matters:</b> the addressable market for customer-led clean-power procurement could expand materially.</p>
-</article>
-<article class="news">
-<div class="news-num">3</div><div class="tagline"><span class="pill med">Project</span><span class="pill policy">Solar + BESS</span></div>
-<h3>GULF brings 135 MW of contracted solar capacity online</h3>
-<p>Two Suphan Buri projects reached COD on <b>1 Sep 2026</b>; another 235.6 MW of contracted solar / solar+BESS is scheduled for Nov–Dec.</p>
-<p class="so-what"><b>Why it matters:</b> the recent FiT pipeline is beginning to convert from awards into operating capacity.</p>
-</article>
-</div>
+<div class="news-grid"><article class="news source-scope" data-source-title="Open public source" data-source-url="https://www.thaipbs.th/news/content/557632"><div class="news-num">1</div><div class="tagline"><span class="pill high">High impact</span><span class="pill policy">Policy &amp; regulation</span></div><div class="smallnote">8 Sep 2026</div><h3>PDP2026 hearing sets a 50.9 GW first-stage build envelope</h3><p>The 2026–2037 draft build totals about 50.9 GW: 24.3 GW solar, 14.5 GW BESS, 9.1 GW CCGT, 2.7 GW wind and 0.3 GW SMR.</p><p class="so-what"><b>Why it matters: </b>It gives a clearer technology-level view of the next investment cycle while the post-2037 pathway remains under consultation.</p></article><article class="news source-scope" data-source-title="Open public source" data-source-url="https://www.energy.go.th/th/minister-news/30493"><div class="news-num">2</div><div class="tagline"><span class="pill high">High impact</span><span class="pill policy">Market design</span></div><div class="smallnote">31 Aug 2026</div><h3>Direct PPA policy direction broadens clean-power access for industry</h3><p>The Ministry says Direct PPA will allow industrial users to procure clean electricity through utility networks, alongside rooftop-solar and green-tariff reforms.</p><p class="so-what"><b>Why it matters: </b>It can expand customer-led clean-power procurement and change the commercial roles of utilities, generators and large power users.</p></article><article class="news source-scope" data-source-title="Open public source" data-source-url="https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&amp;symbol=GULF"><div class="news-num">3</div><div class="tagline"><span class="pill high">High impact</span><span class="pill policy">Project &amp; investment</span></div><div class="smallnote">1 Sep 2026</div><h3>GULF starts commercial operation of two solar projects</h3><p>Two Suphan Buri projects reached COD on 1 Sep 2026 with 135 MW of contracted capacity; additional solar and solar+BESS capacity is scheduled later in 2026.</p><p class="so-what"><b>Why it matters: </b>It is evidence that the contracted renewable pipeline is converting into operating capacity rather than remaining only an award or announcement.</p></article></div>
 <div class="section-title"><h2>How Thailand’s power plan is changing</h2><div class="sub">Current approved target → common draft build through 2037 → longer-term 2050 range.</div></div>
 <div class="callout" style="margin-bottom:13px"><b>PDP in plain English:</b> Thailand’s <b>Power Development Plan</b> sets how much electricity capacity the system needs and which technologies should supply it. <b>AEDP2018</b> is today’s approved renewable benchmark; <b>PDP2026</b> is the draft next plan under consultation, extending the horizon to 2050.</div>
 <div class="main-grid">
 <div class="card">
 <div class="card-title"><div><h3>Capacity pathway at a glance</h3><div class="smallnote">Approved target and draft new-build ambition shown separately.</div></div><div class="meta">2037 → 2050 planning horizon</div></div>
-<div style="display:grid;gap:13px;margin-top:5px">
-<div style="display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center">
+<div class="source-scope" data-source-title="Open public source" data-source-url="https://pvstatus.dede.go.th/en/section_3-2.php" style="display:grid;gap:13px;margin-top:5px">
+<div class="source-scope" data-source-title="Open public source" data-source-url="https://pvstatus.dede.go.th/en/section_3-2.php" style="display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center">
 <div><div class="benchmark-label">Approved today</div><div style="font-size:12px;font-weight:750;margin-top:4px">AEDP2018</div></div>
-<div style="border-left:3px solid #337ab7;padding:9px 12px;background:#f5f8fb;border-radius:0 9px 9px 0"><b>29.4 GW total RE &amp; alternative capacity by 2037</b><div class="smallnote" style="margin-top:4px">The 10.3 GW utility-COD metric elsewhere uses a different scope and capacity basis, so it should not be read as a direct percentage of this policy target.</div></div>
+<div style="border-left:3px solid #337ab7;padding:9px 12px;background:#f5f8fb;border-radius:0 9px 9px 0"><b>29.4 GW total RE &amp; alternative capacity by 2037</b><div class="smallnote" style="margin-top:4px">The utility-COD metric elsewhere uses a different scope and capacity basis, so it should not be read as a direct percentage of this policy target.</div></div>
 </div>
-<div style="display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center">
+<div class="source-scope" data-source-title="Open public source" data-source-url="https://www.thaipbs.th/news/content/557632" style="display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center">
 <div><div class="benchmark-label">Draft next plan</div><div style="font-size:12px;font-weight:750;margin-top:4px">PDP2026 • to 2037</div></div>
-<div style="border-left:3px solid #7bc4a4;padding:9px 12px;background:#f3faf7;border-radius:0 9px 9px 0"><b>+24.3 GW solar + 2.7 GW wind = +27.0 GW</b><div class="smallnote" style="margin-top:4px">This is <b>new capacity to be added during 2026–2037</b>, not an ending system total. All four draft scenarios share this first-stage build.</div></div>
+<div style="border-left:3px solid #7bc4a4;padding:9px 12px;background:#f3faf7;border-radius:0 9px 9px 0"><b>50.9 GW total first-stage build; 27.0 GW solar + wind</b><div class="smallnote" style="margin-top:4px">8 Sep hearing: 24.3 GW solar, 14.5 GW BESS, 9.1 GW CCGT, 2.7 GW wind and 0.3 GW SMR during 2026–2037. These are <b>new additions</b>, not an ending system total.</div></div>
 </div>
-<div style="display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center">
+<div class="source-scope" data-source-title="Open public source" data-source-url="https://www.energynewscenter.com/%E0%B8%AA%E0%B8%99%E0%B8%9E-%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B8%A3%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%9C%E0%B8%99-pdp-2026-%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%9F%E0%B8%B1%E0%B8%87/" style="display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center">
 <div><div class="benchmark-label">Longer-term choice</div><div style="font-size:12px;font-weight:750;margin-top:4px">PDP2026 • to 2050</div></div>
 <div style="border-left:3px solid #a9b3bd;padding:9px 12px;background:#fafbfc;border-radius:0 9px 9px 0"><b>+39–114 GW solar + wind across 2026–2050</b><div class="range-guide"><span class="range-chip"><b>Lower-RE pathways</b> ~39–64 GW</span><span>→</span><span class="range-chip"><b>RE-led pathway</b> up to ~114 GW</span></div><div class="smallnote" style="margin-top:5px">The range widens after 2037 as the scenarios make different choices on renewables, gas/CCS and other clean technologies.</div></div>
 </div>
 </div>
-<div class="warning" style="margin-top:15px"><b>Important comparison note.</b> 29.4 GW is an <b>ending total-capacity target</b>; +27.0 GW and +39–114 GW are <b>new capacity additions</b>. The draft figures are therefore a measure of build ambition, not a direct replacement for the 29.4 GW total.</div>
+<div class="warning" style="margin-top:15px"><b>Important comparison note.</b> <a class="figure-source" href="https://pvstatus.dede.go.th/en/section_3-2.php" rel="noopener" target="_blank" title="Open public source">29.4 GW</a> is an ending RE &amp; alternative-capacity target; the <a class="figure-source" href="https://www.thaipbs.th/news/content/557632" rel="noopener" target="_blank" title="Open public source">50.9 GW</a> first-stage figure is all-system new build (including storage, gas and SMR), while <a class="figure-source" href="https://www.energynewscenter.com/%E0%B8%AA%E0%B8%99%E0%B8%9E-%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B8%A3%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%9C%E0%B8%99-pdp-2026-%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%9F%E0%B8%B1%E0%B8%87/" rel="noopener" target="_blank" title="Open public source">+39–114 GW</a> is a derived solar+wind addition range to 2050. They are not apples-to-apples totals.</div>
 </div>
 <div class="card">
 <div class="card-title"><h3>What to watch next</h3><div class="meta">Near-term watchlist</div></div>
 <div class="watch">
-<div class="watch-item"><b>PDP2026 — consultation outcome</b><span>Track whether the common +27.0 GW solar/wind build through 2037 changes and which post-2037 scenario becomes the preferred pathway.</span></div>
-<div class="watch-item"><b>Direct PPA — pilot implementation</b><span>Track final eligibility, TPA / wheeling economics and timing for the up-to-2,000 MW data-center pilot.</span></div>
+<div class="watch-item source-scope" data-source-title="Open public source" data-source-url="https://www.thaipbs.th/news/content/557632"><b>PDP2026 — consultation outcome</b><span>Track whether the common +27.0 GW solar/wind build through 2037 changes and which post-2037 scenario becomes the preferred pathway.</span></div>
+<div class="watch-item source-scope" data-source-title="Open public source" data-source-url="https://www.erc.or.th/th/listen-to-opinions/580"><b>Direct PPA — pilot implementation</b><span>Track final eligibility, TPA / wheeling economics and timing for the up-to-2,000 MW data-center pilot.</span></div>
 <div class="watch-item"><b>Renewable procurement / CODs</b><span>Track selected projects through Awarded → PPA → Construction → COD → Delayed to distinguish ambition from actual build.</span></div>
-
 </div>
 </div>
 </div>
 </section>
 <section class="page" id="market">
 <div class="page-intro"><div><h2>Power &amp; transition</h2><div class="cadence">Mostly monthly • project / policy changes event-driven</div></div><p>Demand, generation mix and renewable build-out.</p></div>
-
 <div class="two-col">
-<div class="card">
-<div class="card-title"><div><h3>Demand rebound has persisted through May</h3><div class="smallnote">YTD electricity consumption growth, YoY at each published checkpoint</div></div><div class="meta">EPPO • excluding IPS in overview series</div></div>
+<div class="card source-scope" data-source-title="Open public source" data-source-url="https://catalog.eppo.go.th/dataset/dataset_11_37">
+<div class="card-title"><div><h3>Demand rebound has persisted through June</h3><div class="smallnote">YTD electricity consumption growth, YoY at each published checkpoint</div></div><div class="meta">EPPO • excluding IPS in overview series</div></div>
 <div class="chart-box">
 <svg viewbox="0 0 560 300">
 <line stroke="#d9dfe5" x1="50" x2="535" y1="245" y2="245"></line><line stroke="#d9dfe5" x1="50" x2="50" y1="35" y2="245"></line>
@@ -301,13 +286,13 @@ a:hover{text-decoration:underline}
 <rect fill="#7fa8ca" height="66" rx="3" width="63" x="170" y="127"></rect><text fill="#667085" font-size="10" x="174" y="261">Jan-26</text><text fill="#173b63" font-size="11" x="184" y="117">+5.3%</text>
 <rect fill="#6d9ec5" height="61" rx="3" width="63" x="261" y="132"></rect><text fill="#667085" font-size="10" x="257" y="261">Jan-Mar</text><text fill="#173b63" font-size="11" x="276" y="122">+4.9%</text>
 <rect fill="#4f89b7" height="76" rx="3" width="63" x="352" y="117"></rect><text fill="#667085" font-size="10" x="347" y="261">Jan-Apr</text><text fill="#173b63" font-size="11" x="365" y="107">+6.1%</text>
-<rect fill="#337ab7" height="74" rx="3" width="63" x="443" y="119"></rect><text fill="#667085" font-size="10" x="438" y="261">Jan-May</text><text fill="#173b63" font-size="11" x="457" y="109">+6.0%</text>
+<rect fill="#337ab7" height="74" rx="3" width="63" x="443" y="119"></rect><text fill="#667085" font-size="10" x="438" y="261">Jan-Jun</text><text fill="#173b63" font-size="11" x="457" y="109">+6.0%</text>
 </svg>
 </div>
 <div class="callout"><b>What it means:</b> Jan–May demand is not just a weather story in the EPPO overview; industry, households and business were all higher YoY. The key question is whether H2 confirms a structural acceleration or normalizes.</div>
 </div>
-<div class="card">
-<div class="card-title"><div><h3>Peak demand</h3><div class="smallnote">EGAT system peak</div></div><div class="meta">Current peak: 22 Apr 2026</div></div>
+<div class="card source-scope" data-source-title="Open public source" data-source-url="https://www.egat.co.th/home/statistics-demand-latest/">
+<div class="card-title"><div><h3>Peak demand</h3><div class="smallnote">EGAT system peak</div></div><div class="meta">2026 system peak: 22 Apr • latest monthly peak: 24 Jun</div></div>
 <div class="chart-box">
 <svg viewbox="0 0 560 300">
 <line stroke="#d9dfe5" x1="55" x2="525" y1="245" y2="245"></line><line stroke="#d9dfe5" x1="55" x2="55" y1="35" y2="245"></line>
@@ -316,93 +301,84 @@ a:hover{text-decoration:underline}
 <rect fill="#337ab7" height="187" rx="4" width="90" x="325" y="58"></rect><text fill="#667085" font-size="11" x="340" y="266">2026 YTD</text><text fill="#173b63" font-size="12" font-weight="700" x="334" y="46">35.99 GW</text>
 </svg>
 </div>
-<div class="stat-row"><div class="stat-chip"><b>+1.42 GW</b><br/>vs 2025 EGAT peak</div><div class="stat-chip"><b>+4.1%</b><br/>year-on-year peak increase</div><div class="stat-chip"><b>20:50</b><br/>time of 2026 peak</div></div>
+<div class="stat-row"><div class="stat-chip"><b>35.99 GW</b><br/>2026 system peak • 22 Apr</div><div class="stat-chip"><b>34.95 GW</b><br/>June monthly peak • 24 Jun</div><div class="stat-chip"><b>-0.34%</b><br/>June monthly peak vs May</div></div>
 <div class="footer-note">Do not mix EGAT-system peak with EPPO’s “3 utility” system peak without labeling the definition.</div>
 </div>
 </div>
-<div class="section-title"><h2>Generation stack</h2><div class="sub">Full-year 2025 is the latest fully reconciled mix shown here; the same view can refresh monthly from EPPO’s generation-by-fuel data.</div></div>
+<div class="section-title"><h2>Generation stack</h2><div class="sub">Latest available EPPO YTD mix first; the prior full year is shown only as a clearly labelled benchmark.</div></div>
 <div class="two-col">
-<div class="card">
-<h3>2025 generation mix</h3>
-<div class="mixbar"><span style="width:54.2%;background:#4d6f8e"></span><span style="width:14.8%;background:#7e8791"></span><span style="width:10.4%;background:#5aa982"></span><span style="width:3.4%;background:#7bb7d7"></span><span style="width:.1%;background:#c7a979"></span><span style="width:17.1%;background:#c4ccd4"></span></div>
-<div class="legend"><span><i style="background:#4d6f8e"></i>Gas 54.2%</span><span><i style="background:#7e8791"></i>Coal/lignite 14.8%</span><span><i style="background:#5aa982"></i>Other RE 10.4%</span><span><i style="background:#7bb7d7"></i>Hydro 3.4%</span><span><i style="background:#c7a979"></i>Oil 0.1%</span><span><i style="background:#c4ccd4"></i>Imports / other 17.1%</span></div>
-<div class="stat-row"><div class="stat-chip"><b>227,424 GWh</b><br/>total generation</div><div class="stat-chip"><b>-3.4%</b><br/>generation YoY</div><div class="stat-chip"><b>-9.6%</b><br/>gas generation YoY</div></div>
-</div>
-<div class="card">
-<h3>What changed in the mix</h3>
+<div class="card source-scope" data-source-title="Open public source" data-source-url="https://catalog.eppo.go.th/dataset/dataset_11_27" id="currentGenerationMixCard"><div class="card-title"><div><h3 id="currentGenerationMixTitle">H1 2026 generation mix</h3><div class="smallnote" id="currentGenerationMixPeriod">Latest available EPPO YTD mix</div></div><span class="pill policy">Latest</span></div>
+<div class="mixbar" id="currentGenerationMixBar"></div>
+<div class="legend" id="currentGenerationMixLegend"></div>
+<div class="stat-row" id="currentGenerationStats"><div class="stat-chip"><b id="currentGasShare">61.7%</b><br/>gas share</div><div class="stat-chip"><b id="currentReHydroShare">12.9%</b><br/>RE + hydro</div><div class="stat-chip"><b id="currentOtherShare">25.4%</b><br/>other fuels / imports</div></div>
+<div class="callout" style="margin-top:16px"><b>How to read it:</b> this is the latest YTD generation mix available from EPPO. The prior full year is used only as a benchmark on the right.</div></div>
+<div class="card source-scope" data-source-title="Open public source" data-source-url="https://catalog.eppo.go.th/dataset/dataset_11_27" id="generationComparatorCard"><h3 id="generationComparatorTitle">Change vs FY2025</h3>
 <div class="stat-row" style="margin:14px 0 16px">
- <div class="stat-chip"><b>54.2%</b><br/>gas share in 2025</div>
- <div class="stat-chip"><b>-5.5 ppt</b><br/>vs 59.7% in 2024</div>
- <div class="stat-chip"><b>13.8%</b><br/>RE + hydro share in 2025</div>
+<div class="stat-chip"><b id="compareGasCurrent">61.7%</b><br/><span id="compareGasCurrentLabel">gas • H1 2026</span></div>
+<div class="stat-chip"><b id="compareGasDelta">+7.5 ppt</b><br/>vs <span id="compareGasPrior">54.2%</span> FY2025</div>
+<div class="stat-chip"><b id="compareReCurrent">12.9%</b><br/><span id="compareReCurrentLabel">RE + hydro • H1 2026</span></div>
+<div class="stat-chip"><b id="compareReDelta">-0.9 ppt</b><br/>vs <span id="compareRePrior">13.8%</span> FY2025</div>
 </div>
-<div class="bar-row"><span>Gas share 2024</span><div class="bar-track"><div class="bar-fill" style="width:59.7%;background:#7f94a8"></div></div><span class="bar-num">59.7%</span></div>
-<div class="bar-row"><span>Gas share 2025</span><div class="bar-track"><div class="bar-fill" style="width:54.2%;background:#4d6f8e"></div></div><span class="bar-num">54.2%</span></div>
-<div class="callout" style="margin-top:16px"><b>Signal to watch:</b> gas remains the dominant fuel, but its share fell materially in 2025. With demand rebounding in 2026, the key question is what serves incremental load — renewables, imports or a return of gas — and whether storage / grid flexibility scales with it.</div>
-</div>
+<div class="bar-row"><span>Gas FY2025</span><div class="bar-track"><div class="bar-fill" id="compareGasPriorBar" style="width:54.2%;background:#7f94a8"></div></div><span class="bar-num" id="compareGasPriorBarNum">54.2%</span></div>
+<div class="bar-row"><span id="compareGasCurrentBarLabel">Gas H1 2026</span><div class="bar-track"><div class="bar-fill" id="compareGasCurrentBar" style="width:61.7%;background:#4d6f8e"></div></div><span class="bar-num" id="compareGasCurrentBarNum">61.7%</span></div>
+<div class="bar-row"><span>RE + hydro FY2025</span><div class="bar-track"><div class="bar-fill" id="compareRePriorBar" style="width:13.8%;background:#7bb7a2"></div></div><span class="bar-num" id="compareRePriorBarNum">13.8%</span></div>
+<div class="bar-row"><span id="compareReCurrentBarLabel">RE + hydro H1 2026</span><div class="bar-track"><div class="bar-fill" id="compareReCurrentBar" style="width:12.9%;background:#5aa982"></div></div><span class="bar-num" id="compareReCurrentBarNum">12.9%</span></div>
+<div class="callout" id="generationSignal" style="margin-top:16px"><b>Signal:</b> H1 2026 relied more heavily on gas than FY2025, while RE + hydro was slightly lower.</div></div>
 </div>
 <div class="section-title"><h2>Renewables &amp; pipeline</h2><div class="sub">Track what is operating, contracted and still moving through procurement without mixing capacity bases.</div></div>
 <div class="two-col">
- <div class="card">
-  <div class="card-title"><div><h3>Grid-connected RE pipeline</h3><div class="smallnote">ERC status as of 30 Jun 2025 • contracted-sale MW</div></div><span class="pill policy">Mutually exclusive stages</span></div>
-  <div style="font-size:38px;font-weight:800;letter-spacing:-.04em"><span id="utilityCommittedTotal">17.38</span> <span style="font-size:15px;color:var(--muted)">GW committed across stages</span></div>
-  <div class="funnel-grid">
-   <div class="funnel-step current"><span>At COD</span><b id="funnelCod">10.30 GW</b><div class="stage-note">Commercial operation</div></div>
-   <div class="funnel-step"><span>Signed PPA</span><b id="funnelPpa">5.83 GW</b><div class="stage-note">Not yet COD</div></div>
-   <div class="funnel-step"><span>Accepted</span><b id="funnelAccepted">1.25 GW</b><div class="stage-note">Pre-PPA</div></div>
-  </div>
-  <div class="segment-track" style="height:16px"><span id="funnelCodBar" style="width:59.3%;background:#337ab7"></span><span id="funnelPpaBar" style="width:33.6%;background:#7fa8ca"></span><span id="funnelAcceptedBar" style="width:7.2%;background:#cbd5df"></span></div>
-  <div class="callout" style="margin-top:15px"><b>How to read it:</b> COD, signed-PPA and accepted capacity are distinct stages and can be added to the 17.38 GW utility commitment total. Do not add company project announcements again if they sit inside these cohorts.</div>
- </div>
- <div class="card">
-  <div class="card-title"><div><h3>Self-use &amp; direct-customer RE</h3><div class="smallnote">Separate from utility-sale pipeline • installed MW basis</div></div><span class="pill med">Different basis</span></div>
-  <div style="font-size:38px;font-weight:800;letter-spacing:-.04em"><span id="selfUseTotal">5.98</span> <span style="font-size:15px;color:var(--muted)">GW installed</span></div>
-  <div class="mixbar" style="height:26px;margin-top:22px"><span id="selfUseSolarBar" style="width:74.7%;background:#5e9fd3"></span><span id="selfUseBiomassBar" style="width:17.9%;background:#5aa982"></span><span style="width:7.4%;background:#c7d0d9"></span></div>
-  <div class="legend"><span><i style="background:#5e9fd3"></i>Solar <b id="selfUseSolar">4.47 GW</b></span><span><i style="background:#5aa982"></i>Biomass <b id="selfUseBiomass">1.07 GW</b></span><span><i style="background:#c7d0d9"></i>Biogas <b>0.17 GW</b></span><span><i style="background:#d8dee5"></i>Other <b>0.27 GW</b></span></div>
-  <div class="callout" style="margin-top:18px"><b>Why separate it:</b> these are installed MW behind the utility-sale funnel. Combining them with contracted-sale MW would create a false market total.</div>
- </div>
+<div class="card source-scope" data-source-title="Open public source" data-source-url="https://www.erc.or.th/th/annual-report/3801">
+<div class="card-title"><div><h3>Grid-connected RE pipeline</h3><div class="smallnote">ERC status as of 30 Jun 2025 • contracted-sale MW</div></div><span class="pill policy">Mutually exclusive stages</span></div>
+<div style="font-size:38px;font-weight:800;letter-spacing:-.04em"><span id="utilityCommittedTotal">17.38</span> <span style="font-size:15px;color:var(--muted)">GW committed across stages</span></div>
+<div class="funnel-grid">
+<div class="funnel-step current"><span>At COD</span><b id="funnelCod">10.30 GW</b><div class="stage-note">Commercial operation</div></div>
+<div class="funnel-step"><span>Signed PPA</span><b id="funnelPpa">5.83 GW</b><div class="stage-note">Not yet COD</div></div>
+<div class="funnel-step"><span>Accepted</span><b id="funnelAccepted">1.25 GW</b><div class="stage-note">Pre-PPA</div></div>
 </div>
-
+<div class="segment-track" style="height:16px"><span id="funnelCodBar" style="width:59.3%;background:#337ab7"></span><span id="funnelPpaBar" style="width:33.6%;background:#7fa8ca"></span><span id="funnelAcceptedBar" style="width:7.2%;background:#cbd5df"></span></div>
+<div class="callout" style="margin-top:15px"><b>How to read it:</b> COD, signed-PPA and accepted capacity are distinct stages and can be added to the 17.38 GW utility commitment total. Do not add company project announcements again if they sit inside these cohorts.</div>
+</div>
+<div class="card source-scope" data-source-title="Open public source" data-source-url="https://www.erc.or.th/th/annual-report/3801">
+<div class="card-title"><div><h3>Self-use &amp; direct-customer RE</h3><div class="smallnote">Separate from utility-sale pipeline • installed MW basis</div></div><span class="pill med">Different basis</span></div>
+<div style="font-size:38px;font-weight:800;letter-spacing:-.04em"><span id="selfUseTotal">5.98</span> <span style="font-size:15px;color:var(--muted)">GW installed</span></div>
+<div class="mixbar" style="height:26px;margin-top:22px"><span id="selfUseSolarBar" style="width:74.7%;background:#5e9fd3"></span><span id="selfUseBiomassBar" style="width:17.9%;background:#5aa982"></span><span style="width:7.4%;background:#c7d0d9"></span></div>
+<div class="legend"><span><i style="background:#5e9fd3"></i>Solar <b id="selfUseSolar">4.47 GW</b></span><span><i style="background:#5aa982"></i>Biomass <b id="selfUseBiomass">1.07 GW</b></span><span><i style="background:#c7d0d9"></i>Biogas <b>0.17 GW</b></span><span><i style="background:#d8dee5"></i>Other <b>0.27 GW</b></span></div>
+<div class="callout" style="margin-top:18px"><b>Why separate it:</b> these are installed MW behind the utility-sale funnel. Combining them with contracted-sale MW would create a false market total.</div>
+</div>
+</div>
 <div class="section-title"><h2>FiT procurement progress</h2><div class="sub">A stage view is more useful than a single announced-pipeline number.</div></div>
 <div class="two-col">
- <div class="card">
-  <div class="card-title"><div><h3>FiT 2022–2030: first no-fuel-cost cohort</h3><div class="smallnote">Status as of Dec 2025 • milestones are nested, not additive</div></div><span class="pill policy">4.85 GW selected</span></div>
-  <div class="bar-row"><span>Selected</span><div class="bar-track"><div class="bar-fill" id="fitSelectedBar" style="width:100%"></div></div><span class="bar-num" id="fitSelected">4.85</span></div>
-  <div class="bar-row"><span>PPA signed</span><div class="bar-track"><div class="bar-fill" id="fitPpaBar" style="width:86.5%"></div></div><span class="bar-num" id="fitPpa">4.20</span></div>
-  <div class="bar-row"><span>CoP approved</span><div class="bar-track"><div class="bar-fill" id="fitCopBar" style="width:29.4%"></div></div><span class="bar-num" id="fitCop">1.43</span></div>
-  <div class="bar-row"><span>Licensed</span><div class="bar-track"><div class="bar-fill" id="fitLicensedBar" style="width:13.5%"></div></div><span class="bar-num" id="fitLicensed">0.66</span></div>
-  <div class="bar-row"><span>COD</span><div class="bar-track"><div class="bar-fill" id="fitCodBar" style="width:6.8%"></div></div><span class="bar-num" id="fitCod">0.33</span></div>
-  <div class="callout" style="margin-top:15px"><b>Signal:</b> 4.20 GW has reached PPA, but only 0.33 GW had reached COD by Dec-25. The conversion pace from PPA → permits → COD is the more decision-relevant bottleneck to track.</div>
- </div>
- <div class="card">
-  <div class="card-title"><div><h3>Additional 2024 FiT round</h3><div class="smallnote">72 projects • selected capacity; PPA process subsequently revised</div></div><span class="pill med">2.15 GW selected</span></div>
-  <div class="stat-row" style="margin:14px 0"><div class="stat-chip"><b>565 MW</b><br/>wind</div><div class="stat-chip"><b>1,583 MW</b><br/>solar</div><div class="stat-chip"><b>2026–30</b><br/>SCOD window</div></div>
-  <table class="compact-table"><thead><tr><th>SCOD</th><th>2026</th><th>2027</th><th>2028</th><th>2029</th><th>2030</th></tr></thead><tbody><tr><td><b>MW</b></td><td id="scod2026">279</td><td id="scod2027">155</td><td id="scod2028">748</td><td id="scod2029">464</td><td id="scod2030">504</td></tr></tbody></table>
-  <div class="warning" style="margin-top:13px"><b>Source-table note.</b> ERC's published 2027 total is 155.40 MW while the technology rows sum to 154.40 MW; the database preserves the official values and flags the 1 MW discrepancy rather than silently “fixing” it.</div>
-  <div class="callout" style="margin-top:13px"><b>Separate emerging pool:</b> the 2026 household rooftop program opened applications for up to <b>500 MW</b>; this is a procurement cap, not awarded capacity.</div>
- </div>
+<div class="card source-scope" data-source-title="Open public source" data-source-url="https://www.erc.or.th/th/annual-report/3801">
+<div class="card-title"><div><h3>FiT 2022–2030: first no-fuel-cost cohort</h3><div class="smallnote">Status as of Dec 2025 • milestones are nested, not additive</div></div><span class="pill policy">4.85 GW selected</span></div>
+<div class="bar-row"><span>Selected</span><div class="bar-track"><div class="bar-fill" id="fitSelectedBar" style="width:100.0%;"></div></div><span class="bar-num" id="fitSelected">4.85</span></div>
+<div class="bar-row"><span>PPA signed</span><div class="bar-track"><div class="bar-fill" id="fitPpaBar" style="width:86.5%;"></div></div><span class="bar-num" id="fitPpa">4.20</span></div>
+<div class="bar-row"><span>CoP approved</span><div class="bar-track"><div class="bar-fill" id="fitCopBar" style="width:29.4%;"></div></div><span class="bar-num" id="fitCop">1.43</span></div>
+<div class="bar-row"><span>Licensed</span><div class="bar-track"><div class="bar-fill" id="fitLicensedBar" style="width:13.5%;"></div></div><span class="bar-num" id="fitLicensed">0.66</span></div>
+<div class="bar-row"><span>COD</span><div class="bar-track"><div class="bar-fill" id="fitCodBar" style="width:6.8%;"></div></div><span class="bar-num" id="fitCod">0.33</span></div>
+<div class="callout" style="margin-top:15px"><b>Signal:</b> 4.20 GW has reached PPA, but only 0.33 GW had reached COD by Dec-25. The conversion pace from PPA → permits → COD is the more decision-relevant bottleneck to track.</div>
 </div>
-
+<div class="card source-scope" data-source-title="Open public source" data-source-url="https://www.erc.or.th/th/annual-report/3801">
+<div class="card-title"><div><h3>Additional 2024 FiT round</h3><div class="smallnote">72 projects • selected capacity; PPA process subsequently revised</div></div><span class="pill med">2.15 GW selected</span></div>
+<div class="stat-row" style="margin:14px 0"><div class="stat-chip"><b>565 MW</b><br/>wind</div><div class="stat-chip"><b>1,583 MW</b><br/>solar</div><div class="stat-chip"><b>2026–30</b><br/>SCOD window</div></div>
+<table class="compact-table"><thead><tr><th>SCOD</th><th>2026</th><th>2027</th><th>2028</th><th>2029</th><th>2030</th></tr></thead><tbody><tr><td><b>MW</b></td><td id="scod2026">279</td><td id="scod2027">155</td><td id="scod2028">748</td><td id="scod2029">464</td><td id="scod2030">504</td></tr></tbody></table>
+<div class="warning" style="margin-top:13px"><b>Source-table note.</b> ERC's published 2027 total is 155.40 MW while the technology rows sum to 154.40 MW; the database preserves the official values and flags the 1 MW discrepancy rather than silently “fixing” it.</div>
+<div class="callout" style="margin-top:13px"><b>Separate emerging pool:</b> the 2026 household rooftop program opened applications for up to <b>500 MW</b>; this is a procurement cap, not awarded capacity.</div>
+</div>
+</div>
 <div class="section-title"><h2>Recent project &amp; pipeline milestones</h2><div class="sub">Named projects help show whether national procurement is actually converting into assets.</div></div>
-<div class="card"><table class="compact-table"><thead><tr><th>Developer / project</th><th>Capacity</th><th>Status / timing</th><th>Why it matters</th></tr></thead><tbody id="projectMilestoneBody">
-<tr><td><b>GULF • LNE + SSE, Suphan Buri</b></td><td>135 MW contracted</td><td>COD 1 Sep 2026</td><td>Two FiT projects have moved into operation; 250.1 MW installed vs 135 MW contracted shows why both bases must be stored.</td></tr>
-<tr><td><b>GULF • 4 solar / solar+BESS projects</b></td><td>235.6 MW contracted</td><td>Scheduled Nov–Dec 2026</td><td>Near-term test of whether PPA pipeline continues converting on schedule.</td></tr>
-<tr><td><b>GULF • 4 wind farms</b></td><td>286 MW contracted</td><td>Expected COD 2027</td><td>Material wind tranche with turbine supply secured.</td></tr>
-<tr><td><b>GUNKUL • 9 solar projects</b></td><td>460.8 MW contracted</td><td>SCOD 2026–2030</td><td>Shows developer-level share of the national contracted pipeline.</td></tr>
-<tr><td><b>GUNKUL • 2 wind projects</b></td><td>180 MW contracted</td><td>SCOD 2029–2030</td><td>Longer-dated wind capacity already under PPA.</td></tr>
-</tbody></table><div class="footer-note">Project rows are milestone examples and overlap with national FiT / utility pipeline totals. They are never added to the market total a second time.</div></div>
+<div class="card"><table class="compact-table"><thead><tr><th>Developer / project</th><th>Capacity</th><th>Status / timing</th><th>Why it matters</th></tr></thead><tbody id="projectMilestoneBody"><tr class="source-scope" data-source-title="Open public source" data-source-url="https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&amp;symbol=GULF"><td><b>GULF • LNE + SSE, Suphan Buri</b></td><td>135 MW contracted</td><td>COD 1 Sep 2026</td><td>Two FiT projects entered operation; 250.1 MW installed vs 135 MW contracted highlights the capacity-basis distinction.</td></tr><tr class="source-scope" data-source-title="Open public source" data-source-url="https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&amp;symbol=GULF"><td><b>GULF • 4 solar / solar+BESS projects</b></td><td>235.6 MW contracted</td><td>Scheduled Nov–Dec 2026</td><td>Near-term test of whether the signed pipeline continues converting to COD on schedule.</td></tr><tr class="source-scope" data-source-title="Open public source" data-source-url="https://www.gulf.co.th/en/newsroom/news-and-activities/502/gulf-joins-forces-with-goldwind-to-advance-clean-energy-with-turbine-supply-agreement-for-four-wind-farms-in-thailand"><td><b>GULF • 4 wind farms</b></td><td>286 MW contracted</td><td>Expected COD 2027</td><td>Material wind tranche with turbine-supply agreements secured.</td></tr><tr class="source-scope" data-source-title="Open public source" data-source-url="https://www.gunkul.com/en/about/who-we-are"><td><b>GUNKUL • 9 solar projects</b></td><td>460.8 MW contracted</td><td>SCOD 2026–2030</td><td>Developer-level view of capacity already under PPA within the wider national pipeline.</td></tr><tr class="source-scope" data-source-title="Open public source" data-source-url="https://www.gunkul.com/en/about/who-we-are"><td><b>GUNKUL • 2 wind projects</b></td><td>180 MW contracted</td><td>SCOD 2029–2030</td><td>Longer-dated wind capacity already under PPA.</td></tr></tbody></table><div class="footer-note">Project rows are milestone examples and overlap with national FiT / utility pipeline totals. They are never added to the market total a second time.</div></div>
 </section>
 <section class="page" id="economics">
 <div class="page-intro"><div><h2>Economics &amp; policy</h2><div class="cadence">Gas weekly / monthly • tariff 4-monthly • policy event-driven</div></div><p>Power costs, gas exposure and key policy developments.</p></div>
-
 <div class="two-col">
-<div class="card">
+<div class="card source-scope" data-source-title="Open public source" data-source-url="https://www.erc.or.th/th/news-release/3472">
 <div class="card-title"><div><h3>Average billed tariff</h3><div class="smallnote">Latest ERC-stated average across customer categories • effective Sep 2026</div></div><span class="pill policy">ERC</span></div>
 <div style="display:flex;align-items:end;gap:10px;margin:20px 0 18px"><div style="font-size:48px;font-weight:850;letter-spacing:-.05em">3.86</div><div style="padding-bottom:8px;color:var(--muted);font-size:12px">THB/kWh</div></div>
 <div class="compare-band"><div class="compare-cell"><span>July decision</span><b>3.95</b></div><div class="compare-arrow">→</div><div class="compare-cell current"><span>From Sep-26</span><b>3.86</b></div></div>
 <div class="smallnote" style="margin-top:8px"><b>▼ 2.3%</b> vs the July headline decision.</div>
 <div class="callout" style="margin-top:14px"><b>What changed:</b> Ft stayed at 16.23 sat/kWh for Sep–Dec, but a later residential progressive-rate decision lowered ERC’s stated average billed rate across all categories. Track the headline tariff and Ft separately.</div>
 </div>
-<div class="card">
+<div class="card source-scope" data-source-title="Open public source" data-source-url="https://www.eppo.go.th/index.php/th/petroleum/item/download/26675_41441bf1b65c876dac13593297849a05">
 <div class="card-title"><div><h3>Gas exposure</h3><div class="smallnote">Natural gas supply mix, Jan–Mar 2026</div></div><span class="pill med">Cost driver</span></div>
 <div class="mixbar" style="height:34px;margin-top:25px"><span style="width:61%;background:#4d6f8e"></span><span style="width:31%;background:#7fa8ca"></span><span style="width:8%;background:#c1ccd6"></span></div>
 <div class="legend"><span><i style="background:#4d6f8e"></i>Domestic 61%</span><span><i style="background:#7fa8ca"></i>LNG import 31%</span><span><i style="background:#c1ccd6"></i>Myanmar 8%</span></div>
@@ -412,23 +388,23 @@ a:hover{text-decoration:underline}
 </div>
 <div class="section-title"><h2>Tariff risk snapshot</h2><div class="sub">Current cost pressure, how it has moved, and what is actually passing through to customer tariffs.</div></div>
 <div class="card">
- <div class="three-col">
-  <div><div class="benchmark-label">Fuel exposure</div><div class="benchmark-big">39%</div><div class="smallnote">of gas supply was imported in Jan–Mar 2026 (31% LNG + 8% Myanmar).</div></div>
-  <div><div class="benchmark-label">Pool Gas</div><div class="benchmark-big" id="poolGasValue">325.23</div><div class="smallnote"><span id="poolGasPeriod">THB/MMBtu • Apr-26</span><br/><b id="poolGasMom">▲ 18.0% vs Mar-26</b> • <span id="poolGasVsJan">+20.9% vs Jan-26</span><br/><span id="poolGasDriver">Main driver: imported LNG +24.2% MoM.</span></div></div>
-  <div><div class="benchmark-label">Ft</div><div class="benchmark-big" id="ftCurrent">16.23</div><div class="smallnote">sat/kWh • Sep–Dec 2026<br/><b id="ftVsEarly">+67.0% vs Jan–Apr</b> • <span id="ftVsPrev">flat vs May–Aug</span></div></div>
- </div>
- <div class="callout" style="margin-top:18px"><b>Why this matters:</b> tariff risk is not a one-for-one gas-price pass-through. ERC first used claw-back to hold the Sep–Dec headline at 3.95 THB/kWh, then a later tariff-structure decision reduced the stated average billed rate to 3.86 from September while Ft remained unchanged. Fuel costs, cost recovery and tariff policy therefore need to be tracked separately.</div>
- <div class="range-guide" style="margin-top:13px"><b>Watch next:</b><span class="range-chip">LNG / Pool Gas</span><span class="range-chip">THB / USD</span><span class="range-chip">import share</span><span class="range-chip">next Ft reset</span><span class="range-chip">claw-back / cost recovery</span></div>
+<div class="three-col">
+<div class="source-scope" data-source-title="Open public source" data-source-url="https://www.eppo.go.th/index.php/th/petroleum/item/download/26675_41441bf1b65c876dac13593297849a05"><div class="benchmark-label">Fuel exposure</div><div class="benchmark-big">39%</div><div class="smallnote">of gas supply was imported in Jan–Mar 2026 (31% LNG + 8% Myanmar).</div></div>
+<div class="source-scope" data-source-title="Open public source" data-source-url="https://www.eppo.go.th/data-energy-statistic/energy-price-th/%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2-pool-gas/"><div class="benchmark-label">Pool Gas</div><div class="benchmark-big" id="poolGasValue">325.23</div><div class="smallnote"><span id="poolGasPeriod">THB/MMBtu • Apr-26</span><br/><b id="poolGasMom">▲ 18.0% vs prior month</b> • <span id="poolGasVsJan">+20.9% vs Jan-26</span><br/><span id="poolGasDriver">Main driver: imported LNG +24.2% MoM.</span></div></div>
+<div class="source-scope" data-source-title="Open public source" data-source-url="https://erc.or.th/th/automatic/"><div class="benchmark-label">Ft</div><div class="benchmark-big" id="ftCurrent">16.23</div><div class="smallnote">sat/kWh • Sep–Dec 2026<br/><b id="ftVsEarly">+67.0% vs Jan–Apr</b> • <span id="ftVsPrev">flat vs May–Aug</span></div></div>
+</div>
+<div class="callout source-scope" data-source-title="Open public source" data-source-url="https://www.erc.or.th/th/news-release/3472" style="margin-top:18px"><b>Why this matters:</b> tariff risk is not a one-for-one gas-price pass-through. ERC first used claw-back to hold the Sep–Dec headline at 3.95 THB/kWh, then a later tariff-structure decision reduced the stated average billed rate to 3.86 from September while Ft remained unchanged. Fuel costs, cost recovery and tariff policy therefore need to be tracked separately.</div>
+<div class="range-guide" style="margin-top:13px"><b>Watch next:</b><span class="range-chip">LNG / Pool Gas</span><span class="range-chip">THB / USD</span><span class="range-chip">import share</span><span class="range-chip">next Ft reset</span><span class="range-chip">claw-back / cost recovery</span></div>
 </div>
 <div class="section-title"><h2>Policy &amp; market-design tracker</h2><div class="sub">Track status, latest signal, implications and the next milestone for the topics shaping the market.</div></div>
 <div class="card">
 <table class="policy-table">
 <thead><tr><th>Topic</th><th>Status</th><th>Latest signal</th><th>Why it matters</th><th>Next watch</th></tr></thead>
 <tbody>
-<tr><td><b>PDP2026</b></td><td><span class="status dev">Draft / consultation</span></td><td>Common 2026–2037 build includes +24.3 GW solar, +2.7 GW wind and +14.5 GW BESS; post-2037 pathways diverge.</td><td>Sets the next investment cycle for generation, storage and grid infrastructure.</td><td>Consultation revisions and preferred post-2037 pathway</td></tr>
-<tr><td><b>Direct PPA</b></td><td><span class="status pilot">Pilot framework</span></td><td>Up to 2,000 MW pilot for data centers via TPA; ERC has consulted on eligibility and wheeling structure.</td><td>Could unlock customer-led clean procurement and change utility economics.</td><td>Final rules, allocation, wheeling cost</td></tr>
-<tr><td><b>UGT 1 / UGT 2</b></td><td><span class="status live">2026 decisions</span></td><td>UGT1 2026 resolution dated 21 Jan; UGT2 resolution dated 1 Apr.</td><td>Benchmark alternative to direct procurement for green-power buyers.</td><td>Product uptake / pricing / availability</td></tr>
-<tr><td><b>Solar rooftop</b></td><td><span class="status dev">Reform direction</span></td><td>Ministry communicated larger household purchase quotas and simpler permitting direction.</td><td>Behind-the-meter growth changes load shape and retail-volume outlook.</td><td>Implementing rules and actual uptake</td></tr>
+<tr class="source-scope" data-source-title="Open public source" data-source-url="https://www.thaipbs.th/news/content/557632"><td><b>PDP2026</b></td><td><span class="status dev">Draft / consultation</span></td><td>8 Sep hearing: ~50.9 GW first-stage build through 2037 — 24.3 GW solar, 14.5 GW BESS, 9.1 GW CCGT, 2.7 GW wind and 0.3 GW SMR.</td><td>Sets the next investment cycle for generation, storage and grid infrastructure.</td><td>Consultation revisions and preferred post-2037 pathway</td></tr>
+<tr class="source-scope" data-source-title="Open public source" data-source-url="https://www.erc.or.th/th/listen-to-opinions/580"><td><b>Direct PPA</b></td><td><span class="status pilot">Pilot framework</span></td><td>Up to 2,000 MW pilot for data centers via TPA; ERC has consulted on eligibility and wheeling structure.</td><td>Could unlock customer-led clean procurement and change utility economics.</td><td>Final rules, allocation, wheeling cost</td></tr>
+<tr class="source-scope" data-source-title="Open public source" data-source-url="https://www.erc.or.th/th/util-green-tariff"><td><b>UGT 1 / UGT 2</b></td><td><span class="status live">2026 decisions</span></td><td>UGT1 2026 resolution dated 21 Jan; UGT2 resolution dated 1 Apr.</td><td>Benchmark alternative to direct procurement for green-power buyers.</td><td>Product uptake / pricing / availability</td></tr>
+<tr class="source-scope" data-source-title="Open public source" data-source-url="https://erc.or.th/pdfjs/web/viewer.html?file=%2Fweb-upload%2F200xf869baf82be74c18cc110e974eea8d5c%2F202606%2Fm_news%2F9090%2F3441%2Ffile_download%2Fae5c0f3369d23b692064262036b1725f.pdf"><td><b>Solar rooftop</b></td><td><span class="status dev">Reform direction</span></td><td>Ministry communicated larger household purchase quotas and simpler permitting direction.</td><td>Behind-the-meter growth changes load shape and retail-volume outlook.</td><td>Implementing rules and actual uptake</td></tr>
 </tbody>
 </table>
 </div>
@@ -467,11 +443,11 @@ a:hover{text-decoration:underline}
 <div class="source-item"><div class="org">EPPO</div><div><a href="https://www.eppo.go.th/wp-content/uploads/2026/08/Highlight_05-Jan-May2026.pdf" target="_blank">Thailand Energy Overview, Jan–May 2026</a> — demand and gas-supply overview.</div><div class="fresh">Aug-26</div></div>
 <div class="source-item"><div class="org">EPPO Data Catalog</div><div><a href="https://catalog.eppo.go.th/th/dataset/?groups=electricity" target="_blank">Electricity datasets</a> — monthly generation-by-fuel, consumption, peak/load-factor CSVs.</div><div class="fresh">Aug-26</div></div>
 <div class="source-item"><div class="org">EPPO Gas</div><div><a href="https://www.eppo.go.th/category/data-energy-statistic/situation-and-forecast/situation-petro-price/situation-gas-price/" target="_blank">Natural-gas situation reports</a> — monthly Pool Gas, LNG and FX comparisons.</div><div class="fresh">Sep-26</div></div>
-<div class="source-item"><div class="org">EGAT</div><div><a href="https://www.egat.co.th/home/statistics-demand-latest/" target="_blank">Latest peak-demand statistics</a> — 2026 EGAT-system peak.</div><div class="fresh">Jul-26</div></div>
+<div class="source-item"><div class="org">EGAT</div><div><a href="https://www.egat.co.th/home/statistics-demand-latest/" target="_blank">Latest peak-demand statistics</a> — 2026 system peak plus latest June monthly peak.</div><div class="fresh">Jun-26 data</div></div>
 <div class="source-item"><div class="org">ERC</div><div><a href="https://www.erc.or.th/th/automatic" target="_blank">Automatic tariff / Ft</a> — Sep–Dec 2026 Ft; <a href="https://www.erc.or.th/th/news-release/3472" target="_blank">Aug-26 tariff-structure decision</a> — average billed rate from Sep 2026.</div><div class="fresh">Aug-26</div></div>
 <div class="source-item"><div class="org">DEDE</div><div><a href="https://pvstatus.dede.go.th/en/section_3-2.php" target="_blank">AEDP / renewable target background</a> and <a href="https://pei.dede.go.th/dataset/gis-002" target="_blank">renewable power plant map dataset</a>.</div><div class="fresh">mixed</div></div>
 <div class="source-item"><div class="org">EPPO</div><div><a href="https://www.eppo.go.th/information-services/advertise/news-eppo/%E0%B8%AA%E0%B8%99%E0%B8%9E-%E0%B8%A3%E0%B9%88%E0%B8%A7%E0%B8%A1%E0%B9%80%E0%B8%A7%E0%B8%97%E0%B8%B5-new-energy-for-thailand/" target="_blank">PDP2026 direction, 26 Aug 2026</a> — plan horizon, flexibility and clean-system direction.</div><div class="fresh">Aug-26</div></div>
-<div class="source-item"><div class="org">Draft PDP2026 coverage</div><div><a href="https://www.nationthailand.com/sustaination/40070547" target="_blank">Common 2026–2037 build</a> and <a href="https://www.energynewscenter.com/%E0%B8%AA%E0%B8%99%E0%B8%9E-%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B8%A3%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%9C%E0%B8%99-pdp-2026-%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%9F%E0%B8%B1%E0%B8%87/" target="_blank">2050 scenario ranges</a> — figures reported from the Sep-26 consultation draft.</div><div class="fresh">Sep-26</div></div>
+<div class="source-item"><div class="org">Draft PDP2026 coverage</div><div><a href="https://www.thaipbs.th/news/content/557632" target="_blank">8 Sep public-hearing build envelope</a> and <a href="https://www.energynewscenter.com/%E0%B8%AA%E0%B8%99%E0%B8%9E-%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B8%A3%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%9C%E0%B8%99-pdp-2026-%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%9F%E0%B8%B1%E0%B8%87/" target="_blank">2050 scenario ranges</a> — exact scenario figures remain tagged as public consultation coverage.</div><div class="fresh">8 Sep-26</div></div>
 <div class="source-item"><div class="org">Ministry / ERC</div><div><a href="https://www.energy.go.th/th/minister-news/30493" target="_blank">Direct PPA policy direction</a> and <a href="https://www.erc.or.th/th/listen-to-opinions/580" target="_blank">pilot framework</a> — widening clean-power procurement beyond the initial data-centre focus while implementation details remain under development.</div><div class="fresh">Aug-26</div></div>
 <div class="source-item"><div class="org">ERC</div><div><a href="https://www.erc.or.th/th/annual-report" target="_blank">FY2025 performance report</a> — utility-sale renewable funnel, technology totals, FiT procurement stages and additional-round SCOD schedule.</div><div class="fresh">Jun/Dec-25 status</div></div>
 <div class="source-item"><div class="org">GULF / SET</div><div><a href="https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&amp;symbol=GULF" target="_blank">1 Sep 2026 COD disclosure</a> plus company releases — current project-level contracted / installed MW and future COD milestones.</div><div class="fresh">Sep-26</div></div>
@@ -499,13 +475,13 @@ const ctx={
   questions:['What part of the rebound is structural vs weather / base effect?','Which grid regions are seeing the fastest incremental load?','Does the contracted supply pipeline match the load geography and timing?'],
   source:'EPPO Thailand Energy Overview Jan–May 2026',url:'https://www.eppo.go.th/wp-content/uploads/2026/08/Highlight_05-Jan-May2026.pdf'},
  peak:{title:'EGAT system peak',
-  quick:'The EGAT-system peak reached 35,991.6 MW at 20:50 on 22 April 2026, versus 34,568.3 MW for the 2025 EGAT-system peak.',
+  quick:'The 2026 EGAT-system peak remains 35,991.6 MW at 20:50 on 22 April. EGAT’s latest monthly datapoint is June: 34,948.8 MW at 20:48 on 24 June, down 0.34% from May.',
   why:'Peak grew ~4.1%, which matters for capacity adequacy and network requirements even if annual energy growth tells a different story. Keep the EGAT-system definition separate from the “3 utility system” peak used in some EPPO reports.',
   client:['Utilities: capacity adequacy, grid capex and demand response.','Storage / flexible generation: value is driven by peak shape, not only annual GWh.','C&I: potential capacity / demand-charge and connection implications.'],
   questions:['What hours and regions are driving new peak load?','How much of the peak is weather-sensitive?','What flexible resources can defer network or generation investment?'],
   source:'EGAT latest peak demand statistics',url:'https://www.egat.co.th/home/statistics-demand-latest/'},
  regen:{title:'Renewable generation share',
-  quick:'For full-year 2025, EPPO’s generation mix shows 10.4% “renewable energy” plus 3.4% hydro, or 13.8% when those categories are combined.',
+   quick:'EPPO H1 2026 generation data show 10.0% renewable energy plus 2.9% hydro, or 12.9% combined. FY2025 was 13.8% on the same displayed combination.',
   why:'Generation share is more informative than capacity share for actual decarbonization. But definition matters: hydro and imports should be shown separately before combining into a “clean” metric.',
   client:['Developers: penetration vs curtailment / capture-price implications.','Utilities: system flexibility and balancing needs.','C&I: how quickly grid electricity is becoming cleaner vs contractual green procurement.'],
   questions:['What is the monthly 2026 share on the same definition?','How much comes from variable RE vs dispatchable renewables?','How is RE growth changing gas dispatch and system costs?'],
@@ -517,10 +493,10 @@ const ctx={
   questions:['How quickly is the 5.83 GW signed-PPA pipeline reaching COD?','Which technologies are driving delays between PPA, permits and COD?','How much self-use/direct-customer capacity should be analyzed separately from utility procurement?'],
   source:'ERC FY2025 renewable procurement status',url:'https://www.erc.or.th/th/annual-report'},
  gas:{title:'Gas share of generation',
-  quick:'Natural gas provided 54.2% of electricity generation in full-year 2025. Gas generation volume declined 9.6% YoY, but gas remained the dominant generation fuel.',
+   quick:'Natural gas provided 61.7% of electricity generation in H1 2026, up 7.5 percentage points from 54.2% in FY2025.',
   why:'Gas links security, LNG / domestic supply economics and the Ft tariff. The transition question is not only how much renewable capacity is added, but how much gas dispatch it actually displaces — and what flexible capacity replaces its system role.',
   client:['Utilities / IPPs: dispatch and asset-utilization outlook.','C&I: gas / LNG exposure remains relevant to tariff risk.','Renewables / BESS: opportunity depends on system value, not just energy LCOE.'],
-  questions:['What is 2026 monthly gas share from the EPPO CSV?','How much gas is marginal vs must-run / system support?','How do LNG prices flow through to Ft under current assumptions?'],
+  questions:['Does gas share stay elevated in H2 2026?','How much gas is marginal vs must-run / system support?','How do LNG prices flow through to Ft under current assumptions?'],
   source:'EPPO electricity / generation by fuel',url:'https://catalog.eppo.go.th/th/dataset/?groups=electricity'},
  tariff:{title:'Average power tariff / Ft',
   quick:'ERC kept Ft at 16.23 satang/kWh for Sep–Dec 2026, but a later tariff-structure decision states that the average billed electricity rate across all customer categories falls from 3.95 to 3.86 THB/kWh from September.',
@@ -530,14 +506,44 @@ const ctx={
   source:'Energy Regulatory Commission — tariff decision / Ft',url:'https://www.erc.or.th/th/news-release/3472'}
 };
 const drawer=document.getElementById('drawer'),backdrop=document.getElementById('backdrop');
+function liveContext(key){
+ const d={...ctx[key]};
+ let pd=null; try{pd=JSON.parse(document.getElementById('pulse-data').textContent)}catch(e){}
+ const M=pd&&pd.metrics?pd.metrics:{};
+ const n=(x,d=1)=>Number(x).toFixed(d);
+ if(key==='demand'&&M.K01){
+   const k=M.K01, det=k.details||{}, period=k.period_end.slice(0,7);
+   d.quick=`EPPO reports ${Number(det.ytd_gwh||0).toLocaleString('en-US')} GWh of electricity consumption YTD through ${period}, ${Number(k.value)>=0?'up':'down'} ${Math.abs(Number(k.value)).toFixed(1)}% YoY.`;
+   d.source=k.source_name||'EPPO electricity consumption dataset'; d.url=k.source_url||d.url;
+ }
+ if(key==='peak'&&M.K02){
+   const k=M.K02, det=k.details||{};
+   d.quick=`The EGAT-system peak is ${Number(k.value).toLocaleString('en-US',{maximumFractionDigits:1})} MW on ${k.period_end}${det.peak_time?' at '+det.peak_time:''}.`+(det.latest_monthly_peak_mw?` The latest published monthly peak is ${Number(det.latest_monthly_peak_mw).toLocaleString('en-US',{maximumFractionDigits:1})} MW on ${det.latest_monthly_peak_date}.`:'');
+   d.source=k.source_name||'EGAT latest peak-demand statistics'; d.url=k.source_url||d.url;
+ }
+ if(key==='regen'&&M.K03){
+   const k=M.K03, det=k.details||{}, label=det.period_label||k.period_end.slice(0,7);
+   d.quick=`For ${label}, EPPO generation data show ${n(det.renewable_pct)}% renewable energy plus ${n(det.hydro_pct)}% hydro, or ${n(k.value)}% combined.`+(det.prior_fy_re_hydro_pct!=null?` ${det.prior_period_label||'Prior full year'} was ${n(det.prior_fy_re_hydro_pct)}%.`:'');
+   d.source=k.source_name||'EPPO generation-by-fuel dataset'; d.url=k.source_url||d.url;
+ }
+ if(key==='gas'&&M.K05){
+   const k=M.K05, det=k.details||{}, cur=Number(k.value), prev=Number(det.prior_share_pct), label=det.period_label||k.period_end.slice(0,7), prior=det.prior_period_label||'prior full year';
+   d.quick=`Natural gas provided ${n(cur)}% of electricity generation in ${label}`+(Number.isFinite(prev)?`, ${cur>=prev?'up':'down'} ${Math.abs(cur-prev).toFixed(1)} percentage points from ${n(prev)}% in ${prior}`:'')+'.';
+   d.source=k.source_name||'EPPO generation-by-fuel dataset'; d.url=k.source_url||d.url;
+ }
+ if(key==='tariff'&&pd&&pd.applicable_tariff_event){
+   const t=pd.applicable_tariff_event; d.quick=`ERC's latest applicable average billed-rate decision is ${Number(t.value).toFixed(2)} THB/kWh from ${t.effective_start}.`; d.url=t.source_url||d.url; d.source='Energy Regulatory Commission — tariff decision / Ft';
+ }
+ return d;
+}
 function openDrawer(key){
- const d=ctx[key]; document.getElementById('drawerTitle').textContent=d.title;
+ const d=liveContext(key); document.getElementById('drawerTitle').textContent=d.title;
  document.getElementById('drawerBody').innerHTML=`
  <div class="level"><div class="level-name">30 seconds</div><h3>What am I looking at?</h3><p>${d.quick}</p></div>
  <div class="level"><div class="level-name">2 minutes</div><h3>Why is it moving / why does it matter?</h3><p>${d.why}</p></div>
  <div class="level"><div class="level-name">Relevance</div><h3>Who is affected?</h3><ul>${d.client.map(x=>`<li>${x}</li>`).join('')}</ul></div>
  <div class="level"><div class="level-name">Questions to consider</div><h3>What to explore further</h3><ul>${d.questions.map(x=>`<li>${x}</li>`).join('')}</ul></div>
- <div class="level"><div class="level-name">Source</div><a class="source-link" href="${d.url}" target="_blank">${d.source} ↗</a></div>`;
+ <div class="level"><div class="level-name">Source</div><a class="source-link" href="${d.url}" target="_blank" rel="noopener">${d.source} ↗</a></div>`;
  drawer.classList.add('open');backdrop.classList.add('open');
 }
 document.querySelectorAll('[data-kpi]').forEach(k=>k.addEventListener('click',()=>openDrawer(k.dataset.kpi)));
@@ -545,5 +551,84 @@ function closeDrawer(){drawer.classList.remove('open');backdrop.classList.remove
 document.getElementById('closeDrawer').addEventListener('click',closeDrawer);backdrop.addEventListener('click',closeDrawer);
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer()});
 </script>
-</body>
+<script id="pulse-data" type="application/json">{}</script><script id="figure-provenance" type="application/json">{}</script><script>
+(function(){
+  function getData(){try{return JSON.parse(document.getElementById('pulse-data').textContent)}catch(e){return null}}
+  const d=getData(); if(!d||!d.metrics) return;
+  const M=d.metrics;
+  const q=(s,root=document)=>root.querySelector(s);
+  const qa=(s,root=document)=>[...root.querySelectorAll(s)];
+  const pct=x=>Number(x).toFixed(1)+'%';
+  const gw=mw=>(Number(mw)/1000).toFixed(1)+' GW';
+  function setWidth(el,v){if(el)el.style.width=Number(v)+'%'}
+  // Demand
+  let k=q('.kpi[data-kpi="demand"]'); if(k&&M.K01){
+    q('.kpi-value',k).textContent=(M.K01.value>=0?'+':'')+pct(M.K01.value);
+    q('.kpi-delta',k).textContent=M.K01.period_end.slice(0,4)+' YTD through '+M.K01.period_end.slice(0,7);
+    const vals=qa('.compare-cell b',k); if(vals[0]) vals[0].textContent=pct(M.K01.details.fy2025_growth_pct); if(vals[1]) vals[1].textContent=(M.K01.value>=0?'+':'')+pct(M.K01.value);
+    q('.asof',k).firstChild.nodeValue='As of '+M.K01.period_end+' - EPPO - '+Number(M.K01.details.ytd_gwh).toLocaleString('en-US')+' GWh ';
+  }
+  // RE generation: headline, composition and legend always sourced from same observation.
+  k=q('.kpi[data-kpi="regen"]'); if(k&&M.K03){
+    const r=M.K03.details.renewable_pct,h=M.K03.details.hydro_pct,o=M.K03.details.other_pct;
+    q('.kpi-value',k).textContent=pct(M.K03.value); q('.kpi-delta',k).textContent=pct(r)+' RE + '+pct(h)+' hydro';
+    const bars=qa('.segment-track span',k); setWidth(bars[0],r); setWidth(bars[1],h); setWidth(bars[2],o);
+    const legs=qa('.segment-legend span',k); if(legs[0]) legs[0].innerHTML='<b>'+pct(M.K03.value)+'</b> RE + hydro'; if(legs[1]) legs[1].textContent=pct(o)+' other';
+    q('.asof',k).firstChild.nodeValue='As of '+M.K03.period_end+' - EPPO - incl. hydro ';
+  }
+  // Gas generation: headline, comparator, bar and legend always sourced from same observation.
+  k=q('.kpi[data-kpi="gas"]'); if(k&&M.K05){
+    const cur=Number(M.K05.value), prev=Number(M.K05.details.prior_share_pct), delta=cur-prev, other=100-cur;
+    q('.kpi-value',k).textContent=pct(cur); q('.kpi-delta',k).textContent=(delta>=0?'+':'')+delta.toFixed(1)+' ppt vs '+(M.K05.details.prior_period_label||'prior period');
+    const vals=qa('.compare-cell b',k); if(vals[0]) vals[0].textContent=pct(prev); if(vals[1]) vals[1].textContent=pct(cur);
+    const labs=qa('.compare-cell span',k); if(labs[0]) labs[0].textContent=M.K05.details.prior_period_label||'Prior'; if(labs[1]) labs[1].textContent=M.K05.details.period_label||M.K05.period_end.slice(0,4)+' YTD';
+    const bars=qa('.segment-track span',k); setWidth(bars[0],cur); setWidth(bars[1],other);
+    const legs=qa('.segment-legend span',k); if(legs[0]) legs[0].innerHTML='<b>'+pct(cur)+'</b> gas'; if(legs[1]) legs[1].textContent=pct(other)+' other';
+    q('.asof',k).firstChild.nodeValue='As of '+M.K05.period_end+' - EPPO ';
+  }
+})();
+</script><script>
+(function(){
+  const numberRe = /(?<![A-Za-z])(?:[+\-▲▼~]?\s?\d[\d,]*(?:\.\d+)?(?:\s?%|\s?ppt|\s?GW|\s?MW|\s?GWh|\s?MMSCFD|\s?THB\/kWh|\s?THB\/MMBtu|\s?sat\/kWh)?)/g;
+  function nearestSource(el){
+    const s=el.closest('[data-source-url]');
+    return s ? s.dataset.sourceUrl : null;
+  }
+  function wrapTextNode(node,url){
+    const text=node.nodeValue;
+    if(!text || !/\d/.test(text)) return;
+    const parent=node.parentElement;
+    if(!parent || parent.closest('a,script,style,svg,button')) return;
+    // If a more-specific nested source exists, use it.
+    const own=nearestSource(parent) || url;
+    if(!own) return;
+    const frag=document.createDocumentFragment();
+    let last=0, m;
+    numberRe.lastIndex=0;
+    while((m=numberRe.exec(text))){
+      if(m.index>last) frag.appendChild(document.createTextNode(text.slice(last,m.index)));
+      const a=document.createElement('a');
+      a.href=own; a.target='_blank'; a.rel='noopener'; a.className='figure-source'; a.title='Open public source';
+      a.textContent=m[0]; frag.appendChild(a); last=m.index+m[0].length;
+    }
+    if(last===0) return;
+    if(last<text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+    node.replaceWith(frag);
+  }
+  document.querySelectorAll('[data-source-url]').forEach(scope=>{
+    const url=scope.dataset.sourceUrl;
+    scope.querySelectorAll('svg').forEach(svg=>{
+      // Use the nearest source scope so nested panels remain precise.
+      const u=nearestSource(svg)||url;
+      svg.addEventListener('click',()=>window.open(u,'_blank','noopener'));
+      svg.setAttribute('title','Open public source');
+    });
+    const walker=document.createTreeWalker(scope,NodeFilter.SHOW_TEXT);
+    const nodes=[]; while(walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(n=>wrapTextNode(n,url));
+  });
+})();
+</script></body>
 </html>
+
+&lt;!-- Generated from thailand_power.db; values are database-backed and capacity bases are governed separately. --&gt;

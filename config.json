@@ -49,6 +49,25 @@
       "imported electricity",
       "ไฟฟ้านำเข้า",
       "นำเข้า"
+    ],
+    "coal_lignite": [
+      "coal",
+      "lignite",
+      "coal/lignite",
+      "coal and lignite",
+      "ถ่านหิน",
+      "ลิกไนต์"
+    ],
+    "oil": [
+      "fuel oil",
+      "diesel",
+      "oil",
+      "น้ำมันเตา",
+      "น้ำมันดีเซล",
+      "น้ำมัน"
     ]
+  },
+  "egat": {
+    "peak_url": "https://www.egat.co.th/home/statistics-demand-latest/"
   }
 }

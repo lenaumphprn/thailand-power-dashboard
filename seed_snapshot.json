@@ -152,18 +152,18 @@
     {
       "metric_id": "K01",
       "period_start": "2026-01-01",
-      "period_end": "2026-05-31",
+      "period_end": "2026-06-30",
       "value": 6.0,
       "unit": "% YoY",
       "source_id": "S01",
-      "publication_date": "2026-08-24",
+      "publication_date": "2026-08-31",
       "qa_status": "seeded_verified",
-      "note": "Jan-May 2026 vs Jan-May 2025; EPPO overview reports 90,751 GWh.",
+      "note": "Jan-Jun 2026 vs Jan-Jun 2025; EPPO public dataset reports 109,846 GWh.",
       "details": {
-        "ytd_gwh": 90751,
+        "ytd_gwh": 109846.0,
         "fy2025_growth_pct": -2.8
       },
-      "raw_source_ref": "https://www.eppo.go.th/wp-content/uploads/2026/08/Highlight_05-Jan-May2026.pdf"
+      "raw_source_ref": "https://catalog.eppo.go.th/dataset/dataset_11_37"
     },
     {
       "metric_id": "K02",
@@ -184,18 +184,25 @@
     },
     {
       "metric_id": "K03",
-      "period_start": "2025-01-01",
-      "period_end": "2025-12-31",
-      "value": 13.8,
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "value": 12.9,
       "unit": "% of generation",
       "source_id": "S02",
-      "publication_date": "2026-01-01",
+      "publication_date": "2026-08-31",
       "qa_status": "seeded_verified",
-      "note": "10.4% renewable energy + 3.4% hydro.",
+      "note": "H1 2026: 10.0% renewable + 2.9% hydro = 12.9%.",
       "details": {
-        "renewable_pct": 10.4,
-        "hydro_pct": 3.4,
-        "other_pct": 86.2
+        "renewable_pct": 10.0,
+        "hydro_pct": 2.9,
+        "other_pct": 87.1,
+        "gas_pct": 61.7,
+        "other_fuels_imports_pct": 25.4,
+        "prior_fy_re_hydro_pct": 13.8,
+        "prior_fy_gas_pct": 54.2,
+        "prior_period_label": "FY2025",
+        "period_label": "H1 2026",
+        "ytd_generation_gwh": 0.0
       },
       "raw_source_ref": "https://catalog.eppo.go.th/dataset/dataset_11_27"
     },
@@ -220,17 +227,22 @@
     },
     {
       "metric_id": "K05",
-      "period_start": "2025-01-01",
-      "period_end": "2025-12-31",
-      "value": 54.2,
+      "period_start": "2026-01-01",
+      "period_end": "2026-06-30",
+      "value": 61.7,
       "unit": "% of generation",
       "source_id": "S02",
-      "publication_date": "2026-01-01",
+      "publication_date": "2026-08-31",
       "qa_status": "seeded_verified",
-      "note": "Natural gas share of 2025 generation.",
+      "note": "Natural gas share of H1 2026 electricity generation.",
       "details": {
-        "gas_generation_yoy_pct": -9.6,
-        "prior_share_pct": 59.7
+        "prior_share_pct": 54.2,
+        "prior_period_label": "FY2025",
+        "share_change_ppt": 7.5,
+        "renewable_pct": 10.0,
+        "hydro_pct": 2.9,
+        "re_hydro_pct": 12.9,
+        "period_label": "H1 2026"
       },
       "raw_source_ref": "https://catalog.eppo.go.th/dataset/dataset_11_27"
     },

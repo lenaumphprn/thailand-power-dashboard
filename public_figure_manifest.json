@@ -9,13 +9,11 @@
       "source_tier": "official",
       "source_name": "EPPO Thailand Energy Overview Jan-May 2026",
       "source_urls": [
-        "https://www.eppo.go.th/wp-content/uploads/2026/08/Highlight_05-Jan-May2026.pdf",
         "https://catalog.eppo.go.th/dataset/dataset_11_37"
       ],
       "published_values": [
-        "Jan-May 2026: 90,751 GWh; +6.0% YoY",
-        "FY2025 growth: -2.8%",
-        "YTD checkpoint growth values shown in demand chart"
+        "Jan-Jun 2026: 109,846 GWh; +6.0% YoY",
+        "FY2025 growth: -2.8%"
       ]
     },
     {
@@ -77,7 +75,7 @@
       "input_figure_ids": [
         "GENERATION_2025"
       ],
-      "formula": "10.4% renewable + 3.4% hydro = 13.8%"
+      "formula": "Latest YTD renewable share + hydro share; H1 2026 seed: 10.0% + 2.9% = 12.9%"
     },
     {
       "figure_id": "GAS_SHARE_SHIFT",
@@ -90,7 +88,7 @@
       "input_figure_ids": [
         "GENERATION_2025"
       ],
-      "formula": "54.2% - 59.7% = -5.5 percentage points"
+      "formula": "Latest YTD gas share minus prior full-year gas share; H1 2026 seed: 61.7% - 54.2% = +7.5 percentage points"
     },
     {
       "figure_id": "RE_UTILITY_FUNNEL",
@@ -392,6 +390,23 @@
         "UGT1 decision 21 Jan 2026",
         "UGT2 decision 1 Apr 2026"
       ]
+    },
+    {
+      "figure_id": "GENERATION_H1_2026",
+      "label": "H1 2026 generation mix headline shares",
+      "provenance_type": "DIRECT_PUBLIC",
+      "source_tier": "official",
+      "source_name": "EPPO generation-by-fuel public dataset",
+      "source_urls": [
+        "https://catalog.eppo.go.th/dataset/dataset_11_27"
+      ],
+      "published_values": [
+        "Gas 61.7%",
+        "Renewable 10.0%",
+        "Hydro 2.9%",
+        "Renewable + hydro 12.9%"
+      ],
+      "note": "Current-period seed used until a newer EPPO observation is successfully ingested."
     }
   ]
 }

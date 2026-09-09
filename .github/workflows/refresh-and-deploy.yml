@@ -56,6 +56,7 @@ jobs:
           cp data/thailand_power_renewables_pulse_live.html site/index.html
           cp data/dashboard_data.json site/dashboard_data.json
           cp data/provenance_audit.csv site/provenance_audit.csv
+          cp data/consistency_audit.csv site/consistency_audit.csv
           cp public_figure_manifest.json site/public_figure_manifest.json
           touch site/.nojekyll
 

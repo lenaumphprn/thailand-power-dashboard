@@ -88,15 +88,15 @@
   "events": [
     {
       "source_id": null,
-      "source_name": "The Nation — PDP2026 consultation coverage",
+      "source_name": "Thai PBS — PDP2026 public-hearing coverage",
       "source_tier": "public_secondary_consultation_coverage",
-      "source_url": "https://www.nationthailand.com/sustaination/40070547",
-      "title": "EPPO opens public hearing on draft PDP2026",
-      "body_excerpt": "The draft plan's common 2026-2037 build includes 24.3 GW solar, 2.7 GW wind and 14.5 GW BESS, with four longer-term pathways under consultation.",
+      "source_url": "https://www.thaipbs.th/news/content/557632",
+      "title": "PDP2026 hearing sets a 50.9 GW first-stage build envelope",
+      "body_excerpt": "The 2026–2037 draft build totals about 50.9 GW: 24.3 GW solar, 14.5 GW BESS, 9.1 GW CCGT, 2.7 GW wind and 0.3 GW SMR.",
       "event_date": "2026-09-08",
       "category": "Policy & regulation",
       "topic": "PDP2026",
-      "materiality_score": 12,
+      "materiality_score": 13,
       "confidence": 0.98,
       "review_status": "verified_seed"
     },

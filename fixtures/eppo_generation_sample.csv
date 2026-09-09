@@ -1,6 +1,21 @@
 Year,Month,Fuel Type,Quantity,UNIT
+2025,Jan,Natural Gas,5000,GWh
+2025,Jan,Renewable Energy,1200,GWh
+2025,Jan,Hydro,300,GWh
+2025,Jan,Coal/Lignite,1800,GWh
+2025,Jan,Imported Electricity,1700,GWh
+2025,Feb,Natural Gas,5000,GWh
+2025,Feb,Renewable Energy,1200,GWh
+2025,Feb,Hydro,300,GWh
+2025,Feb,Coal/Lignite,1800,GWh
+2025,Feb,Imported Electricity,1700,GWh
 2026,Jan,Natural Gas,5400,GWh
 2026,Jan,Renewable Energy,1100,GWh
 2026,Jan,Hydro,400,GWh
 2026,Jan,Coal/Lignite,1600,GWh
 2026,Jan,Imported Electricity,1500,GWh
+2026,Feb,Natural Gas,6600,GWh
+2026,Feb,Renewable Energy,900,GWh
+2026,Feb,Hydro,200,GWh
+2026,Feb,Coal/Lignite,1300,GWh
+2026,Feb,Imported Electricity,1000,GWh
