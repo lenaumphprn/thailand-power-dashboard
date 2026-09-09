@@ -42,7 +42,8 @@ PASS,project_registry,ERC-ROOFTOP-2026-500,PASS,https://erc.or.th/pdfjs/web/view
 PASS,market_event,EV-02dca6ebe8d793bd,PASS,https://www.nationthailand.com/sustaination/40070547,Public row-level source
 PASS,market_event,EV-d2150615091be310,PASS,https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&symbol=GULF,Public row-level source
 PASS,market_event,EV-4daad52974b96098,PASS,https://www.bgrimmpower.com/en/power-plants/overview,Public row-level source
-PASS,weekly_digest,1,PASS,https://www.nationthailand.com/sustaination/40070547,Public row-level source
+PASS,market_event,EV-4a43756654915e56,PASS,https://www.thaipbs.th/news/content/557632,Public row-level source
+PASS,weekly_digest,1,PASS,https://www.thaipbs.th/news/content/557632,Public row-level source
 PASS,weekly_digest,2,PASS,https://www.energy.go.th/th/minister-news/30493,Public row-level source
 PASS,weekly_digest,3,PASS,https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&symbol=GULF,Public row-level source
 PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Total:selected,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
@@ -78,7 +79,7 @@ PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Total:2027,PASS,https://www.er
 PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Total:2028,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
 PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Total:2029,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
 PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Total:2030,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
-PASS,figure_manifest,DEMAND_2026,PASS,https://www.eppo.go.th/wp-content/uploads/2026/08/Highlight_05-Jan-May2026.pdf | https://catalog.eppo.go.th/dataset/dataset_11_37,Direct public source
+PASS,figure_manifest,DEMAND_2026,PASS,https://catalog.eppo.go.th/dataset/dataset_11_37,Direct public source
 PASS,figure_manifest,PEAK_2026,PASS,https://www.egat.co.th/home/statistics-demand-latest/,Direct public source
 PASS,figure_manifest,PEAK_CHANGE,PASS,https://www.egat.co.th/home/statistics-demand-latest/,Calculated only from public-source inputs
 PASS,figure_manifest,GENERATION_2025,PASS,https://catalog.eppo.go.th/dataset/dataset_11_27,Direct public source
@@ -104,6 +105,8 @@ PASS,figure_manifest,PDP2026_2037,PASS,https://www.nationthailand.com/sustainati
 PASS,figure_manifest,PDP2026_2050_RANGE,PASS,https://www.nationthailand.com/sustaination/40070547,Calculated only from public-source inputs
 PASS,figure_manifest,DIRECT_PPA_2000,PASS,https://www.energy.go.th/th/minister-news/30364 | https://www.erc.or.th/th/listen-to-opinions/580,Direct public source
 PASS,figure_manifest,UGT_2026,PASS,https://www.erc.or.th/th/util-green-tariff,Direct public source
+PASS,figure_manifest,GENERATION_H1_2026,PASS,https://catalog.eppo.go.th/dataset/dataset_11_27,Direct public source
 PASS,dashboard,source_assurance,PASS,,Visible public-source policy present
 PASS,dashboard,embedded_manifest,PASS,,Figure provenance manifest embedded in HTML
+PASS,dashboard,consistency_audit,PASS,,Consistency audit generated before publication
 PASS,dashboard,forbidden_estimates,PASS,,No model-estimated / illustrative market values

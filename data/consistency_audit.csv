@@ -1,0 +1,19 @@
+﻿check,status,detail
+demand KPI matches database value + period,PASS,"Power demand +6.0% H1 2026 vs prior year How fast national electricity consumption is growing. FY2025 -2.8% → H1 2026 +6.0% As of 2026-06-30 - EPPO - 109,846 GWh ↗ click figures for source"
+peak KPI matches database value + period,PASS,"EGAT system peak 36.0 GW +4.1% vs prior-year peak Highest system load; a signal of capacity and grid pressure. 2025 peak 34.6 GW → 2026 YTD 36.0 GW Peak 2026-04-22 - EGAT - 35,991.6 MW ↗ click figures for source"
+regen KPI matches database value + period,PASS,"RE generation share 15.0% 10.6% RE + 4.4% hydro Share of actual electricity supplied by renewables, not just installed capacity. 15.0% RE + hydro 85.0% other As of 2026-06-30 - EPPO - incl. hydro ↗ click figures for sour"
+recap KPI matches database value + period,PASS,"Grid-connected RE at COD 10.3 GW 10,298 MW contracted-sale capacity Renewable projects at commercial operation and selling into EGAT / MEA / PEA. COD 10.30 GW PPA, not COD 5.83 GW Accepted 1.25 GW As of 2025-06-30 - ERC "
+gas KPI matches database value + period,PASS,Gas share of generation 61.0% +6.7 ppt vs FY2025 How dependent the power system remains on natural gas. FY2025 54.2% → H1 2026 61.0% 61.0% gas 39.0% other As of 2026-06-30 - EPPO ↗ click figures for source
+tariff KPI matches applicable ERC event,PASS,Average billed tariff 3.86 THB/kWh Latest applicable ERC-stated average Latest broad billed-rate benchmark after the Sep-26 tariff-structure change. Prior headline 3.95 → From Sep-26 3.86 Effective 2026-09-01 - ERC - ave
+RE headline/components/legend synchronized,PASS,"RE generation share 15.0% 10.6% RE + 4.4% hydro Share of actual electricity supplied by renewables, not just installed capacity. 15.0% RE + hydro 85.0% other As of 2026-06-30 - EPPO - incl. hydro ↗ click figures for source"
+Gas headline/comparator/bar synchronized,PASS,Gas share of generation 61.0% +6.7 ppt vs FY2025 How dependent the power system remains on natural gas. FY2025 54.2% → H1 2026 61.0% 61.0% gas 39.0% other As of 2026-06-30 - EPPO ↗ click figures for source
+Generation stack leads with latest YTD period,PASS,"H1 2026 generation mix Latest available EPPO YTD mix • as of 2026-06-30 Latest Gas 61.0% Coal / lignite 9.3% Other RE 10.6% Hydro 4.4% Imports 14.7% 61.0% gas share 15.0% RE + hydro 24.0% other fuels / imports 119,850 GWh YTD generation How to read it: this is the latest YTD generation mix available from EPPO. The prio"
+Generation historical benchmark explicitly labelled,PASS,"Change vs FY2025 61.0% gas • H1 2026 +6.7 ppt vs 54.2% FY2025 15.0% RE + hydro • H1 2026 +1.3 ppt vs 13.7% FY2025 Gas FY2025 54.2% Gas H1 2026 61.0% RE + hydro FY2025 13.7% RE + hydro H1 2026 15.0% Signal: H1 2026 gas share is +6.7 ppt vs FY2025, while RE + hydro is +1.3 ppt."
+Demand detail card uses latest observation,PASS,"Demand growth YTD electricity consumption growth, YoY EPPO • latest available period first Jan–May 2026 +6.0% H1 2026 +6.0% Latest: H1 2026 demand is +6.0% YoY at 109,846 GWh."
+Peak detail card uses current system peak,PASS,Peak demand EGAT system peak Current-year peak: 2026-04-22 2025 peak 34.57 GW → 2026 YTD peak 35.99 GW +4.1% vs prior-year peak 32.76 GW Jul monthly peak • 20 Jul -6.25% latest monthly peak vs prior month Do not mix EGAT-system peak with EPPO’s “3 utility” system peak without labeling the definition
+All major quantitative blocks have public source scope,PASS,none missing
+All source scopes use HTTPS URLs,PASS,all HTTPS
+Click-to-source runtime embedded,PASS,numeric figures and charts source-linked
+KPI drawers resolve current embedded data,PASS,drawer context uses current metric payload rather than fixed current-period values
+Embedded dashboard data valid,PASS,pulse-data JSON
+Embedded figure provenance valid,PASS,figure-provenance JSON

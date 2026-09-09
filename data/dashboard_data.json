@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T06:54:38Z",
+  "generated_at": "2026-09-09T07:42:25Z",
   "metrics": {
     "K01": {
       "observation_id": 27,
@@ -27,24 +27,30 @@
       "provenance_type": "DIRECT_PUBLIC"
     },
     "K02": {
-      "observation_id": 2,
+      "observation_id": 78,
       "metric_id": "K02",
       "period_start": "2026-01-01",
       "period_end": "2026-04-22",
       "value": 35991.6,
       "unit": "MW",
       "source_id": "S07",
-      "publication_date": "2026-07-01",
+      "publication_date": "2026-09-09",
       "effective_start": null,
       "effective_end": null,
-      "ingested_at": "2026-09-09T03:31:39Z",
+      "ingested_at": "2026-09-09T07:40:54Z",
       "scope_version": "v1.0",
-      "qa_status": "seeded_verified",
+      "qa_status": "pass",
       "raw_source_ref": "https://www.egat.co.th/home/statistics-demand-latest/",
-      "note": "EGAT-system peak on 22 Apr 2026 at 20:50.",
+      "note": null,
       "details": {
-        "growth_pct": 4.1,
+        "growth_pct": 4.117356074785272,
+        "latest_month": 7.0,
+        "latest_monthly_change_pct": -6.25,
+        "latest_monthly_peak_date": "2026-07-20",
+        "latest_monthly_peak_mw": 32764.1,
+        "latest_monthly_peak_time": "20:30",
         "peak_time": "20:50",
+        "prior_year": 2025.0,
         "prior_year_peak_mw": 34568.3
       },
       "source_url": "https://www.egat.co.th/home/statistics-demand-latest/",
@@ -53,25 +59,35 @@
       "provenance_type": "DIRECT_PUBLIC"
     },
     "K03": {
-      "observation_id": 28,
+      "observation_id": 76,
       "metric_id": "K03",
-      "period_start": "2026-06-01",
+      "period_start": "2026-01-01",
       "period_end": "2026-06-30",
-      "value": 12.91521501462428,
+      "value": 14.994946375213598,
       "unit": "% of generation",
       "source_id": "S02",
       "publication_date": "2026-09-09",
       "effective_start": null,
       "effective_end": null,
-      "ingested_at": "2026-09-09T06:52:56Z",
+      "ingested_at": "2026-09-09T07:40:52Z",
       "scope_version": "v1.0",
       "qa_status": "pass",
-      "raw_source_ref": null,
+      "raw_source_ref": "https://catalog.eppo.go.th/dataset/dataset_11_27",
       "note": null,
       "details": {
-        "hydro_pct": 2.911346886227258,
-        "other_pct": 87.08478498537572,
-        "renewable_pct": 10.003868128397022
+        "coal_lignite_pct": 9.278802583232917,
+        "gas_pct": 60.96768726473813,
+        "hydro_pct": 4.4182307355227755,
+        "imports_pct": 14.710280220754084,
+        "oil_pct": 0.048283556061271354,
+        "other_fuels_pct": 0.0,
+        "other_pct": 85.0050536247864,
+        "period_label": "H1 2026",
+        "prior_fy_gas_pct": 54.23101877946591,
+        "prior_fy_re_hydro_pct": 13.737239520903621,
+        "prior_period_label": "FY2025",
+        "renewable_pct": 10.576715639690821,
+        "ytd_generation_gwh": 119850.327359
       },
       "source_url": "https://catalog.eppo.go.th/dataset/dataset_11_27",
       "source_name": "Electricity generation by fuel",
@@ -106,22 +122,31 @@
       "provenance_type": "DIRECT_PUBLIC"
     },
     "K05": {
-      "observation_id": 29,
+      "observation_id": 77,
       "metric_id": "K05",
-      "period_start": "2026-06-01",
+      "period_start": "2026-01-01",
       "period_end": "2026-06-30",
-      "value": 61.66317563838458,
+      "value": 60.96768726473813,
       "unit": "% of generation",
       "source_id": "S02",
       "publication_date": "2026-09-09",
       "effective_start": null,
       "effective_end": null,
-      "ingested_at": "2026-09-09T06:52:56Z",
+      "ingested_at": "2026-09-09T07:40:52Z",
       "scope_version": "v1.0",
       "qa_status": "pass",
-      "raw_source_ref": null,
+      "raw_source_ref": "https://catalog.eppo.go.th/dataset/dataset_11_27",
       "note": null,
-      "details": {},
+      "details": {
+        "gas_generation_yoy_pct": 13.688635052163445,
+        "hydro_pct": 4.4182307355227755,
+        "period_label": "H1 2026",
+        "prior_period_label": "FY2025",
+        "prior_share_pct": 54.23101877946591,
+        "re_hydro_pct": 14.994946375213598,
+        "renewable_pct": 10.576715639690821,
+        "share_change_ppt": 6.736668485272219
+      },
       "source_url": "https://catalog.eppo.go.th/dataset/dataset_11_27",
       "source_name": "Electricity generation by fuel",
       "source_tier": "1A",
@@ -1598,11 +1623,11 @@
       "refresh_date": "2026-09-09",
       "rank": 1,
       "category": "Policy & regulation",
-      "headline": "EPPO opens public hearing on draft PDP2026",
-      "one_fact": "The draft plan's common 2026-2037 build includes 24.3 GW solar, 2.7 GW wind and 14.5 GW BESS, with four longer-term pathways under consultation.",
+      "headline": "PDP2026 hearing sets a 50.9 GW first-stage build envelope",
+      "one_fact": "The 2026–2037 draft build totals about 50.9 GW: 24.3 GW solar, 14.5 GW BESS, 9.1 GW CCGT, 2.7 GW wind and 0.3 GW SMR.",
       "why_it_matters": "It resets the forward build envelope for generation, storage and grid investment, and will shape procurement opportunities through 2037 and beyond.",
-      "score": 12,
-      "source_url": "https://www.nationthailand.com/sustaination/40070547",
+      "score": 13,
+      "source_url": "https://www.thaipbs.th/news/content/557632",
       "event_date": "2026-09-08"
     },
     {
@@ -1629,6 +1654,19 @@
     }
   ],
   "market_events": [
+    {
+      "event_date": "2026-09-08",
+      "category": "Policy & regulation",
+      "topic": "PDP2026",
+      "company": null,
+      "title": "PDP2026 hearing sets a 50.9 GW first-stage build envelope",
+      "capacity_mw": 50900.0,
+      "status_after": null,
+      "materiality_score": 13,
+      "confidence": 0.98,
+      "source_name": "Thai PBS — PDP2026 public-hearing coverage",
+      "source_url": "https://www.thaipbs.th/news/content/557632"
+    },
     {
       "event_date": "2026-09-08",
       "category": "Policy & regulation",
@@ -1810,6 +1848,19 @@
       "confidence": 0.75,
       "source_name": "EPPO news",
       "source_url": "https://www.eppo.go.th/plan-policy/energy-plan/แผนพัฒนากำลังผลิตไฟฟ้า"
+    },
+    {
+      "event_date": null,
+      "category": "Policy & regulation",
+      "topic": "PDP2026",
+      "company": null,
+      "title": "ผอ. สนพ. ร่วมงาน BIG ISSUE : PDP 2026 ENERGY GREEN POWER",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 10,
+      "confidence": 0.75,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/information-services/advertise/news-eppo/%e0%b8%9c%e0%b8%ad-%e0%b8%aa%e0%b8%99%e0%b8%9e-%e0%b8%a3%e0%b9%88%e0%b8%a7%e0%b8%a1%e0%b8%87%e0%b8%b2%e0%b8%99-big-issue-pdp-2026-energy-green-power"
     },
     {
       "event_date": null,
@@ -2252,32 +2303,6 @@
       "confidence": 0.75,
       "source_name": "ERC news releases",
       "source_url": "https://www.erc.or.th/th/code-of-practice"
-    },
-    {
-      "event_date": null,
-      "category": "Other",
-      "topic": null,
-      "company": null,
-      "title": "กฎหมายการรับซื้อไฟฟ้า",
-      "capacity_mw": null,
-      "status_after": null,
-      "materiality_score": 2,
-      "confidence": 0.75,
-      "source_name": "ERC news releases",
-      "source_url": "https://www.erc.or.th/th/news-release"
-    },
-    {
-      "event_date": null,
-      "category": "Other",
-      "topic": null,
-      "company": null,
-      "title": "ประมวลหลักการปฏิบัติ (Code Of Practice: CoP)",
-      "capacity_mw": null,
-      "status_after": null,
-      "materiality_score": 2,
-      "confidence": 0.75,
-      "source_name": "ERC news releases",
-      "source_url": "https://www.erc.or.th/th/news-release"
     }
   ],
   "applicable_tariff_event": {
@@ -2293,6 +2318,6 @@
     "source_url": "https://www.erc.or.th/th/news-release/3472",
     "title": "Residential progressive-rate structure; average billed rate across all categories",
     "supersedes_event_id": "ERC-2026-07-23-FT",
-    "ingested_at": "2026-09-09T06:52:52Z"
+    "ingested_at": "2026-09-09T07:40:49Z"
   }
 }
