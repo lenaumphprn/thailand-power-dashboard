@@ -1,0 +1,108 @@
+﻿severity,object_type,object_id,status,source_url,note
+PASS,metric,K01,PASS,https://www.eppo.go.th/wp-content/uploads/2026/08/Highlight_05-Jan-May2026.pdf,Latest displayed observation has public lineage
+PASS,metric,K02,PASS,https://www.egat.co.th/home/statistics-demand-latest/,Latest displayed observation has public lineage
+PASS,metric,K03,PASS,https://catalog.eppo.go.th/dataset/dataset_11_27,Latest displayed observation has public lineage
+PASS,metric,K04,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Latest displayed observation has public lineage
+PASS,metric,K05,PASS,https://catalog.eppo.go.th/dataset/dataset_11_27,Latest displayed observation has public lineage
+PASS,metric,K06,PASS,https://www.erc.or.th/th/news-release/3472,Latest displayed observation has public lineage
+PASS,metric,K07,PASS,https://erc.or.th/th/automatic/,Latest displayed observation has public lineage
+PASS,metric,K08,PASS,https://www.eppo.go.th/index.php/th/petroleum/item/download/26675_41441bf1b65c876dac13593297849a05,Latest displayed observation has public lineage
+PASS,metric,K09,PASS,https://www.eppo.go.th/epposite/index.php/th/component/k2/item/download/26689_9cedd3a6289d377b71bb0c6c784fa1a8,Latest displayed observation has public lineage
+PASS,metric,K10,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Latest displayed observation has public lineage
+PASS,metric,K11,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Latest displayed observation has public lineage
+PASS,metric,K12,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Latest displayed observation has public lineage
+PASS,renewable_capacity_snapshot,ERC-2025-06-30-UTILITY-COD,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,renewable_capacity_snapshot,ERC-2025-06-30-UTILITY-PPA_NOT_COD,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,renewable_capacity_snapshot,ERC-2025-06-30-UTILITY-ACCEPTED_PRE_PPA,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,renewable_capacity_snapshot,ERC-2025-06-30-UTILITY-ALL_STATUSES,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,renewable_capacity_snapshot,ERC-2025-06-30-UTILITY-TECH-WASTE,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,renewable_capacity_snapshot,ERC-2025-06-30-UTILITY-TECH-BIOMASS,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,renewable_capacity_snapshot,ERC-2025-06-30-UTILITY-TECH-BIOGAS,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,renewable_capacity_snapshot,ERC-2025-06-30-UTILITY-TECH-HYDRO,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,renewable_capacity_snapshot,ERC-2025-06-30-UTILITY-TECH-WIND,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,renewable_capacity_snapshot,ERC-2025-06-30-UTILITY-TECH-SOLAR,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,renewable_capacity_snapshot,ERC-2025-06-30-UTILITY-TECH-OTHER_RENEWABLE,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,renewable_capacity_snapshot,ERC-2025-06-30-SELFUSE-TOTAL,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,renewable_capacity_snapshot,ERC-2025-06-30-SELFUSE-TECH-BIOMASS,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,renewable_capacity_snapshot,ERC-2025-06-30-SELFUSE-TECH-BIOGAS,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,renewable_capacity_snapshot,ERC-2025-06-30-SELFUSE-TECH-HYDRO,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,renewable_capacity_snapshot,ERC-2025-06-30-SELFUSE-TECH-SOLAR,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,renewable_capacity_snapshot,ERC-2025-06-30-SELFUSE-TECH-OTHER_RENEWABLE,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,procurement_cohort,FIT2022_NO_FUEL,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,procurement_cohort,FIT2024_ADDITIONAL,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public row-level source
+PASS,procurement_cohort,ROOFTOP_2026,PASS,https://erc.or.th/pdfjs/web/viewer.html?file=%2Fweb-upload%2F200xf869baf82be74c18cc110e974eea8d5c%2F202606%2Fm_news%2F9090%2F3441%2Ffile_download%2Fae5c0f3369d23b692064262036b1725f.pdf,Public row-level source
+PASS,project_registry,GULF-LNE-2026,PASS,https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&symbol=GULF,Public row-level source
+PASS,project_registry,GULF-SSE-2026,PASS,https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&symbol=GULF,Public row-level source
+PASS,project_registry,GULF-YE2026-SOLAR-TRANCHE,PASS,https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&symbol=GULF,Public row-level source
+PASS,project_registry,GULF-RE-FINANCING-939,PASS,https://www.gulf.co.th/en/newsroom/news-and-activities/531/gulf-secures-thb-60-billion-or-approximately-usd-19-billion-to-invest-in-renewable-energy-power-projects-with-a-total-contracted-generation-capacity-of-939-mw,Public row-level source
+PASS,project_registry,GULF-WIND-286,PASS,https://www.gulf.co.th/en/newsroom/news-and-activities/502/gulf-joins-forces-with-goldwind-to-advance-clean-energy-with-turbine-supply-agreement-for-four-wind-farms-in-thailand,Public row-level source
+PASS,project_registry,GUNKUL-SOLAR-4608,PASS,https://www.gunkul.com/en/about/who-we-are,Public row-level source
+PASS,project_registry,GUNKUL-WIND-180,PASS,https://www.gunkul.com/en/about/who-we-are,Public row-level source
+PASS,project_registry,ERC-ROOFTOP-2026-500,PASS,https://erc.or.th/pdfjs/web/viewer.html?file=%2Fweb-upload%2F200xf869baf82be74c18cc110e974eea8d5c%2F202606%2Fm_news%2F9090%2F3441%2Ffile_download%2Fae5c0f3369d23b692064262036b1725f.pdf,Public row-level source
+PASS,market_event,EV-02dca6ebe8d793bd,PASS,https://www.nationthailand.com/sustaination/40070547,Public row-level source
+PASS,market_event,EV-d2150615091be310,PASS,https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&symbol=GULF,Public row-level source
+PASS,weekly_digest,1,PASS,https://www.nationthailand.com/sustaination/40070547,Public row-level source
+PASS,weekly_digest,2,PASS,https://www.energy.go.th/th/minister-news/30493,Public row-level source
+PASS,weekly_digest,3,PASS,https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&symbol=GULF,Public row-level source
+PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Total:selected,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Total:ppa,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Total:cop,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Total:licensed,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Total:cod,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Wind:ppa,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Wind:cop,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Wind:licensed,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Wind:cod,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Solar+BESS:ppa,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Solar+BESS:cop,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Solar+BESS:licensed,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Solar+BESS:cod,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Ground solar:ppa,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Ground solar:cop,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Ground solar:licensed,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Ground solar:cod,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_stage_snapshot,FIT2024_ADDITIONAL:Total:selected,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Wind:2026,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Wind:2027,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Wind:2028,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Wind:2029,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Wind:2030,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Solar:2026,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Solar:2027,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Solar:2028,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Solar:2029,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Solar:2030,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Total:2026,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Total:2027,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Total:2028,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Total:2029,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,procurement_scod_schedule,FIT2024_ADDITIONAL:Total:2030,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
+PASS,figure_manifest,DEMAND_2026,PASS,https://www.eppo.go.th/wp-content/uploads/2026/08/Highlight_05-Jan-May2026.pdf | https://catalog.eppo.go.th/dataset/dataset_11_37,Direct public source
+PASS,figure_manifest,PEAK_2026,PASS,https://www.egat.co.th/home/statistics-demand-latest/,Direct public source
+PASS,figure_manifest,PEAK_CHANGE,PASS,https://www.egat.co.th/home/statistics-demand-latest/,Calculated only from public-source inputs
+PASS,figure_manifest,GENERATION_2025,PASS,https://catalog.eppo.go.th/dataset/dataset_11_27,Direct public source
+PASS,figure_manifest,RE_GENERATION_COMBINED,PASS,https://catalog.eppo.go.th/dataset/dataset_11_27,Calculated only from public-source inputs
+PASS,figure_manifest,GAS_SHARE_SHIFT,PASS,https://catalog.eppo.go.th/dataset/dataset_11_27,Calculated only from public-source inputs
+PASS,figure_manifest,RE_UTILITY_FUNNEL,PASS,https://www.erc.or.th/th/annual-report/3801,Direct public source
+PASS,figure_manifest,RE_SELF_USE,PASS,https://www.erc.or.th/th/annual-report/3801,Direct public source
+PASS,figure_manifest,FIT2022_FUNNEL,PASS,https://www.erc.or.th/th/annual-report/3801,Direct public source
+PASS,figure_manifest,FIT2024_ROUND,PASS,https://www.erc.or.th/th/annual-report/3801,Direct public source
+PASS,figure_manifest,ROOFTOP_2026,PASS,https://erc.or.th/pdfjs/web/viewer.html?file=%2Fweb-upload%2F200xf869baf82be74c18cc110e974eea8d5c%2F202606%2Fm_news%2F9090%2F3441%2Ffile_download%2Fae5c0f3369d23b692064262036b1725f.pdf,Direct public source
+PASS,figure_manifest,GULF_SOLAR_2026,PASS,https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&symbol=GULF,Direct public source
+PASS,figure_manifest,GULF_WIND,PASS,https://www.gulf.co.th/en/newsroom/news-and-activities/502/gulf-joins-forces-with-goldwind-to-advance-clean-energy-with-turbine-supply-agreement-for-four-wind-farms-in-thailand,Direct public source
+PASS,figure_manifest,GUNKUL_PROJECTS,PASS,https://www.gunkul.com/en/about/who-we-are,Direct public source
+PASS,figure_manifest,GAS_SUPPLY_2026,PASS,https://www.eppo.go.th/index.php/th/petroleum/item/download/26675_41441bf1b65c876dac13593297849a05,Direct public source
+PASS,figure_manifest,POOL_GAS_2026,PASS,https://www.eppo.go.th/data-energy-statistic/energy-price-th/%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2-pool-gas/ | https://www.eppo.go.th/index.php/th/component/k2/item/download/26532_56c8416c12d21961a69d482e35d413cd,Direct public source
+PASS,figure_manifest,POOL_GAS_CHANGE,PASS,https://www.eppo.go.th/data-energy-statistic/energy-price-th/%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2-pool-gas/,Calculated only from public-source inputs
+PASS,figure_manifest,FT_2026,PASS,https://erc.or.th/th/automatic/,Direct public source
+PASS,figure_manifest,FT_CHANGE,PASS,https://erc.or.th/th/automatic/,Calculated only from public-source inputs
+PASS,figure_manifest,TARIFF_2026,PASS,https://www.erc.or.th/th/news-release/3458 | https://www.erc.or.th/th/news-release/3472,Direct public source
+PASS,figure_manifest,TARIFF_CHANGE,PASS,https://www.erc.or.th/th/news-release/3458 | https://www.erc.or.th/th/news-release/3472,Calculated only from public-source inputs
+PASS,figure_manifest,AEDP2018_TARGET,PASS,https://pvstatus.dede.go.th/en/section_3-2.php,Direct public source
+PASS,figure_manifest,PDP2026_2037,PASS,https://www.nationthailand.com/sustaination/40070547 | https://www.energynewscenter.com/%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B8%A3%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%9C%E0%B8%99-pdp-2026-%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%87-12-%E0%B8%9B%E0%B8%B5%E0%B9%81%E0%B8%A3/,Direct public source
+PASS,figure_manifest,PDP2026_2050_RANGE,PASS,https://www.nationthailand.com/sustaination/40070547,Calculated only from public-source inputs
+PASS,figure_manifest,DIRECT_PPA_2000,PASS,https://www.energy.go.th/th/minister-news/30364 | https://www.erc.or.th/th/listen-to-opinions/580,Direct public source
+PASS,figure_manifest,UGT_2026,PASS,https://www.erc.or.th/th/util-green-tariff,Direct public source
+PASS,dashboard,source_assurance,PASS,,Visible public-source policy present
+PASS,dashboard,embedded_manifest,PASS,,Figure provenance manifest embedded in HTML
+PASS,dashboard,forbidden_estimates,PASS,,No model-estimated / illustrative market values

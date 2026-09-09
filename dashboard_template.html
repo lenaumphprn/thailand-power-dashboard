@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Thailand Power &amp; Renewables Pulse</title>
+<style>
+:root{
+  --ink:#122033; --muted:#667085; --line:#e5e7eb; --bg:#f5f7fa; --card:#ffffff;
+  --navy:#173b63; --blue:#337ab7; --blue2:#5e9fd3; --green:#2f7d65; --green2:#7bc4a4;
+  --amber:#a86b19; --amberBg:#fff6e8; --red:#aa4a44; --redBg:#fff1f0; --greenBg:#effaf5;
+  --slate:#8795a5; --shadow:0 8px 24px rgba(16,24,40,.06);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--ink)}
+button,a{font:inherit}
+a{color:var(--navy);text-decoration:none}
+a:hover{text-decoration:underline}
+.shell{max-width:1460px;margin:0 auto;padding:0 28px 56px}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(245,247,250,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top-inner{max-width:1460px;margin:auto;padding:15px 28px 12px;display:flex;align-items:center;gap:20px}
+.brand{min-width:330px}
+.kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:800}
+.brand h1{font-size:18px;margin:2px 0 0;letter-spacing:-.01em}
+.refresh{margin-left:auto;text-align:right;font-size:12px;color:var(--muted);line-height:1.5}
+.refresh b{color:var(--ink)}
+.tabs{display:flex;gap:4px;overflow:auto;margin-left:18px}
+.tab{border:0;background:transparent;color:#667085;padding:9px 12px;border-radius:8px;white-space:nowrap;cursor:pointer;font-size:13px;font-weight:650}
+.tab:hover{background:#edf1f5;color:var(--ink)}
+.tab.active{background:#e7eef6;color:var(--navy)}
+.page{display:none}
+.page.active{display:block}
+.hero{display:block;margin:28px 0 18px}
+.hero-main{background:linear-gradient(135deg,#163b62 0%,#285d85 100%);border-radius:15px;padding:25px 28px;color:white;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero-main:after{content:"";position:absolute;width:260px;height:260px;border:1px solid rgba(255,255,255,.1);border-radius:50%;right:-80px;top:-105px;box-shadow:0 0 0 50px rgba(255,255,255,.025),0 0 0 100px rgba(255,255,255,.018)}
+.hero-main h2{margin:0 0 8px;font-size:28px;letter-spacing:-.03em}
+.hero-main p{margin:0;max-width:760px;color:#dbe8f3;line-height:1.55;font-size:14px}
+.hero-side{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:20px 21px;box-shadow:var(--shadow)}
+.hero-side h3{margin:0 0 10px;font-size:14px}
+.legend-row{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin:8px 0}
+.dot{width:9px;height:9px;border-radius:50%}.green{background:#36a26f}.amber{background:#d29333}.grey{background:#98a2b3}
+.section-title{display:flex;align-items:end;justify-content:space-between;margin:25px 0 12px}
+.section-title h2{margin:0;font-size:18px;letter-spacing:-.015em}
+.section-title .sub{font-size:12px;color:var(--muted);max-width:660px;text-align:right}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.news{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 16px;min-height:142px;box-shadow:0 3px 12px rgba(16,24,40,.035);position:relative}
+.news-num{position:absolute;right:14px;top:10px;font-size:34px;color:#e7ebef;font-weight:800}
+.news .tagline{display:flex;gap:7px;margin-bottom:12px}
+.pill{display:inline-flex;align-items:center;border-radius:999px;padding:4px 8px;font-size:10px;line-height:1;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.pill.high{background:var(--redBg);color:var(--red)}
+.pill.med{background:var(--amberBg);color:var(--amber)}
+.pill.policy{background:#eef4fb;color:var(--navy)}
+.news h3{font-size:15px;line-height:1.35;margin:0 34px 8px 0}
+.news p{font-size:12.5px;line-height:1.55;color:#566273;margin:0}
+.so-what{border-top:1px solid var(--line);margin-top:12px;padding-top:10px;color:var(--ink)!important}
+.so-what b{color:var(--navy)}
+.kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 20px 17px;cursor:pointer;transition:.18s ease;min-height:196px;position:relative}
+.kpi:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:#cbd5df}
+.kpi-label{font-size:11.5px;color:var(--muted);text-transform:uppercase;font-weight:750;letter-spacing:.055em}
+.kpi-value{font-size:30px;margin-top:12px;font-weight:800;letter-spacing:-.035em;white-space:nowrap}
+.kpi-unit{font-size:11px;color:var(--muted);font-weight:600}
+.kpi-delta{font-size:12px;margin-top:5px;min-height:18px}
+.up{color:var(--green)} .down{color:var(--red)} .flat{color:var(--muted)}
+.asof{font-size:10.5px;color:#98a2b3;margin-top:9px}
+.mini-svg{height:32px;width:100%;margin-top:4px}
+.quality{position:absolute;right:10px;top:11px;width:7px;height:7px;border-radius:50%}
+.main-grid{display:grid;grid-template-columns:1.55fr .75fr;gap:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:18px 19px;box-shadow:0 3px 12px rgba(16,24,40,.03)}
+.card h3{margin:0;font-size:14.5px}
+.card-title{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px}
+.card-title .meta{font-size:11px;color:var(--muted);text-align:right}
+.selector{display:flex;gap:4px;background:#eef2f6;border-radius:8px;padding:3px}
+.selector button{border:0;background:transparent;color:var(--muted);padding:6px 9px;border-radius:6px;font-size:11px;cursor:pointer}
+.selector button.active{background:white;color:var(--ink);box-shadow:0 1px 4px rgba(16,24,40,.08)}
+.transition-wrap{display:grid;grid-template-columns:1.4fr .6fr;gap:16px}
+.big-chart{min-height:280px}
+.metric-stack{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-content:start}
+.mini-metric{border:1px solid var(--line);border-radius:9px;padding:10px}
+.mini-metric span{display:block;font-size:10px;color:var(--muted);text-transform:uppercase}
+.mini-metric b{display:block;font-size:17px;margin-top:4px}
+.warning{border-radius:9px;background:var(--amberBg);color:#7a4d11;padding:10px 11px;font-size:11px;line-height:1.45;margin-top:9px}
+.watch{display:flex;flex-direction:column;gap:9px}
+.watch-item{border-left:3px solid #d8e1ea;padding:3px 0 3px 11px}
+.watch-item b{display:block;font-size:12.5px}
+.watch-item span{font-size:11px;color:var(--muted);line-height:1.35;display:block;margin-top:2px}
+.footer-note{font-size:10.5px;color:var(--muted);margin-top:10px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.chart-box{height:310px}
+.chart-box.tall{height:360px}
+.chart-box svg{width:100%;height:100%;overflow:visible}
+.stat-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.stat-chip{background:#f6f8fa;border:1px solid var(--line);padding:7px 9px;border-radius:8px;font-size:11px}
+.stat-chip b{font-size:12px}
+.mixbar{display:flex;height:22px;border-radius:6px;overflow:hidden;margin:14px 0 10px}
+.mixbar span{height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:8px 13px;font-size:10.5px;color:var(--muted)}
+.legend i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px}
+.bar-row{display:grid;grid-template-columns:110px 1fr 58px;gap:9px;align-items:center;margin:10px 0;font-size:11px}
+.bar-track{height:11px;background:#edf0f3;border-radius:4px;overflow:hidden}
+.bar-fill{height:100%;background:var(--blue)}
+.bar-num{text-align:right;font-weight:700}
+.policy-table{width:100%;border-collapse:collapse;font-size:11.5px}
+.policy-table th{text-align:left;color:var(--muted);font-weight:650;border-bottom:1px solid var(--line);padding:8px 7px}
+.policy-table td{padding:10px 7px;border-bottom:1px solid #eef0f2;vertical-align:top}
+.status{display:inline-block;border-radius:999px;padding:3px 7px;font-size:9.5px;font-weight:800}
+.status.dev{background:var(--amberBg);color:var(--amber)}
+.status.live{background:var(--greenBg);color:var(--green)}
+.status.pilot{background:#eef4fb;color:var(--navy)}
+.driver-tree{display:grid;grid-template-columns:1fr 50px 1fr 50px 1fr;align-items:center;text-align:center;gap:5px;margin:25px 0}
+.driver-node{border:1px solid var(--line);border-radius:10px;padding:15px 8px;background:#fafbfc;font-size:11px}
+.arrow{font-size:22px;color:#9aa5b1}
+.source-list{display:grid;gap:8px}
+.source-item{display:grid;grid-template-columns:135px 1fr 84px;gap:10px;border-bottom:1px solid #edf0f3;padding:8px 0;font-size:11px}
+.source-item:last-child{border-bottom:0}
+.source-item .org{font-weight:750}.source-item .fresh{color:var(--muted);text-align:right}
+.quality-box{background:#fafbfc;border:1px dashed #ccd4dc;border-radius:10px;padding:12px;font-size:11px;color:#586576;line-height:1.5}
+.callout{border-left:4px solid var(--blue);background:#f1f6fb;padding:12px 14px;border-radius:0 9px 9px 0;font-size:12px;line-height:1.55}
+.callout b{color:var(--navy)}
+.structure{display:grid;grid-template-columns:1fr 55px 1fr 55px 1fr;align-items:center;gap:6px;margin:18px 0}
+.structure .box{border:1px solid var(--line);border-radius:12px;padding:17px;background:white;text-align:center;min-height:100px}
+.structure .box h4{margin:0 0 6px;font-size:13px}.structure .box p{margin:0;font-size:10.5px;color:var(--muted);line-height:1.5}
+.glossary{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.gloss{border:1px solid var(--line);border-radius:9px;padding:11px}
+.gloss b{font-size:11.5px}.gloss p{font-size:10.5px;color:var(--muted);margin:5px 0 0;line-height:1.45}
+.placeholder{background:repeating-linear-gradient(-45deg,#fafbfc,#fafbfc 8px,#f4f6f8 8px,#f4f6f8 16px);border:1px dashed #ccd4dc;border-radius:9px;padding:26px 18px;text-align:center;color:var(--muted);font-size:11px}
+.drawer-backdrop{position:fixed;inset:0;background:rgba(14,25,38,.25);z-index:40;opacity:0;pointer-events:none;transition:.2s}
+.drawer{position:fixed;right:0;top:0;height:100vh;width:min(520px,92vw);background:white;z-index:41;box-shadow:-15px 0 35px rgba(16,24,40,.16);transform:translateX(102%);transition:.25s ease;overflow:auto}
+.drawer.open{transform:translateX(0)}.drawer-backdrop.open{opacity:1;pointer-events:auto}
+.drawer-head{padding:22px 23px;border-bottom:1px solid var(--line);position:sticky;top:0;background:white;z-index:2;display:flex;justify-content:space-between;gap:12px}
+.drawer-head h2{font-size:18px;margin:4px 0 0}
+.close{border:1px solid var(--line);background:white;border-radius:8px;width:34px;height:34px;cursor:pointer}
+.drawer-body{padding:20px 23px 35px}
+.level{margin-bottom:19px}
+.level .level-name{font-size:10px;color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:.07em}
+.level h3{font-size:13px;margin:5px 0}
+.level p,.level li{font-size:12px;color:#4f5c6c;line-height:1.58}
+.level ul{padding-left:18px}
+.source-link{font-size:11px;display:inline-block;margin-top:6px}
+.smallnote{font-size:10px;color:var(--muted);line-height:1.45}
+
+.kpi-explain{font-size:10.5px;color:#667085;line-height:1.35;margin-top:7px;min-height:28px}
+.benchmark-row{display:grid;grid-template-columns:1fr 1fr .8fr;gap:10px;margin-bottom:13px}
+.benchmark-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 15px;box-shadow:0 3px 12px rgba(16,24,40,.03)}
+.benchmark-card.approved{border-top:3px solid var(--blue)}
+.benchmark-card.emerging{border-top:3px solid var(--green2)}
+.benchmark-card.note{border-top:3px solid #cfd6de}
+.benchmark-label{font-size:10px;text-transform:uppercase;letter-spacing:.055em;font-weight:800;color:var(--muted)}
+.benchmark-big{font-size:25px;font-weight:850;letter-spacing:-.035em;margin:7px 0 4px}
+.benchmark-card p{font-size:10.8px;color:var(--muted);line-height:1.45;margin:4px 0 0}
+.cadence{display:inline-flex;margin-top:6px;border-radius:999px;background:#eef2f6;color:#5f6b78;font-size:10px;font-weight:700;padding:4px 8px}
+.range-guide{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px;font-size:10.5px;color:var(--muted)}
+.range-guide b{color:var(--ink)}
+.range-chip{border:1px solid var(--line);background:#fafbfc;border-radius:999px;padding:4px 7px;color:#667085}
+
+.tab-purpose{font-size:12px;color:var(--muted);margin:20px 0 -12px;line-height:1.45}.source-assurance{font-size:10.5px;color:var(--muted);margin-top:8px}.page-intro{display:flex;justify-content:space-between;align-items:end;margin:28px 0 15px}
+.page-intro h2{font-size:23px;margin:0}.page-intro p{font-size:12px;color:var(--muted);margin:0;max-width:620px;text-align:right;line-height:1.5}
+@media(max-width:1100px){
+ .kpi-grid{grid-template-columns:repeat(2,1fr)} .news-grid{grid-template-columns:1fr}
+ .main-grid,.transition-wrap{grid-template-columns:1fr}.two-col{grid-template-columns:1fr}.three-col{grid-template-columns:1fr 1fr}.benchmark-row{grid-template-columns:1fr 1fr}
+ .top-inner{flex-wrap:wrap}.tabs{order:3;width:100%;margin-left:0}.brand{min-width:0}
+}
+@media(max-width:680px){
+ .shell,.top-inner{padding-left:14px;padding-right:14px}.hero{grid-template-columns:1fr}.kpi-grid{grid-template-columns:1fr}
+ .three-col{grid-template-columns:1fr}.benchmark-row{grid-template-columns:1fr}.hero-main h2{font-size:23px}.section-title{align-items:start;gap:8px;flex-direction:column}.section-title .sub{text-align:left}
+ .structure,.driver-tree{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}.glossary{grid-template-columns:1fr 1fr}
+ .page-intro{display:block}.page-intro p{text-align:left;margin-top:5px}.source-item{grid-template-columns:95px 1fr}.source-item .fresh{grid-column:2;text-align:left}
+}
+
+.kpi-context{margin-top:14px;min-height:48px}
+.compare-band{display:grid;grid-template-columns:1fr 28px 1fr;gap:8px;align-items:center;background:#f7f9fb;border:1px solid var(--line);border-radius:10px;padding:9px 11px}
+.compare-cell span{display:block;font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.compare-cell b{display:block;font-size:13px;margin-top:2px}
+.compare-cell.current b{color:var(--navy)}
+.compare-arrow{text-align:center;color:#98a2b3;font-size:16px}
+.segment-track{display:flex;height:12px;border-radius:999px;overflow:hidden;background:#edf0f3}
+.segment-track span{height:100%}
+.segment-legend{display:flex;justify-content:space-between;gap:10px;margin-top:7px;font-size:10px;color:var(--muted)}
+.segment-legend b{color:var(--ink)}
+.mini-breakdown{display:flex;gap:6px;flex-wrap:wrap}
+.mini-breakdown span{border:1px solid var(--line);background:#fafbfc;border-radius:999px;padding:5px 7px;font-size:9.8px;color:#667085}
+.compact-table{width:100%;border-collapse:collapse;font-size:11px}
+.compact-table th{text-align:left;color:var(--muted);font-weight:650;border-bottom:1px solid var(--line);padding:8px 7px}
+.compact-table td{padding:10px 7px;border-bottom:1px solid #eef0f2;vertical-align:top}
+.compact-table tr:last-child td{border-bottom:0}
+
+.funnel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.funnel-step{border:1px solid var(--line);border-radius:10px;padding:11px;background:#fafbfc}
+.funnel-step span{display:block;font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.035em}
+.funnel-step b{display:block;font-size:18px;margin-top:4px}
+.funnel-step.current{background:#f2f7fb;border-color:#c9dbea}
+.stage-note{font-size:10px;color:var(--muted);line-height:1.45;margin-top:8px}
+@media(max-width:680px){.funnel-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topbar">
+<div class="top-inner">
+<div class="brand">
+<div class="kicker">Thailand ENR intelligence</div>
+<h1>Power &amp; Renewables Pulse</h1>
+</div>
+<div class="tabs" role="tablist">
+<button class="tab active" data-page="pulse">Pulse</button>
+<button class="tab" data-page="market">Power &amp; transition</button>
+<button class="tab" data-page="economics">Economics &amp; policy</button>
+<button class="tab" data-page="power101">Thailand Power 101</button>
+</div>
+<div class="refresh"><b>Refreshed 8 Sep 2026</b><br/>Official sources; each metric has its own “as of” date</div>
+</div>
+</div>
+<div class="shell">
+<section class="page active" id="pulse">
+<div class="tab-purpose"><b>Pulse</b> — Quick read on where the market stands and what’s changing.</div>
+<div class="hero">
+<div class="hero-main">
+<div class="kicker" style="color:#a8d1ef">Monday scan • refreshed weekly</div>
+<h2>Thailand’s power market has re-accelerated in 2026.</h2>
+<p>Electricity consumption was up <b>6.0% YoY in Jan–May</b> after a 2.8% decline in 2025, while the EGAT-system peak reached a new high in April. Policy direction is simultaneously shifting toward a cleaner and more open system through PDP2026, Direct PPA, UGT and grid-flexibility measures.</p>
+</div>
+
+</div>
+<div class="source-assurance"><b>Source policy:</b> All quantitative figures use publicly available sources. Comparisons marked as changes are calculated only from published source values; no model-estimated or illustrative market figures are used.</div>
+<div class="section-title"><h2>State of the market</h2><div class="sub">Six signals that frame demand, system pressure, transition progress and power economics. Each carries its own data date.</div></div>
+<div class="kpi-grid">
+<div class="kpi" data-kpi="demand"><div class="kpi-label">Power demand</div><div class="kpi-value">+6.0%</div><div class="kpi-delta up">Jan-May vs prior year</div><div class="kpi-explain">How fast national electricity consumption is growing.</div><div class="kpi-context compare-band"><div class="compare-cell"><span>FY2025</span><b>-2.8%</b></div><div class="compare-arrow">→</div><div class="compare-cell current"><span>2026 YTD</span><b>+6.0%</b></div></div><div class="asof">As of May-26 - EPPO - 90,751 GWh</div></div>
+<div class="kpi" data-kpi="peak"><div class="kpi-label">EGAT system peak</div><div class="kpi-value">36.0 <span class="kpi-unit">GW</span></div><div class="kpi-delta up">+4.1% vs 2025 peak</div><div class="kpi-explain">Highest system load; a signal of capacity and grid pressure.</div><div class="kpi-context compare-band"><div class="compare-cell"><span>2025 peak</span><b>34.6 GW</b></div><div class="compare-arrow">→</div><div class="compare-cell current"><span>2026 YTD</span><b>36.0 GW</b></div></div><div class="asof">22 Apr-26 - EGAT - 35,991.6 MW</div></div>
+<div class="kpi" data-kpi="regen"><div class="kpi-label">RE generation share</div><div class="kpi-value">13.8%</div><div class="kpi-delta flat">10.4% RE + 3.4% hydro</div><div class="kpi-explain">Share of actual electricity supplied by renewables, not just installed capacity.</div><div class="kpi-context"><div class="segment-track"><span style="width:10.4%;background:#5aa982"></span><span style="width:3.4%;background:#7bb7d7"></span><span style="width:86.2%;background:#e4e8ec"></span></div><div class="segment-legend"><span><b>13.8%</b> RE + hydro</span><span>86.2% other</span></div></div><div class="asof">FY2025 - EPPO - incl. hydro</div></div>
+<div class="kpi" data-kpi="recap"><div class="kpi-label">Grid-connected RE at COD</div><div class="kpi-value">10.3 <span class="kpi-unit">GW</span></div><div class="kpi-delta flat">10,298 MW contracted-sale capacity</div><div class="kpi-explain">Renewable projects at commercial operation and selling into EGAT / MEA / PEA.</div><div class="kpi-context mini-breakdown"><span>COD 10.30 GW</span><span>PPA, not COD 5.83 GW</span><span>Accepted 1.25 GW</span></div><div class="asof">30 Jun-25 - ERC - contracted-sale MW basis</div></div>
+<div class="kpi" data-kpi="gas"><div class="kpi-label">Gas share of generation</div><div class="kpi-value">54.2%</div><div class="kpi-delta down">Gas generation -9.6% YoY</div><div class="kpi-explain">How dependent the power system remains on natural gas.</div><div class="kpi-context"><div class="segment-track"><span style="width:54.2%;background:#4d6f8e"></span><span style="width:45.8%;background:#e4e8ec"></span></div><div class="segment-legend"><span><b>54.2%</b> gas</span><span>45.8% other</span></div></div><div class="asof">FY2025 - EPPO</div></div>
+<div class="kpi" data-kpi="tariff"><div class="kpi-label">Average billed tariff</div><div class="kpi-value">3.86 <span class="kpi-unit">THB/kWh</span></div><div class="kpi-delta down">↓ from 3.95 • Ft remains 16.23 sat/kWh</div><div class="kpi-explain">Latest broad billed-rate benchmark after the Sep-26 tariff-structure change.</div><div class="kpi-context compare-band"><div class="compare-cell"><span>Prior headline</span><b>3.95</b></div><div class="compare-arrow">→</div><div class="compare-cell current"><span>From Sep-26</span><b>3.86</b></div></div><div class="asof">Effective Sep-26 - ERC - avg. all categories</div></div>
+</div>
+<div class="section-title"><h2>Developments shaping the market</h2><div class="sub">Recent policy, market-design and project moves worth knowing.</div></div>
+<div class="news-grid">
+<article class="news">
+<div class="news-num">1</div><div class="tagline"><span class="pill high">High impact</span><span class="pill policy">PDP2026</span></div>
+<h3>Draft PDP2026 sets the next clean-power build cycle</h3>
+<p>The common 2026–2037 pathway includes <b>+27.0 GW of solar + wind</b> and 14.5 GW of BESS across the draft scenarios.</p>
+<p class="so-what"><b>Why it matters:</b> this frames the next major wave of generation, storage and grid investment.</p>
+</article>
+<article class="news">
+<div class="news-num">2</div><div class="tagline"><span class="pill high">High impact</span><span class="pill policy">Direct PPA</span></div>
+<h3>Direct PPA is moving beyond the original data-centre pilot</h3>
+<p>Policy direction now extends direct renewable procurement via TPA toward <b>broader industrial users</b>; final grid-use charges and implementation rules remain the key watch.</p>
+<p class="so-what"><b>Why it matters:</b> the addressable market for customer-led clean-power procurement could expand materially.</p>
+</article>
+<article class="news">
+<div class="news-num">3</div><div class="tagline"><span class="pill med">Project</span><span class="pill policy">Solar + BESS</span></div>
+<h3>GULF brings 135 MW of contracted solar capacity online</h3>
+<p>Two Suphan Buri projects reached COD on <b>1 Sep 2026</b>; another 235.6 MW of contracted solar / solar+BESS is scheduled for Nov–Dec.</p>
+<p class="so-what"><b>Why it matters:</b> the recent FiT pipeline is beginning to convert from awards into operating capacity.</p>
+</article>
+</div>
+<div class="section-title"><h2>How Thailand’s power plan is changing</h2><div class="sub">Current approved target → common draft build through 2037 → longer-term 2050 range.</div></div>
+<div class="callout" style="margin-bottom:13px"><b>PDP in plain English:</b> Thailand’s <b>Power Development Plan</b> sets how much electricity capacity the system needs and which technologies should supply it. <b>AEDP2018</b> is today’s approved renewable benchmark; <b>PDP2026</b> is the draft next plan under consultation, extending the horizon to 2050.</div>
+<div class="main-grid">
+<div class="card">
+<div class="card-title"><div><h3>Capacity pathway at a glance</h3><div class="smallnote">Approved target and draft new-build ambition shown separately.</div></div><div class="meta">2037 → 2050 planning horizon</div></div>
+<div style="display:grid;gap:13px;margin-top:5px">
+<div style="display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center">
+<div><div class="benchmark-label">Approved today</div><div style="font-size:12px;font-weight:750;margin-top:4px">AEDP2018</div></div>
+<div style="border-left:3px solid #337ab7;padding:9px 12px;background:#f5f8fb;border-radius:0 9px 9px 0"><b>29.4 GW total RE &amp; alternative capacity by 2037</b><div class="smallnote" style="margin-top:4px">The 10.3 GW utility-COD metric elsewhere uses a different scope and capacity basis, so it should not be read as a direct percentage of this policy target.</div></div>
+</div>
+<div style="display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center">
+<div><div class="benchmark-label">Draft next plan</div><div style="font-size:12px;font-weight:750;margin-top:4px">PDP2026 • to 2037</div></div>
+<div style="border-left:3px solid #7bc4a4;padding:9px 12px;background:#f3faf7;border-radius:0 9px 9px 0"><b>+24.3 GW solar + 2.7 GW wind = +27.0 GW</b><div class="smallnote" style="margin-top:4px">This is <b>new capacity to be added during 2026–2037</b>, not an ending system total. All four draft scenarios share this first-stage build.</div></div>
+</div>
+<div style="display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center">
+<div><div class="benchmark-label">Longer-term choice</div><div style="font-size:12px;font-weight:750;margin-top:4px">PDP2026 • to 2050</div></div>
+<div style="border-left:3px solid #a9b3bd;padding:9px 12px;background:#fafbfc;border-radius:0 9px 9px 0"><b>+39–114 GW solar + wind across 2026–2050</b><div class="range-guide"><span class="range-chip"><b>Lower-RE pathways</b> ~39–64 GW</span><span>→</span><span class="range-chip"><b>RE-led pathway</b> up to ~114 GW</span></div><div class="smallnote" style="margin-top:5px">The range widens after 2037 as the scenarios make different choices on renewables, gas/CCS and other clean technologies.</div></div>
+</div>
+</div>
+<div class="warning" style="margin-top:15px"><b>Important comparison note.</b> 29.4 GW is an <b>ending total-capacity target</b>; +27.0 GW and +39–114 GW are <b>new capacity additions</b>. The draft figures are therefore a measure of build ambition, not a direct replacement for the 29.4 GW total.</div>
+</div>
+<div class="card">
+<div class="card-title"><h3>What to watch next</h3><div class="meta">Near-term watchlist</div></div>
+<div class="watch">
+<div class="watch-item"><b>PDP2026 — consultation outcome</b><span>Track whether the common +27.0 GW solar/wind build through 2037 changes and which post-2037 scenario becomes the preferred pathway.</span></div>
+<div class="watch-item"><b>Direct PPA — pilot implementation</b><span>Track final eligibility, TPA / wheeling economics and timing for the up-to-2,000 MW data-center pilot.</span></div>
+<div class="watch-item"><b>Renewable procurement / CODs</b><span>Track selected projects through Awarded → PPA → Construction → COD → Delayed to distinguish ambition from actual build.</span></div>
+
+</div>
+</div>
+</div>
+</section>
+<section class="page" id="market">
+<div class="page-intro"><div><h2>Power &amp; transition</h2><div class="cadence">Mostly monthly • project / policy changes event-driven</div></div><p>Demand, generation mix and renewable build-out.</p></div>
+
+<div class="two-col">
+<div class="card">
+<div class="card-title"><div><h3>Demand rebound has persisted through May</h3><div class="smallnote">YTD electricity consumption growth, YoY at each published checkpoint</div></div><div class="meta">EPPO • excluding IPS in overview series</div></div>
+<div class="chart-box">
+<svg viewbox="0 0 560 300">
+<line stroke="#d9dfe5" x1="50" x2="535" y1="245" y2="245"></line><line stroke="#d9dfe5" x1="50" x2="50" y1="35" y2="245"></line>
+<g fill="#8793a1" font-size="10"><text x="18" y="248">-4%</text><text x="25" y="196">0%</text><text x="25" y="143">4%</text><text x="25" y="90">8%</text></g>
+<line stroke="#b7c0ca" stroke-dasharray="4 4" x1="50" x2="535" y1="193" y2="193"></line>
+<rect fill="#a8b8c8" height="37" rx="3" width="63" x="79" y="193"></rect><text fill="#667085" font-size="10" x="90" y="261">FY25</text><text fill="#586576" font-size="11" x="94" y="185">-2.8%</text>
+<rect fill="#7fa8ca" height="66" rx="3" width="63" x="170" y="127"></rect><text fill="#667085" font-size="10" x="174" y="261">Jan-26</text><text fill="#173b63" font-size="11" x="184" y="117">+5.3%</text>
+<rect fill="#6d9ec5" height="61" rx="3" width="63" x="261" y="132"></rect><text fill="#667085" font-size="10" x="257" y="261">Jan-Mar</text><text fill="#173b63" font-size="11" x="276" y="122">+4.9%</text>
+<rect fill="#4f89b7" height="76" rx="3" width="63" x="352" y="117"></rect><text fill="#667085" font-size="10" x="347" y="261">Jan-Apr</text><text fill="#173b63" font-size="11" x="365" y="107">+6.1%</text>
+<rect fill="#337ab7" height="74" rx="3" width="63" x="443" y="119"></rect><text fill="#667085" font-size="10" x="438" y="261">Jan-May</text><text fill="#173b63" font-size="11" x="457" y="109">+6.0%</text>
+</svg>
+</div>
+<div class="callout"><b>What it means:</b> Jan–May demand is not just a weather story in the EPPO overview; industry, households and business were all higher YoY. The key question is whether H2 confirms a structural acceleration or normalizes.</div>
+</div>
+<div class="card">
+<div class="card-title"><div><h3>Peak demand</h3><div class="smallnote">EGAT system peak</div></div><div class="meta">Current peak: 22 Apr 2026</div></div>
+<div class="chart-box">
+<svg viewbox="0 0 560 300">
+<line stroke="#d9dfe5" x1="55" x2="525" y1="245" y2="245"></line><line stroke="#d9dfe5" x1="55" x2="55" y1="35" y2="245"></line>
+<g fill="#8793a1" font-size="10"><text x="22" y="247">30</text><text x="22" y="184">32</text><text x="22" y="121">34</text><text x="22" y="58">36</text><text x="25" y="20">GW</text></g>
+<rect fill="#adc3d8" height="142" rx="4" width="90" x="145" y="103"></rect><text fill="#667085" font-size="11" x="160" y="266">2025</text><text fill="#586576" font-size="12" font-weight="700" x="157" y="92">34.57 GW</text>
+<rect fill="#337ab7" height="187" rx="4" width="90" x="325" y="58"></rect><text fill="#667085" font-size="11" x="340" y="266">2026 YTD</text><text fill="#173b63" font-size="12" font-weight="700" x="334" y="46">35.99 GW</text>
+</svg>
+</div>
+<div class="stat-row"><div class="stat-chip"><b>+1.42 GW</b><br/>vs 2025 EGAT peak</div><div class="stat-chip"><b>+4.1%</b><br/>year-on-year peak increase</div><div class="stat-chip"><b>20:50</b><br/>time of 2026 peak</div></div>
+<div class="footer-note">Do not mix EGAT-system peak with EPPO’s “3 utility” system peak without labeling the definition.</div>
+</div>
+</div>
+<div class="section-title"><h2>Generation stack</h2><div class="sub">Full-year 2025 is the latest fully reconciled mix shown here; the same view can refresh monthly from EPPO’s generation-by-fuel data.</div></div>
+<div class="two-col">
+<div class="card">
+<h3>2025 generation mix</h3>
+<div class="mixbar"><span style="width:54.2%;background:#4d6f8e"></span><span style="width:14.8%;background:#7e8791"></span><span style="width:10.4%;background:#5aa982"></span><span style="width:3.4%;background:#7bb7d7"></span><span style="width:.1%;background:#c7a979"></span><span style="width:17.1%;background:#c4ccd4"></span></div>
+<div class="legend"><span><i style="background:#4d6f8e"></i>Gas 54.2%</span><span><i style="background:#7e8791"></i>Coal/lignite 14.8%</span><span><i style="background:#5aa982"></i>Other RE 10.4%</span><span><i style="background:#7bb7d7"></i>Hydro 3.4%</span><span><i style="background:#c7a979"></i>Oil 0.1%</span><span><i style="background:#c4ccd4"></i>Imports / other 17.1%</span></div>
+<div class="stat-row"><div class="stat-chip"><b>227,424 GWh</b><br/>total generation</div><div class="stat-chip"><b>-3.4%</b><br/>generation YoY</div><div class="stat-chip"><b>-9.6%</b><br/>gas generation YoY</div></div>
+</div>
+<div class="card">
+<h3>What changed in the mix</h3>
+<div class="stat-row" style="margin:14px 0 16px">
+ <div class="stat-chip"><b>54.2%</b><br/>gas share in 2025</div>
+ <div class="stat-chip"><b>-5.5 ppt</b><br/>vs 59.7% in 2024</div>
+ <div class="stat-chip"><b>13.8%</b><br/>RE + hydro share in 2025</div>
+</div>
+<div class="bar-row"><span>Gas share 2024</span><div class="bar-track"><div class="bar-fill" style="width:59.7%;background:#7f94a8"></div></div><span class="bar-num">59.7%</span></div>
+<div class="bar-row"><span>Gas share 2025</span><div class="bar-track"><div class="bar-fill" style="width:54.2%;background:#4d6f8e"></div></div><span class="bar-num">54.2%</span></div>
+<div class="callout" style="margin-top:16px"><b>Signal to watch:</b> gas remains the dominant fuel, but its share fell materially in 2025. With demand rebounding in 2026, the key question is what serves incremental load — renewables, imports or a return of gas — and whether storage / grid flexibility scales with it.</div>
+</div>
+</div>
+<div class="section-title"><h2>Renewables &amp; pipeline</h2><div class="sub">Track what is operating, contracted and still moving through procurement without mixing capacity bases.</div></div>
+<div class="two-col">
+ <div class="card">
+  <div class="card-title"><div><h3>Grid-connected RE pipeline</h3><div class="smallnote">ERC status as of 30 Jun 2025 • contracted-sale MW</div></div><span class="pill policy">Mutually exclusive stages</span></div>
+  <div style="font-size:38px;font-weight:800;letter-spacing:-.04em"><span id="utilityCommittedTotal">17.38</span> <span style="font-size:15px;color:var(--muted)">GW committed across stages</span></div>
+  <div class="funnel-grid">
+   <div class="funnel-step current"><span>At COD</span><b id="funnelCod">10.30 GW</b><div class="stage-note">Commercial operation</div></div>
+   <div class="funnel-step"><span>Signed PPA</span><b id="funnelPpa">5.83 GW</b><div class="stage-note">Not yet COD</div></div>
+   <div class="funnel-step"><span>Accepted</span><b id="funnelAccepted">1.25 GW</b><div class="stage-note">Pre-PPA</div></div>
+  </div>
+  <div class="segment-track" style="height:16px"><span id="funnelCodBar" style="width:59.3%;background:#337ab7"></span><span id="funnelPpaBar" style="width:33.6%;background:#7fa8ca"></span><span id="funnelAcceptedBar" style="width:7.2%;background:#cbd5df"></span></div>
+  <div class="callout" style="margin-top:15px"><b>How to read it:</b> COD, signed-PPA and accepted capacity are distinct stages and can be added to the 17.38 GW utility commitment total. Do not add company project announcements again if they sit inside these cohorts.</div>
+ </div>
+ <div class="card">
+  <div class="card-title"><div><h3>Self-use &amp; direct-customer RE</h3><div class="smallnote">Separate from utility-sale pipeline • installed MW basis</div></div><span class="pill med">Different basis</span></div>
+  <div style="font-size:38px;font-weight:800;letter-spacing:-.04em"><span id="selfUseTotal">5.98</span> <span style="font-size:15px;color:var(--muted)">GW installed</span></div>
+  <div class="mixbar" style="height:26px;margin-top:22px"><span id="selfUseSolarBar" style="width:74.7%;background:#5e9fd3"></span><span id="selfUseBiomassBar" style="width:17.9%;background:#5aa982"></span><span style="width:7.4%;background:#c7d0d9"></span></div>
+  <div class="legend"><span><i style="background:#5e9fd3"></i>Solar <b id="selfUseSolar">4.47 GW</b></span><span><i style="background:#5aa982"></i>Biomass <b id="selfUseBiomass">1.07 GW</b></span><span><i style="background:#c7d0d9"></i>Biogas <b>0.17 GW</b></span><span><i style="background:#d8dee5"></i>Other <b>0.27 GW</b></span></div>
+  <div class="callout" style="margin-top:18px"><b>Why separate it:</b> these are installed MW behind the utility-sale funnel. Combining them with contracted-sale MW would create a false market total.</div>
+ </div>
+</div>
+
+<div class="section-title"><h2>FiT procurement progress</h2><div class="sub">A stage view is more useful than a single announced-pipeline number.</div></div>
+<div class="two-col">
+ <div class="card">
+  <div class="card-title"><div><h3>FiT 2022–2030: first no-fuel-cost cohort</h3><div class="smallnote">Status as of Dec 2025 • milestones are nested, not additive</div></div><span class="pill policy">4.85 GW selected</span></div>
+  <div class="bar-row"><span>Selected</span><div class="bar-track"><div class="bar-fill" id="fitSelectedBar" style="width:100%"></div></div><span class="bar-num" id="fitSelected">4.85</span></div>
+  <div class="bar-row"><span>PPA signed</span><div class="bar-track"><div class="bar-fill" id="fitPpaBar" style="width:86.5%"></div></div><span class="bar-num" id="fitPpa">4.20</span></div>
+  <div class="bar-row"><span>CoP approved</span><div class="bar-track"><div class="bar-fill" id="fitCopBar" style="width:29.4%"></div></div><span class="bar-num" id="fitCop">1.43</span></div>
+  <div class="bar-row"><span>Licensed</span><div class="bar-track"><div class="bar-fill" id="fitLicensedBar" style="width:13.5%"></div></div><span class="bar-num" id="fitLicensed">0.66</span></div>
+  <div class="bar-row"><span>COD</span><div class="bar-track"><div class="bar-fill" id="fitCodBar" style="width:6.8%"></div></div><span class="bar-num" id="fitCod">0.33</span></div>
+  <div class="callout" style="margin-top:15px"><b>Signal:</b> 4.20 GW has reached PPA, but only 0.33 GW had reached COD by Dec-25. The conversion pace from PPA → permits → COD is the more decision-relevant bottleneck to track.</div>
+ </div>
+ <div class="card">
+  <div class="card-title"><div><h3>Additional 2024 FiT round</h3><div class="smallnote">72 projects • selected capacity; PPA process subsequently revised</div></div><span class="pill med">2.15 GW selected</span></div>
+  <div class="stat-row" style="margin:14px 0"><div class="stat-chip"><b>565 MW</b><br/>wind</div><div class="stat-chip"><b>1,583 MW</b><br/>solar</div><div class="stat-chip"><b>2026–30</b><br/>SCOD window</div></div>
+  <table class="compact-table"><thead><tr><th>SCOD</th><th>2026</th><th>2027</th><th>2028</th><th>2029</th><th>2030</th></tr></thead><tbody><tr><td><b>MW</b></td><td id="scod2026">279</td><td id="scod2027">155</td><td id="scod2028">748</td><td id="scod2029">464</td><td id="scod2030">504</td></tr></tbody></table>
+  <div class="warning" style="margin-top:13px"><b>Source-table note.</b> ERC's published 2027 total is 155.40 MW while the technology rows sum to 154.40 MW; the database preserves the official values and flags the 1 MW discrepancy rather than silently “fixing” it.</div>
+  <div class="callout" style="margin-top:13px"><b>Separate emerging pool:</b> the 2026 household rooftop program opened applications for up to <b>500 MW</b>; this is a procurement cap, not awarded capacity.</div>
+ </div>
+</div>
+
+<div class="section-title"><h2>Recent project &amp; pipeline milestones</h2><div class="sub">Named projects help show whether national procurement is actually converting into assets.</div></div>
+<div class="card"><table class="compact-table"><thead><tr><th>Developer / project</th><th>Capacity</th><th>Status / timing</th><th>Why it matters</th></tr></thead><tbody id="projectMilestoneBody">
+<tr><td><b>GULF • LNE + SSE, Suphan Buri</b></td><td>135 MW contracted</td><td>COD 1 Sep 2026</td><td>Two FiT projects have moved into operation; 250.1 MW installed vs 135 MW contracted shows why both bases must be stored.</td></tr>
+<tr><td><b>GULF • 4 solar / solar+BESS projects</b></td><td>235.6 MW contracted</td><td>Scheduled Nov–Dec 2026</td><td>Near-term test of whether PPA pipeline continues converting on schedule.</td></tr>
+<tr><td><b>GULF • 4 wind farms</b></td><td>286 MW contracted</td><td>Expected COD 2027</td><td>Material wind tranche with turbine supply secured.</td></tr>
+<tr><td><b>GUNKUL • 9 solar projects</b></td><td>460.8 MW contracted</td><td>SCOD 2026–2030</td><td>Shows developer-level share of the national contracted pipeline.</td></tr>
+<tr><td><b>GUNKUL • 2 wind projects</b></td><td>180 MW contracted</td><td>SCOD 2029–2030</td><td>Longer-dated wind capacity already under PPA.</td></tr>
+</tbody></table><div class="footer-note">Project rows are milestone examples and overlap with national FiT / utility pipeline totals. They are never added to the market total a second time.</div></div>
+</section>
+<section class="page" id="economics">
+<div class="page-intro"><div><h2>Economics &amp; policy</h2><div class="cadence">Gas weekly / monthly • tariff 4-monthly • policy event-driven</div></div><p>Power costs, gas exposure and key policy developments.</p></div>
+
+<div class="two-col">
+<div class="card">
+<div class="card-title"><div><h3>Average billed tariff</h3><div class="smallnote">Latest ERC-stated average across customer categories • effective Sep 2026</div></div><span class="pill policy">ERC</span></div>
+<div style="display:flex;align-items:end;gap:10px;margin:20px 0 18px"><div style="font-size:48px;font-weight:850;letter-spacing:-.05em">3.86</div><div style="padding-bottom:8px;color:var(--muted);font-size:12px">THB/kWh</div></div>
+<div class="compare-band"><div class="compare-cell"><span>July decision</span><b>3.95</b></div><div class="compare-arrow">→</div><div class="compare-cell current"><span>From Sep-26</span><b>3.86</b></div></div>
+<div class="smallnote" style="margin-top:8px"><b>▼ 2.3%</b> vs the July headline decision.</div>
+<div class="callout" style="margin-top:14px"><b>What changed:</b> Ft stayed at 16.23 sat/kWh for Sep–Dec, but a later residential progressive-rate decision lowered ERC’s stated average billed rate across all categories. Track the headline tariff and Ft separately.</div>
+</div>
+<div class="card">
+<div class="card-title"><div><h3>Gas exposure</h3><div class="smallnote">Natural gas supply mix, Jan–Mar 2026</div></div><span class="pill med">Cost driver</span></div>
+<div class="mixbar" style="height:34px;margin-top:25px"><span style="width:61%;background:#4d6f8e"></span><span style="width:31%;background:#7fa8ca"></span><span style="width:8%;background:#c1ccd6"></span></div>
+<div class="legend"><span><i style="background:#4d6f8e"></i>Domestic 61%</span><span><i style="background:#7fa8ca"></i>LNG import 31%</span><span><i style="background:#c1ccd6"></i>Myanmar 8%</span></div>
+<div class="stat-row" style="margin-top:22px"><div class="stat-chip"><b>39%</b><br/>gas supply imported</div><div class="stat-chip"><b>4,883 MMSCFD</b><br/>average supply</div><div class="stat-chip"><b>62%</b><br/>gas use in power sector*</div></div>
+<div class="footer-note">*Share of gas consumption, not share of electricity generation. Keep these two metrics separate.</div>
+</div>
+</div>
+<div class="section-title"><h2>Tariff risk snapshot</h2><div class="sub">Current cost pressure, how it has moved, and what is actually passing through to customer tariffs.</div></div>
+<div class="card">
+ <div class="three-col">
+  <div><div class="benchmark-label">Fuel exposure</div><div class="benchmark-big">39%</div><div class="smallnote">of gas supply was imported in Jan–Mar 2026 (31% LNG + 8% Myanmar).</div></div>
+  <div><div class="benchmark-label">Pool Gas</div><div class="benchmark-big" id="poolGasValue">325.23</div><div class="smallnote"><span id="poolGasPeriod">THB/MMBtu • Apr-26</span><br/><b id="poolGasMom">▲ 18.0% vs Mar-26</b> • <span id="poolGasVsJan">+20.9% vs Jan-26</span><br/><span id="poolGasDriver">Main driver: imported LNG +24.2% MoM.</span></div></div>
+  <div><div class="benchmark-label">Ft</div><div class="benchmark-big" id="ftCurrent">16.23</div><div class="smallnote">sat/kWh • Sep–Dec 2026<br/><b id="ftVsEarly">+67.0% vs Jan–Apr</b> • <span id="ftVsPrev">flat vs May–Aug</span></div></div>
+ </div>
+ <div class="callout" style="margin-top:18px"><b>Why this matters:</b> tariff risk is not a one-for-one gas-price pass-through. ERC first used claw-back to hold the Sep–Dec headline at 3.95 THB/kWh, then a later tariff-structure decision reduced the stated average billed rate to 3.86 from September while Ft remained unchanged. Fuel costs, cost recovery and tariff policy therefore need to be tracked separately.</div>
+ <div class="range-guide" style="margin-top:13px"><b>Watch next:</b><span class="range-chip">LNG / Pool Gas</span><span class="range-chip">THB / USD</span><span class="range-chip">import share</span><span class="range-chip">next Ft reset</span><span class="range-chip">claw-back / cost recovery</span></div>
+</div>
+<div class="section-title"><h2>Policy &amp; market-design tracker</h2><div class="sub">Track status, latest signal, implications and the next milestone for the topics shaping the market.</div></div>
+<div class="card">
+<table class="policy-table">
+<thead><tr><th>Topic</th><th>Status</th><th>Latest signal</th><th>Why it matters</th><th>Next watch</th></tr></thead>
+<tbody>
+<tr><td><b>PDP2026</b></td><td><span class="status dev">Draft / consultation</span></td><td>Common 2026–2037 build includes +24.3 GW solar, +2.7 GW wind and +14.5 GW BESS; post-2037 pathways diverge.</td><td>Sets the next investment cycle for generation, storage and grid infrastructure.</td><td>Consultation revisions and preferred post-2037 pathway</td></tr>
+<tr><td><b>Direct PPA</b></td><td><span class="status pilot">Pilot framework</span></td><td>Up to 2,000 MW pilot for data centers via TPA; ERC has consulted on eligibility and wheeling structure.</td><td>Could unlock customer-led clean procurement and change utility economics.</td><td>Final rules, allocation, wheeling cost</td></tr>
+<tr><td><b>UGT 1 / UGT 2</b></td><td><span class="status live">2026 decisions</span></td><td>UGT1 2026 resolution dated 21 Jan; UGT2 resolution dated 1 Apr.</td><td>Benchmark alternative to direct procurement for green-power buyers.</td><td>Product uptake / pricing / availability</td></tr>
+<tr><td><b>Solar rooftop</b></td><td><span class="status dev">Reform direction</span></td><td>Ministry communicated larger household purchase quotas and simpler permitting direction.</td><td>Behind-the-meter growth changes load shape and retail-volume outlook.</td><td>Implementing rules and actual uptake</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="page" id="power101">
+<div class="page-intro"><div><h2>Thailand Power 101</h2><div class="cadence">Static reference • update only when market structure / rules change</div></div><p>Quick reference for Thailand’s power-market structure and terminology.</p></div>
+<div class="card">
+<h3>Who does what?</h3>
+<div class="structure">
+<div class="box"><h4>Generators</h4><p>EGAT • IPP • SPP • VSPP • imports • self-generation</p></div><div class="arrow">→</div>
+<div class="box"><h4>System / bulk power</h4><p>EGAT plays the central role in transmission, system operation and bulk procurement under the current structure.</p></div><div class="arrow">→</div>
+<div class="box"><h4>Distribution / customers</h4><p>MEA serves Bangkok / metro area; PEA serves the rest of the country. New green-tariff and TPA mechanisms add procurement options.</p></div>
+</div>
+<div class="callout"><b>Market-design watch:</b> Direct PPA does not mean a fully liberalized retail market. The pilot uses third-party access to state-owned networks under defined eligibility and tariff rules.</div>
+</div>
+<div class="section-title"><h2>Key concepts</h2></div>
+<div class="glossary">
+<div class="gloss"><b>PDP</b><p>Power Development Plan — long-term generation / system planning framework.</p></div>
+<div class="gloss"><b>AEDP</b><p>Alternative Energy Development Plan — renewable / alternative energy targets and policy direction.</p></div>
+<div class="gloss"><b>IPP</b><p>Independent Power Producer — typically large private generators selling into the system.</p></div>
+<div class="gloss"><b>SPP / VSPP</b><p>Small / Very Small Power Producers, including many renewable and cogeneration assets.</p></div>
+<div class="gloss"><b>Ft</b><p>Fuel adjustment component added to the base electricity tariff, adjusted periodically.</p></div>
+<div class="gloss"><b>UGT</b><p>Utility Green Tariff — utility-provided green electricity product / mechanism.</p></div>
+<div class="gloss"><b>Direct PPA</b><p>Direct renewable purchase between eligible buyer and generator through the network under the pilot framework.</p></div>
+<div class="gloss"><b>TPA / wheeling</b><p>Third-party access to electricity networks and associated network / system charges.</p></div>
+<div class="gloss"><b>BESS</b><p>Battery Energy Storage System — increasingly important for flexibility and renewable integration.</p></div>
+</div>
+<div class="section-title"><h2>Definitions &amp; conventions</h2></div>
+<div class="two-col">
+<div class="card"><h3>Capacity basis matters</h3><p class="smallnote" style="font-size:11.5px">Utility pipeline figures use contracted-sale MW; self-use/direct-customer figures use installed MW. They are shown separately and are not summed unless a scope-consistent conversion is explicitly defined.</p></div>
+<div class="card"><h3>Data freshness</h3><p class="smallnote" style="font-size:11.5px">This view refreshes weekly, while official datasets update on different schedules. Each value therefore shows the publication period of the underlying datapoint.</p></div>
+</div>
+<div class="callout" style="margin-top:18px"><b>Figure provenance:</b> Every quantitative figure in this dashboard is tied to a public source URL. Derived comparisons (for example MoM or YoY changes) are calculated only from published observations and are identified in the embedded provenance manifest. Draft PDP scenario figures are explicitly tagged as public consultation coverage where an official machine-readable table is not available.</div>
+<div class="section-title"><h2>Sources</h2><div class="sub">Official public sources used for the figures and policy signals shown above.</div></div>
+<div class="card source-list">
+<div class="source-item"><div class="org">EPPO</div><div><a href="https://www.eppo.go.th/wp-content/uploads/2026/08/Highlight_05-Jan-May2026.pdf" target="_blank">Thailand Energy Overview, Jan–May 2026</a> — demand and gas-supply overview.</div><div class="fresh">Aug-26</div></div>
+<div class="source-item"><div class="org">EPPO Data Catalog</div><div><a href="https://catalog.eppo.go.th/th/dataset/?groups=electricity" target="_blank">Electricity datasets</a> — monthly generation-by-fuel, consumption, peak/load-factor CSVs.</div><div class="fresh">Aug-26</div></div>
+<div class="source-item"><div class="org">EPPO Gas</div><div><a href="https://www.eppo.go.th/category/data-energy-statistic/situation-and-forecast/situation-petro-price/situation-gas-price/" target="_blank">Natural-gas situation reports</a> — monthly Pool Gas, LNG and FX comparisons.</div><div class="fresh">Sep-26</div></div>
+<div class="source-item"><div class="org">EGAT</div><div><a href="https://www.egat.co.th/home/statistics-demand-latest/" target="_blank">Latest peak-demand statistics</a> — 2026 EGAT-system peak.</div><div class="fresh">Jul-26</div></div>
+<div class="source-item"><div class="org">ERC</div><div><a href="https://www.erc.or.th/th/automatic" target="_blank">Automatic tariff / Ft</a> — Sep–Dec 2026 Ft; <a href="https://www.erc.or.th/th/news-release/3472" target="_blank">Aug-26 tariff-structure decision</a> — average billed rate from Sep 2026.</div><div class="fresh">Aug-26</div></div>
+<div class="source-item"><div class="org">DEDE</div><div><a href="https://pvstatus.dede.go.th/en/section_3-2.php" target="_blank">AEDP / renewable target background</a> and <a href="https://pei.dede.go.th/dataset/gis-002" target="_blank">renewable power plant map dataset</a>.</div><div class="fresh">mixed</div></div>
+<div class="source-item"><div class="org">EPPO</div><div><a href="https://www.eppo.go.th/information-services/advertise/news-eppo/%E0%B8%AA%E0%B8%99%E0%B8%9E-%E0%B8%A3%E0%B9%88%E0%B8%A7%E0%B8%A1%E0%B9%80%E0%B8%A7%E0%B8%97%E0%B8%B5-new-energy-for-thailand/" target="_blank">PDP2026 direction, 26 Aug 2026</a> — plan horizon, flexibility and clean-system direction.</div><div class="fresh">Aug-26</div></div>
+<div class="source-item"><div class="org">Draft PDP2026 coverage</div><div><a href="https://www.nationthailand.com/sustaination/40070547" target="_blank">Common 2026–2037 build</a> and <a href="https://www.energynewscenter.com/%E0%B8%AA%E0%B8%99%E0%B8%9E-%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B8%A3%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%9C%E0%B8%99-pdp-2026-%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%9F%E0%B8%B1%E0%B8%87/" target="_blank">2050 scenario ranges</a> — figures reported from the Sep-26 consultation draft.</div><div class="fresh">Sep-26</div></div>
+<div class="source-item"><div class="org">Ministry / ERC</div><div><a href="https://www.energy.go.th/th/minister-news/30493" target="_blank">Direct PPA policy direction</a> and <a href="https://www.erc.or.th/th/listen-to-opinions/580" target="_blank">pilot framework</a> — widening clean-power procurement beyond the initial data-centre focus while implementation details remain under development.</div><div class="fresh">Aug-26</div></div>
+<div class="source-item"><div class="org">ERC</div><div><a href="https://www.erc.or.th/th/annual-report" target="_blank">FY2025 performance report</a> — utility-sale renewable funnel, technology totals, FiT procurement stages and additional-round SCOD schedule.</div><div class="fresh">Jun/Dec-25 status</div></div>
+<div class="source-item"><div class="org">GULF / SET</div><div><a href="https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&amp;symbol=GULF" target="_blank">1 Sep 2026 COD disclosure</a> plus company releases — current project-level contracted / installed MW and future COD milestones.</div><div class="fresh">Sep-26</div></div>
+<div class="source-item"><div class="org">GUNKUL</div><div><a href="https://www.gunkul.com/en/about/who-we-are" target="_blank">Thailand renewable project milestones</a> — solar and wind PPAs / scheduled COD windows.</div><div class="fresh">current</div></div>
+</div>
+</section>
+</div>
+<div class="drawer-backdrop" id="backdrop"></div>
+<aside class="drawer" id="drawer">
+<div class="drawer-head"><div><div class="kicker">Market context</div><h2 id="drawerTitle">Metric</h2></div><button class="close" id="closeDrawer">×</button></div>
+<div class="drawer-body" id="drawerBody"></div>
+</aside>
+<script>
+const pages=[...document.querySelectorAll('.page')];
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+ document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); t.classList.add('active');
+ pages.forEach(p=>p.classList.toggle('active',p.id===t.dataset.page)); window.scrollTo({top:0,behavior:'smooth'});
+}));
+
+const ctx={
+ demand:{title:'Power demand growth',
+  quick:'EPPO reports 90,751 GWh of electricity consumption in Jan–May 2026, up 6.0% YoY. The overview excludes self-generating IPS data.',
+  why:'The rebound is broad-based in the EPPO overview: industry, household and business consumption increased, after total consumption declined 2.8% in 2025. The key follow-up is whether H2 remains elevated.',
+  client:['Utilities / IPPs: re-test demand and reserve assumptions.','Renewable developers: stronger load raises the value of bankable COD and firming.','Large C&I / data centers: assess clean-power availability and grid readiness.'],
+  questions:['What part of the rebound is structural vs weather / base effect?','Which grid regions are seeing the fastest incremental load?','Does the contracted supply pipeline match the load geography and timing?'],
+  source:'EPPO Thailand Energy Overview Jan–May 2026',url:'https://www.eppo.go.th/wp-content/uploads/2026/08/Highlight_05-Jan-May2026.pdf'},
+ peak:{title:'EGAT system peak',
+  quick:'The EGAT-system peak reached 35,991.6 MW at 20:50 on 22 April 2026, versus 34,568.3 MW for the 2025 EGAT-system peak.',
+  why:'Peak grew ~4.1%, which matters for capacity adequacy and network requirements even if annual energy growth tells a different story. Keep the EGAT-system definition separate from the “3 utility system” peak used in some EPPO reports.',
+  client:['Utilities: capacity adequacy, grid capex and demand response.','Storage / flexible generation: value is driven by peak shape, not only annual GWh.','C&I: potential capacity / demand-charge and connection implications.'],
+  questions:['What hours and regions are driving new peak load?','How much of the peak is weather-sensitive?','What flexible resources can defer network or generation investment?'],
+  source:'EGAT latest peak demand statistics',url:'https://www.egat.co.th/home/statistics-demand-latest/'},
+ regen:{title:'Renewable generation share',
+  quick:'For full-year 2025, EPPO’s generation mix shows 10.4% “renewable energy” plus 3.4% hydro, or 13.8% when those categories are combined.',
+  why:'Generation share is more informative than capacity share for actual decarbonization. But definition matters: hydro and imports should be shown separately before combining into a “clean” metric.',
+  client:['Developers: penetration vs curtailment / capture-price implications.','Utilities: system flexibility and balancing needs.','C&I: how quickly grid electricity is becoming cleaner vs contractual green procurement.'],
+  questions:['What is the monthly 2026 share on the same definition?','How much comes from variable RE vs dispatchable renewables?','How is RE growth changing gas dispatch and system costs?'],
+  source:'EPPO 2025 electricity situation / generation mix',url:'https://www.eppo.go.th/data-energy-statistic/energy-statistic/electric-energy-stat/%E0%B9%84%E0%B8%9F%E0%B8%9F%E0%B9%89%E0%B8%B2-2/'},
+ recap:{title:'Grid-connected renewable capacity at COD',
+  quick:'ERC reports 10,297.8 MW of contracted-sale renewable capacity at commercial operation as of 30 Jun 2025, across projects selling into EGAT, MEA and PEA.',
+  why:'This is a cleaner operating-market indicator than the old 2023 consolidated baseline because it distinguishes COD from signed PPA and accepted pre-PPA projects. It is still a contracted-sale MW measure, not installed MW, and excludes self-use/direct-customer capacity.',
+  client:['Utilities and developers: see how much utility-contracted renewable capacity is actually operating versus still in the funnel.','Investors: distinguish COD assets from PPA-stage projects and avoid counting announcements as operating supply.','Power users: the conversion rate to COD affects the timing of clean-power availability.'],
+  questions:['How quickly is the 5.83 GW signed-PPA pipeline reaching COD?','Which technologies are driving delays between PPA, permits and COD?','How much self-use/direct-customer capacity should be analyzed separately from utility procurement?'],
+  source:'ERC FY2025 renewable procurement status',url:'https://www.erc.or.th/th/annual-report'},
+ gas:{title:'Gas share of generation',
+  quick:'Natural gas provided 54.2% of electricity generation in full-year 2025. Gas generation volume declined 9.6% YoY, but gas remained the dominant generation fuel.',
+  why:'Gas links security, LNG / domestic supply economics and the Ft tariff. The transition question is not only how much renewable capacity is added, but how much gas dispatch it actually displaces — and what flexible capacity replaces its system role.',
+  client:['Utilities / IPPs: dispatch and asset-utilization outlook.','C&I: gas / LNG exposure remains relevant to tariff risk.','Renewables / BESS: opportunity depends on system value, not just energy LCOE.'],
+  questions:['What is 2026 monthly gas share from the EPPO CSV?','How much gas is marginal vs must-run / system support?','How do LNG prices flow through to Ft under current assumptions?'],
+  source:'EPPO electricity / generation by fuel',url:'https://catalog.eppo.go.th/th/dataset/?groups=electricity'},
+ tariff:{title:'Average power tariff / Ft',
+  quick:'ERC kept Ft at 16.23 satang/kWh for Sep–Dec 2026, but a later tariff-structure decision states that the average billed electricity rate across all customer categories falls from 3.95 to 3.86 THB/kWh from September.',
+  why:'This is why Ft and the headline billed tariff should be tracked separately. For clean-power economics, compare the applicable customer tariff and avoidable components with UGT or Direct PPA costs, including network, balancing and attribute costs.',
+  client:['Large C&I / data centers: procurement economics and hedge value.','Utilities: tariff pressure and green-product economics.','Developers: willingness-to-pay for contracted clean supply.'],
+  questions:['Which tariff components can Direct PPA actually avoid?','What TPA / wheeling / ancillary charges apply?','How does UGT compare on certainty, additionality and delivery profile?'],
+  source:'Energy Regulatory Commission — tariff decision / Ft',url:'https://www.erc.or.th/th/news-release/3472'}
+};
+const drawer=document.getElementById('drawer'),backdrop=document.getElementById('backdrop');
+function openDrawer(key){
+ const d=ctx[key]; document.getElementById('drawerTitle').textContent=d.title;
+ document.getElementById('drawerBody').innerHTML=`
+ <div class="level"><div class="level-name">30 seconds</div><h3>What am I looking at?</h3><p>${d.quick}</p></div>
+ <div class="level"><div class="level-name">2 minutes</div><h3>Why is it moving / why does it matter?</h3><p>${d.why}</p></div>
+ <div class="level"><div class="level-name">Relevance</div><h3>Who is affected?</h3><ul>${d.client.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+ <div class="level"><div class="level-name">Questions to consider</div><h3>What to explore further</h3><ul>${d.questions.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+ <div class="level"><div class="level-name">Source</div><a class="source-link" href="${d.url}" target="_blank">${d.source} ↗</a></div>`;
+ drawer.classList.add('open');backdrop.classList.add('open');
+}
+document.querySelectorAll('[data-kpi]').forEach(k=>k.addEventListener('click',()=>openDrawer(k.dataset.kpi)));
+function closeDrawer(){drawer.classList.remove('open');backdrop.classList.remove('open')}
+document.getElementById('closeDrawer').addEventListener('click',closeDrawer);backdrop.addEventListener('click',closeDrawer);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer()});
+</script>
+</body>
+</html>

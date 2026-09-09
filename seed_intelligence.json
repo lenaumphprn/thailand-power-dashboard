@@ -1,0 +1,169 @@
+{
+  "sources": [
+    {
+      "source_id": "S18",
+      "organization": "EPPO",
+      "source_name": "EPPO news",
+      "url": "https://www.eppo.go.th/category/information-services/advertise/news-eppo/",
+      "tier": "official",
+      "cadence": "weekly",
+      "method": "html_listing"
+    },
+    {
+      "source_id": "S19",
+      "organization": "Ministry of Energy",
+      "source_name": "Minister news",
+      "url": "https://www.energy.go.th/th/minister-news",
+      "tier": "official",
+      "cadence": "weekly",
+      "method": "html_listing"
+    },
+    {
+      "source_id": "S20",
+      "organization": "GUNKUL",
+      "source_name": "GUNKUL SET announcements",
+      "url": "https://www.gunkul.com/en/investor-relations/newsroom/set-announcements",
+      "tier": "company_primary",
+      "cadence": "weekly",
+      "method": "html_listing"
+    },
+    {
+      "source_id": "S21",
+      "organization": "EGCO",
+      "source_name": "EGCO SET announcements",
+      "url": "https://www.egco.com/en/investor-relations/newsroom/set-announcements",
+      "tier": "company_primary",
+      "cadence": "weekly",
+      "method": "html_listing"
+    },
+    {
+      "source_id": "S22",
+      "organization": "BGRIM",
+      "source_name": "B.Grimm Power SET announcements",
+      "url": "https://www.bgrimmpower.com/en/investor-relations/newsroom/set-announcements",
+      "tier": "company_primary",
+      "cadence": "weekly",
+      "method": "html_listing"
+    },
+    {
+      "source_id": "S23",
+      "organization": "GPSC",
+      "source_name": "GPSC SET announcements",
+      "url": "https://www.gpscgroup.com/en/investor-relations/newsroom/set-announcements",
+      "tier": "company_primary",
+      "cadence": "weekly",
+      "method": "html_listing"
+    },
+    {
+      "source_id": "S24",
+      "organization": "RATCH",
+      "source_name": "RATCH SET announcements",
+      "url": "https://www.ratch.co.th/en/investor-relations/newsroom/set-announcements",
+      "tier": "company_primary",
+      "cadence": "weekly",
+      "method": "html_listing"
+    },
+    {
+      "source_id": "S26",
+      "organization": "ERC",
+      "source_name": "ERC consultations",
+      "url": "https://www.erc.or.th/th/listen-to-opinions/content",
+      "tier": "official",
+      "cadence": "weekly",
+      "method": "html_listing"
+    }
+  ],
+  "aliases": [
+    {
+      "alias": "LNE",
+      "project_id": "GULF-LNE-2026",
+      "company": "GULF"
+    },
+    {
+      "alias": "SSE",
+      "project_id": "GULF-SSE-2026",
+      "company": "GULF"
+    }
+  ],
+  "events": [
+    {
+      "source_id": null,
+      "source_name": "The Nation — PDP2026 consultation coverage",
+      "source_tier": "public_secondary_consultation_coverage",
+      "source_url": "https://www.nationthailand.com/sustaination/40070547",
+      "title": "EPPO opens public hearing on draft PDP2026",
+      "body_excerpt": "The draft plan's common 2026-2037 build includes 24.3 GW solar, 2.7 GW wind and 14.5 GW BESS, with four longer-term pathways under consultation.",
+      "event_date": "2026-09-08",
+      "category": "Policy & regulation",
+      "topic": "PDP2026",
+      "materiality_score": 12,
+      "confidence": 0.98,
+      "review_status": "verified_seed"
+    },
+    {
+      "source_id": "S19",
+      "source_name": "Ministry of Energy",
+      "source_tier": "official",
+      "source_url": "https://www.energy.go.th/th/minister-news/30493",
+      "title": "Direct PPA policy direction broadens clean-power access for industry",
+      "body_excerpt": "The Ministry says Direct PPA will allow industrial users to procure clean electricity through utility networks, alongside rooftop-solar and green-tariff reforms.",
+      "event_date": "2026-08-31",
+      "category": "Market design",
+      "topic": "Direct PPA",
+      "materiality_score": 11,
+      "confidence": 0.96,
+      "review_status": "verified_seed"
+    },
+    {
+      "source_id": "S16",
+      "source_name": "GULF SET announcement",
+      "source_tier": "company_primary",
+      "source_url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&symbol=GULF",
+      "title": "GULF starts commercial operation of two solar projects",
+      "body_excerpt": "Two Suphan Buri projects reached COD on 1 Sep 2026 with 135 MW of contracted capacity; additional solar and solar+BESS capacity is scheduled later in 2026.",
+      "event_date": "2026-09-01",
+      "category": "Project & investment",
+      "topic": "Solar COD",
+      "company": "GULF",
+      "technology": "Solar / BESS",
+      "capacity_mw": 135.0,
+      "status_after": "COD",
+      "materiality_score": 9,
+      "confidence": 0.99,
+      "review_status": "verified_seed"
+    },
+    {
+      "source_id": "S16",
+      "source_name": "GULF SET announcement",
+      "source_tier": "company_primary",
+      "source_url": "https://investor.gulf.co.th/en/newsroom/set-announcements?page=1",
+      "title": "GULF secures long-term project financing for three wind projects",
+      "body_excerpt": "GULF announced long-term project financing for three wind power projects on 24 Aug 2026, supporting execution of its contracted renewable pipeline.",
+      "event_date": "2026-08-24",
+      "category": "Project & investment",
+      "topic": "Wind financing",
+      "company": "GULF",
+      "technology": "Wind",
+      "materiality_score": 7,
+      "confidence": 0.92,
+      "review_status": "verified_seed"
+    },
+    {
+      "source_id": "S20",
+      "source_name": "GUNKUL SET announcement",
+      "source_tier": "company_primary",
+      "source_url": "https://www.set.or.th/en/market/news-and-alert/newsdetails?id=105471800&symbol=GUNKUL",
+      "title": "GUNKUL signs PPAs for three solar and wind projects",
+      "body_excerpt": "GUNKUL announced execution of PPAs for three renewable power projects on 20 Jul 2026, moving part of its development pipeline into contracted status.",
+      "event_date": "2026-07-20",
+      "category": "Project & investment",
+      "topic": "Renewable PPA",
+      "company": "GUNKUL",
+      "technology": "Solar / Wind",
+      "status_after": "PPA signed",
+      "materiality_score": 7,
+      "confidence": 0.97,
+      "review_status": "verified_seed"
+    }
+  ]
+}

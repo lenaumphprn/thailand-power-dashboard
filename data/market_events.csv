@@ -1,0 +1,6 @@
+﻿event_date,category,topic,company,title,capacity_mw,status_after,materiality_score,confidence,review_status,source_name,source_url
+2026-09-08,Policy & regulation,PDP2026,,EPPO opens public hearing on draft PDP2026,24300.0,,12,0.98,verified_seed,The Nation — PDP2026 consultation coverage,https://www.nationthailand.com/sustaination/40070547
+2026-09-01,Project & investment,Solar COD,GULF,GULF starts commercial operation of two solar projects,135.0,COD,9,0.99,verified_seed,GULF SET announcement,https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&symbol=GULF
+2026-08-31,Market design,Direct PPA,,Direct PPA policy direction broadens clean-power access for industry,,,11,0.96,verified_seed,Ministry of Energy,https://www.energy.go.th/th/minister-news/30493
+2026-08-24,Project & investment,Wind financing,GULF,GULF secures long-term project financing for three wind projects,,,7,0.92,verified_seed,GULF SET announcement,https://investor.gulf.co.th/en/newsroom/set-announcements?page=1
+2026-07-20,Project & investment,Renewable PPA,GUNKUL,GUNKUL signs PPAs for three solar and wind projects,,PPA signed,7,0.97,verified_seed,GUNKUL SET announcement,https://www.set.or.th/en/market/news-and-alert/newsdetails?id=105471800&symbol=GUNKUL

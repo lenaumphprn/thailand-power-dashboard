@@ -1,0 +1,398 @@
+{
+  "as_of": "2026-09-08",
+  "sources": [
+    {
+      "source_id": "S01",
+      "organization": "EPPO",
+      "source_name": "National electricity consumption by sector",
+      "url": "https://catalog.eppo.go.th/dataset/dataset_11_37",
+      "tier": "1A",
+      "cadence": "Monthly",
+      "method": "CKAN/DataStore API or CSV"
+    },
+    {
+      "source_id": "S02",
+      "organization": "EPPO",
+      "source_name": "Electricity generation by fuel",
+      "url": "https://catalog.eppo.go.th/dataset/dataset_11_27",
+      "tier": "1A",
+      "cadence": "Monthly",
+      "method": "CKAN/DataStore API or CSV"
+    },
+    {
+      "source_id": "S07",
+      "organization": "EGAT",
+      "source_name": "Latest peak demand",
+      "url": "https://www.egat.co.th/home/statistics-demand-latest/",
+      "tier": "1B",
+      "cadence": "Monthly / event",
+      "method": "HTML"
+    },
+    {
+      "source_id": "S08",
+      "organization": "ERC",
+      "source_name": "Automatic tariff (Ft) history",
+      "url": "https://www.erc.or.th/th/automatic/",
+      "tier": "1A",
+      "cadence": "~4-monthly",
+      "method": "HTML table"
+    },
+    {
+      "source_id": "S09",
+      "organization": "ERC",
+      "source_name": "Tariff decisions / press releases",
+      "url": "https://www.erc.or.th/th/news-release",
+      "tier": "1B",
+      "cadence": "Event-driven",
+      "method": "HTML / PDF"
+    },
+    {
+      "source_id": "S12",
+      "organization": "DEDE",
+      "source_name": "Renewable capacity baseline",
+      "url": "https://pei.dede.go.th/en/dataset/gis-002",
+      "tier": "1B",
+      "cadence": "Mixed",
+      "method": "Reconciliation required"
+    },
+    {
+      "source_id": "S06",
+      "organization": "EPPO",
+      "source_name": "Pool Gas price",
+      "url": "https://www.eppo.go.th/data-energy-statistic/energy-price-th/%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2-pool-gas/",
+      "tier": "1B",
+      "cadence": "Monthly value / weekly check",
+      "method": "HTML / bulletin"
+    },
+    {
+      "source_id": "S10",
+      "organization": "EPPO",
+      "source_name": "Thailand natural gas situation Jan-Mar 2026",
+      "url": "https://www.eppo.go.th/index.php/th/petroleum/item/download/26675_41441bf1b65c876dac13593297849a05",
+      "tier": "1A",
+      "cadence": "Monthly / quarterly overview",
+      "method": "Official public report"
+    }
+  ],
+  "metrics": [
+    {
+      "metric_id": "K01",
+      "metric_name": "Power demand growth",
+      "definition": "National electricity consumption YTD through latest available month versus same months prior year",
+      "unit": "% YoY",
+      "source_id_primary": "S01",
+      "scope_version": "v1.0"
+    },
+    {
+      "metric_id": "K02",
+      "metric_name": "EGAT system peak",
+      "definition": "Highest observed EGAT-system demand in current calendar year",
+      "unit": "MW",
+      "source_id_primary": "S07",
+      "scope_version": "v1.0"
+    },
+    {
+      "metric_id": "K03",
+      "metric_name": "RE generation share",
+      "definition": "Domestic Renewable Energy + Hydro generation divided by total generation",
+      "unit": "% of generation",
+      "source_id_primary": "S02",
+      "scope_version": "v1.0"
+    },
+    {
+      "metric_id": "K13",
+      "metric_name": "DEDE consolidated RE installed baseline",
+      "definition": "DEDE consolidated renewable & alternative electricity installed-capacity baseline; retained as a legacy reference and not used as the current market headline",
+      "unit": "MW installed capacity",
+      "source_id_primary": "S12",
+      "scope_version": "legacy-dede-v1.0"
+    },
+    {
+      "metric_id": "K05",
+      "metric_name": "Gas share of generation",
+      "definition": "Natural-gas-fired generation divided by total generation",
+      "unit": "% of generation",
+      "source_id_primary": "S02",
+      "scope_version": "v1.0"
+    },
+    {
+      "metric_id": "K06",
+      "metric_name": "Headline average billed power tariff",
+      "definition": "Latest ERC-stated average billed electricity rate across all customer categories applicable to current billing period",
+      "unit": "THB/kWh",
+      "source_id_primary": "S09",
+      "scope_version": "v1.0"
+    },
+    {
+      "metric_id": "K07",
+      "metric_name": "Ft retail adjustment",
+      "definition": "ERC retail Ft for applicable billing period",
+      "unit": "satang/kWh",
+      "source_id_primary": "S08",
+      "scope_version": "v1.0"
+    },
+    {
+      "metric_id": "K08",
+      "metric_name": "Gas import dependency",
+      "definition": "Imported pipeline gas + LNG share of total gas supply",
+      "unit": "% of gas supply",
+      "source_id_primary": "S10",
+      "scope_version": "v1.0"
+    },
+    {
+      "metric_id": "K09",
+      "metric_name": "Pool Gas price",
+      "definition": "Latest published Pool Gas price, keyed to underlying price month",
+      "unit": "THB/MMBtu",
+      "source_id_primary": "S06",
+      "scope_version": "v1.0"
+    }
+  ],
+  "observations": [
+    {
+      "metric_id": "K01",
+      "period_start": "2026-01-01",
+      "period_end": "2026-05-31",
+      "value": 6.0,
+      "unit": "% YoY",
+      "source_id": "S01",
+      "publication_date": "2026-08-24",
+      "qa_status": "seeded_verified",
+      "note": "Jan-May 2026 vs Jan-May 2025; EPPO overview reports 90,751 GWh.",
+      "details": {
+        "ytd_gwh": 90751,
+        "fy2025_growth_pct": -2.8
+      },
+      "raw_source_ref": "https://www.eppo.go.th/wp-content/uploads/2026/08/Highlight_05-Jan-May2026.pdf"
+    },
+    {
+      "metric_id": "K02",
+      "period_start": "2026-01-01",
+      "period_end": "2026-04-22",
+      "value": 35991.6,
+      "unit": "MW",
+      "source_id": "S07",
+      "publication_date": "2026-07-01",
+      "qa_status": "seeded_verified",
+      "note": "EGAT-system peak on 22 Apr 2026 at 20:50.",
+      "details": {
+        "prior_year_peak_mw": 34568.3,
+        "peak_time": "20:50",
+        "growth_pct": 4.1
+      },
+      "raw_source_ref": "https://www.egat.co.th/home/statistics-demand-latest/"
+    },
+    {
+      "metric_id": "K03",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "value": 13.8,
+      "unit": "% of generation",
+      "source_id": "S02",
+      "publication_date": "2026-01-01",
+      "qa_status": "seeded_verified",
+      "note": "10.4% renewable energy + 3.4% hydro.",
+      "details": {
+        "renewable_pct": 10.4,
+        "hydro_pct": 3.4,
+        "other_pct": 86.2
+      },
+      "raw_source_ref": "https://catalog.eppo.go.th/dataset/dataset_11_27"
+    },
+    {
+      "metric_id": "K13",
+      "period_start": "2023-01-01",
+      "period_end": "2023-12-31",
+      "value": 12810,
+      "unit": "MW",
+      "source_id": "S12",
+      "publication_date": "2024-01-01",
+      "qa_status": "historical_baseline",
+      "note": "DEDE consolidated 2023 installed-capacity baseline retained as legacy reference; not comparable to ERC utility contracted-sale funnel without reconciliation.",
+      "details": {
+        "biomass_mw": 3870,
+        "solar_mw": 3294,
+        "large_hydro_mw": 2918,
+        "wind_mw": 1544
+      },
+      "scope_version": "legacy-dede-v1.0",
+      "raw_source_ref": "https://pei.dede.go.th/en/dataset/gis-002"
+    },
+    {
+      "metric_id": "K05",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "value": 54.2,
+      "unit": "% of generation",
+      "source_id": "S02",
+      "publication_date": "2026-01-01",
+      "qa_status": "seeded_verified",
+      "note": "Natural gas share of 2025 generation.",
+      "details": {
+        "gas_generation_yoy_pct": -9.6,
+        "prior_share_pct": 59.7
+      },
+      "raw_source_ref": "https://catalog.eppo.go.th/dataset/dataset_11_27"
+    },
+    {
+      "metric_id": "K06",
+      "period_start": "2026-09-01",
+      "period_end": null,
+      "effective_start": "2026-09-01",
+      "value": 3.86,
+      "unit": "THB/kWh",
+      "source_id": "S09",
+      "publication_date": "2026-08-13",
+      "qa_status": "seeded_verified",
+      "note": "ERC states average billed rate across all categories falls from 3.95 to 3.86 from Sep 2026.",
+      "details": {
+        "prior_headline_thb_kwh": 3.95
+      },
+      "raw_source_ref": "https://www.erc.or.th/th/news-release/3472"
+    },
+    {
+      "metric_id": "K07",
+      "period_start": "2026-09-01",
+      "period_end": "2026-12-31",
+      "effective_start": "2026-09-01",
+      "effective_end": "2026-12-31",
+      "value": 16.23,
+      "unit": "satang/kWh",
+      "source_id": "S08",
+      "publication_date": "2026-07-23",
+      "qa_status": "seeded_verified",
+      "note": "ERC Ft for Sep-Dec 2026.",
+      "raw_source_ref": "https://erc.or.th/th/automatic/"
+    },
+    {
+      "metric_id": "K08",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "value": 39.0,
+      "unit": "% of gas supply",
+      "source_id": "S10",
+      "publication_date": "2026-05-01",
+      "qa_status": "seeded_verified",
+      "note": "Jan-Mar 2026 gas supply: 31% LNG + 8% Myanmar imported.",
+      "details": {
+        "domestic_pct": 61,
+        "lng_pct": 31,
+        "myanmar_pct": 8,
+        "avg_supply_mmscfd": 4883,
+        "gas_use_power_pct": 62
+      },
+      "raw_source_ref": "https://www.eppo.go.th/index.php/th/petroleum/item/download/26675_41441bf1b65c876dac13593297849a05"
+    },
+    {
+      "metric_id": "K09",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "value": 268.9082,
+      "unit": "THB/MMBtu",
+      "source_id": "S06",
+      "publication_date": "2026-03-01",
+      "qa_status": "seeded_verified",
+      "note": "Pool Gas Jan-26; +0.7203 THB/MMBtu vs Dec-25.",
+      "raw_source_ref": "https://www.eppo.go.th/data-energy-statistic/energy-price-th/%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2-pool-gas/"
+    },
+    {
+      "metric_id": "K09",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "value": 267.8974,
+      "unit": "THB/MMBtu",
+      "source_id": "S06",
+      "publication_date": "2026-04-01",
+      "qa_status": "seeded_verified",
+      "note": "Pool Gas Feb-26; value reported in EPPO Mar-26 gas situation table.",
+      "raw_source_ref": "https://www.eppo.go.th/data-energy-statistic/energy-price-th/%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2-pool-gas/"
+    },
+    {
+      "metric_id": "K09",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "value": 275.5891,
+      "unit": "THB/MMBtu",
+      "source_id": "S06",
+      "publication_date": "2026-04-13",
+      "qa_status": "seeded_verified",
+      "note": "Pool Gas Mar-26; +7.6917 THB/MMBtu vs Feb-26.",
+      "raw_source_ref": "https://www.eppo.go.th/index.php/th/component/k2/item/download/26532_56c8416c12d21961a69d482e35d413cd"
+    },
+    {
+      "metric_id": "K09",
+      "period_start": "2026-04-01",
+      "period_end": "2026-04-30",
+      "value": 325.232,
+      "unit": "THB/MMBtu",
+      "source_id": "S06",
+      "publication_date": "2026-05-01",
+      "qa_status": "seeded_verified",
+      "note": "Pool Gas Apr-26; EPPO reports +49.6429 THB/MMBtu vs Mar, driven mainly by higher LNG price.",
+      "details": {
+        "previous_value": 275.5891,
+        "previous_period": "2026-03",
+        "mom_abs_change": 49.6429,
+        "mom_pct_change": 18.0134,
+        "jan_2026_value": 268.9082,
+        "vs_jan_pct_change": 20.9454,
+        "lng_price": 442.2831,
+        "lng_previous_value": 356.237,
+        "lng_mom_pct_change": 24.1542
+      },
+      "raw_source_ref": "https://www.eppo.go.th/epposite/index.php/th/component/k2/item/download/26689_9cedd3a6289d377b71bb0c6c784fa1a8"
+    }
+  ],
+  "ft_history": [
+    {
+      "period_start": "2023-09-01",
+      "period_end": "2023-12-31",
+      "value": 20.48
+    },
+    {
+      "period_start": "2024-01-01",
+      "period_end": "2024-04-30",
+      "value": 39.72
+    },
+    {
+      "period_start": "2024-05-01",
+      "period_end": "2024-08-31",
+      "value": 39.72
+    },
+    {
+      "period_start": "2024-09-01",
+      "period_end": "2024-12-31",
+      "value": 39.72
+    },
+    {
+      "period_start": "2025-01-01",
+      "period_end": "2025-04-30",
+      "value": 36.72
+    },
+    {
+      "period_start": "2025-05-01",
+      "period_end": "2025-08-31",
+      "value": 19.72
+    },
+    {
+      "period_start": "2025-09-01",
+      "period_end": "2025-12-31",
+      "value": 15.72
+    },
+    {
+      "period_start": "2026-01-01",
+      "period_end": "2026-04-30",
+      "value": 9.72
+    },
+    {
+      "period_start": "2026-05-01",
+      "period_end": "2026-08-31",
+      "value": 16.23
+    },
+    {
+      "period_start": "2026-09-01",
+      "period_end": "2026-12-31",
+      "value": 16.23
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+﻿cohort_id,cohort_name,scheme,as_of_date,target_mw,selected_projects,selected_mw,status,scod_start_year,scod_end_year,technology,stage,stage_projects,stage_mw,stage_qa
+FIT2022_NO_FUEL,FiT 2022-2030 - no-fuel-cost renewables,ERC FiT 2022-2030,2025-12-31,5203.0,175,4852.26,173 PPAs signed; projects progressing through CoP/license/COD,2024,2030,Ground solar,ppa,129,2368.0,pass
+FIT2022_NO_FUEL,FiT 2022-2030 - no-fuel-cost renewables,ERC FiT 2022-2030,2025-12-31,5203.0,175,4852.26,173 PPAs signed; projects progressing through CoP/license/COD,2024,2030,Ground solar,cop,34,761.91,pass
+FIT2022_NO_FUEL,FiT 2022-2030 - no-fuel-cost renewables,ERC FiT 2022-2030,2025-12-31,5203.0,175,4852.26,173 PPAs signed; projects progressing through CoP/license/COD,2024,2030,Ground solar,licensed,18,460.09,pass
+FIT2022_NO_FUEL,FiT 2022-2030 - no-fuel-cost renewables,ERC FiT 2022-2030,2025-12-31,5203.0,175,4852.26,173 PPAs signed; projects progressing through CoP/license/COD,2024,2030,Ground solar,cod,8,195.4,pass
+FIT2022_NO_FUEL,FiT 2022-2030 - no-fuel-cost renewables,ERC FiT 2022-2030,2025-12-31,5203.0,175,4852.26,173 PPAs signed; projects progressing through CoP/license/COD,2024,2030,Solar+BESS,ppa,22,921.8,pass
+FIT2022_NO_FUEL,FiT 2022-2030 - no-fuel-cost renewables,ERC FiT 2022-2030,2025-12-31,5203.0,175,4852.26,173 PPAs signed; projects progressing through CoP/license/COD,2024,2030,Solar+BESS,cop,7,397.0,pass
+FIT2022_NO_FUEL,FiT 2022-2030 - no-fuel-cost renewables,ERC FiT 2022-2030,2025-12-31,5203.0,175,4852.26,173 PPAs signed; projects progressing through CoP/license/COD,2024,2030,Solar+BESS,licensed,3,196.0,pass
+FIT2022_NO_FUEL,FiT 2022-2030 - no-fuel-cost renewables,ERC FiT 2022-2030,2025-12-31,5203.0,175,4852.26,173 PPAs signed; projects progressing through CoP/license/COD,2024,2030,Solar+BESS,cod,2,135.0,pass
+FIT2022_NO_FUEL,FiT 2022-2030 - no-fuel-cost renewables,ERC FiT 2022-2030,2025-12-31,5203.0,175,4852.26,173 PPAs signed; projects progressing through CoP/license/COD,2024,2030,Total,selected,175,4852.26,pass
+FIT2022_NO_FUEL,FiT 2022-2030 - no-fuel-cost renewables,ERC FiT 2022-2030,2025-12-31,5203.0,175,4852.26,173 PPAs signed; projects progressing through CoP/license/COD,2024,2030,Total,ppa,173,4197.5,pass
+FIT2022_NO_FUEL,FiT 2022-2030 - no-fuel-cost renewables,ERC FiT 2022-2030,2025-12-31,5203.0,175,4852.26,173 PPAs signed; projects progressing through CoP/license/COD,2024,2030,Total,cop,44,1428.61,pass
+FIT2022_NO_FUEL,FiT 2022-2030 - no-fuel-cost renewables,ERC FiT 2022-2030,2025-12-31,5203.0,175,4852.26,173 PPAs signed; projects progressing through CoP/license/COD,2024,2030,Total,licensed,21,656.09,pass
+FIT2022_NO_FUEL,FiT 2022-2030 - no-fuel-cost renewables,ERC FiT 2022-2030,2025-12-31,5203.0,175,4852.26,173 PPAs signed; projects progressing through CoP/license/COD,2024,2030,Total,cod,10,330.4,pass
+FIT2022_NO_FUEL,FiT 2022-2030 - no-fuel-cost renewables,ERC FiT 2022-2030,2025-12-31,5203.0,175,4852.26,173 PPAs signed; projects progressing through CoP/license/COD,2024,2030,Wind,ppa,22,907.7,pass
+FIT2022_NO_FUEL,FiT 2022-2030 - no-fuel-cost renewables,ERC FiT 2022-2030,2025-12-31,5203.0,175,4852.26,173 PPAs signed; projects progressing through CoP/license/COD,2024,2030,Wind,cop,3,269.7,pass
+FIT2022_NO_FUEL,FiT 2022-2030 - no-fuel-cost renewables,ERC FiT 2022-2030,2025-12-31,5203.0,175,4852.26,173 PPAs signed; projects progressing through CoP/license/COD,2024,2030,Wind,licensed,0,0.0,pass
+FIT2022_NO_FUEL,FiT 2022-2030 - no-fuel-cost renewables,ERC FiT 2022-2030,2025-12-31,5203.0,175,4852.26,173 PPAs signed; projects progressing through CoP/license/COD,2024,2030,Wind,cod,0,0.0,pass
+FIT2024_ADDITIONAL,FiT 2024 additional round,ERC FiT 2022-2030 additional round 2024,2025-12-31,2180.0,72,2148.7,Selected; PPA timetable revised / execution process ongoing,2026,2030,Total,selected,72,2148.7,pass
+ROOFTOP_2026,Residential solar rooftop procurement 2026,ERC household solar rooftop FiT 2026,2026-06-29,500.0,,,Applications open from 1 Jul 2026 until quota filled,2026,2027,,,,,

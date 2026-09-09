@@ -1,0 +1,25 @@
+{
+  "lookback_days": 120,
+  "max_detail_fetches_per_source": 15,
+  "sources": [
+    {"source_id":"S09","organization":"ERC","source_name":"ERC news releases","url":"https://www.erc.or.th/th/news-release","tier":"official","cadence":"weekly","method":"html_listing"},
+    {"source_id":"S26","organization":"ERC","source_name":"ERC consultations","url":"https://www.erc.or.th/th/listen-to-opinions/content","tier":"official","cadence":"weekly","method":"html_listing"},
+    {"source_id":"S18","organization":"EPPO","source_name":"EPPO news","url":"https://www.eppo.go.th/category/information-services/advertise/news-eppo/","tier":"official","cadence":"weekly","method":"html_listing"},
+    {"source_id":"S19","organization":"Ministry of Energy","source_name":"Minister news","url":"https://www.energy.go.th/th/minister-news","tier":"official","cadence":"weekly","method":"html_listing"},
+    {"source_id":"S16","organization":"GULF","source_name":"GULF SET announcements","url":"https://investor.gulf.co.th/en/newsroom/set-announcements?page=1","tier":"company_primary","cadence":"weekly","method":"html_listing","company":"GULF"},
+    {"source_id":"S20","organization":"GUNKUL","source_name":"GUNKUL SET announcements","url":"https://www.gunkul.com/en/investor-relations/newsroom/set-announcements","tier":"company_primary","cadence":"weekly","method":"html_listing","company":"GUNKUL"},
+    {"source_id":"S21","organization":"EGCO","source_name":"EGCO SET announcements","url":"https://www.egco.com/en/investor-relations/newsroom/set-announcements","tier":"company_primary","cadence":"weekly","method":"html_listing","company":"EGCO"},
+    {"source_id":"S22","organization":"BGRIM","source_name":"B.Grimm Power SET announcements","url":"https://www.bgrimmpower.com/en/investor-relations/newsroom/set-announcements","tier":"company_primary","cadence":"weekly","method":"html_listing","company":"BGRIM"},
+    {"source_id":"S23","organization":"GPSC","source_name":"GPSC SET announcements","url":"https://www.gpscgroup.com/en/investor-relations/newsroom/set-announcements","tier":"company_primary","cadence":"weekly","method":"html_listing","company":"GPSC"},
+    {"source_id":"S24","organization":"RATCH","source_name":"RATCH SET announcements","url":"https://www.ratch.co.th/en/investor-relations/newsroom/set-announcements","tier":"company_primary","cadence":"weekly","method":"html_listing","company":"RATCH"}
+  ],
+  "positive_keywords": [
+    "pdp2026","pdp 2026","power development plan","direct ppa","utility green tariff","ugt","wheeling","third party access","tpa",
+    "renewable","solar","wind","hydro","battery","bess","energy storage","power purchase agreement","ppa","commercial operation","cod",
+    "power project","power plant","transmission","grid","electricity tariff","ft","ค่าไฟ","เอฟที","พลังงานหมุนเวียน","พลังงานแสงอาทิตย์","พลังงานลม","โรงไฟฟ้า","ซื้อขายไฟฟ้า","รับซื้อไฟฟ้า","ระบบส่งไฟฟ้า"
+  ],
+  "negative_keywords": [
+    "financial statement","financial performance","management discussion","dividend","agm","shareholders","audit committee","cfo","director",
+    "treasury shares","sec news","form 59","form 246","site visit","holiday","annual general meeting","งบการเงิน","เงินปันผล","กรรมการ","ผู้ถือหุ้น"
+  ]
+}

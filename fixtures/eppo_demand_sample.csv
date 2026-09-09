@@ -1,0 +1,13 @@
+Year,Month,Sector,Quantity,UNIT
+2025,Jan,Residential,1000,GWh
+2025,Jan,Business,800,GWh
+2025,Jan,Industry,1200,GWh
+2026,Jan,Residential,1060,GWh
+2026,Jan,Business,840,GWh
+2026,Jan,Industry,1280,GWh
+2025,Feb,Residential,900,GWh
+2025,Feb,Business,700,GWh
+2025,Feb,Industry,1100,GWh
+2026,Feb,Residential,945,GWh
+2026,Feb,Business,735,GWh
+2026,Feb,Industry,1170,GWh

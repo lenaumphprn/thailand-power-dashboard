@@ -1,0 +1,54 @@
+{
+  "scope_version": "v2.0",
+  "eppo": {
+    "base_urls": [
+      "https://catalog.eppo.go.th",
+      "https://catalog.eppo.go.th/th"
+    ],
+    "packages": {
+      "demand": {
+        "package_id": "dataset_11_37",
+        "fallback_resource_id": "d3a101dd-a2f7-4ed4-a122-4f21c0038db3",
+        "source_id": "S01"
+      },
+      "generation": {
+        "package_id": "dataset_11_27",
+        "fallback_resource_id": "edd5d4f8-f32e-4366-8573-52ba242c6bd1",
+        "source_id": "S02"
+      }
+    }
+  },
+  "erc": {
+    "ft_url": "https://www.erc.or.th/th/automatic/",
+    "news_index_url": "https://www.erc.or.th/th/news-release",
+    "known_tariff_decisions": [
+      "https://www.erc.or.th/th/news-release/3458",
+      "https://www.erc.or.th/th/news-release/3472"
+    ]
+  },
+  "fuel_aliases": {
+    "gas": [
+      "natural gas",
+      "gas",
+      "ก๊าซธรรมชาติ"
+    ],
+    "hydro": [
+      "hydro",
+      "hydropower",
+      "พลังน้ำ",
+      "ไฟฟ้าพลังน้ำ"
+    ],
+    "renewable": [
+      "renewable energy",
+      "renewable",
+      "พลังงานหมุนเวียน",
+      "พลังงานทดแทน"
+    ],
+    "imports": [
+      "import",
+      "imported electricity",
+      "ไฟฟ้านำเข้า",
+      "นำเข้า"
+    ]
+  }
+}
