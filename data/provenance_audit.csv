@@ -1,11 +1,11 @@
 ﻿severity,object_type,object_id,status,source_url,note
-PASS,metric,K01,PASS,https://www.eppo.go.th/wp-content/uploads/2026/08/Highlight_05-Jan-May2026.pdf,Latest displayed observation has public lineage
+PASS,metric,K01,PASS,https://catalog.eppo.go.th/dataset/dataset_11_37,Latest displayed observation has public lineage
 PASS,metric,K02,PASS,https://www.egat.co.th/home/statistics-demand-latest/,Latest displayed observation has public lineage
 PASS,metric,K03,PASS,https://catalog.eppo.go.th/dataset/dataset_11_27,Latest displayed observation has public lineage
 PASS,metric,K04,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Latest displayed observation has public lineage
 PASS,metric,K05,PASS,https://catalog.eppo.go.th/dataset/dataset_11_27,Latest displayed observation has public lineage
 PASS,metric,K06,PASS,https://www.erc.or.th/th/news-release/3472,Latest displayed observation has public lineage
-PASS,metric,K07,PASS,https://erc.or.th/th/automatic/,Latest displayed observation has public lineage
+PASS,metric,K07,PASS,https://www.erc.or.th/th/automatic/,Latest displayed observation has public lineage
 PASS,metric,K08,PASS,https://www.eppo.go.th/index.php/th/petroleum/item/download/26675_41441bf1b65c876dac13593297849a05,Latest displayed observation has public lineage
 PASS,metric,K09,PASS,https://www.eppo.go.th/epposite/index.php/th/component/k2/item/download/26689_9cedd3a6289d377b71bb0c6c784fa1a8,Latest displayed observation has public lineage
 PASS,metric,K10,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Latest displayed observation has public lineage
@@ -41,6 +41,7 @@ PASS,project_registry,GUNKUL-WIND-180,PASS,https://www.gunkul.com/en/about/who-w
 PASS,project_registry,ERC-ROOFTOP-2026-500,PASS,https://erc.or.th/pdfjs/web/viewer.html?file=%2Fweb-upload%2F200xf869baf82be74c18cc110e974eea8d5c%2F202606%2Fm_news%2F9090%2F3441%2Ffile_download%2Fae5c0f3369d23b692064262036b1725f.pdf,Public row-level source
 PASS,market_event,EV-02dca6ebe8d793bd,PASS,https://www.nationthailand.com/sustaination/40070547,Public row-level source
 PASS,market_event,EV-d2150615091be310,PASS,https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&symbol=GULF,Public row-level source
+PASS,market_event,EV-4daad52974b96098,PASS,https://www.bgrimmpower.com/en/power-plants/overview,Public row-level source
 PASS,weekly_digest,1,PASS,https://www.nationthailand.com/sustaination/40070547,Public row-level source
 PASS,weekly_digest,2,PASS,https://www.energy.go.th/th/minister-news/30493,Public row-level source
 PASS,weekly_digest,3,PASS,https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&symbol=GULF,Public row-level source

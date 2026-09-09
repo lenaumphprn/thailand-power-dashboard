@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-09-09T03:31:40Z",
+  "generated_at": "2026-09-09T06:54:38Z",
   "metrics": {
     "K01": {
-      "observation_id": 1,
+      "observation_id": 27,
       "metric_id": "K01",
       "period_start": "2026-01-01",
-      "period_end": "2026-05-31",
-      "value": 6.0,
+      "period_end": "2026-06-30",
+      "value": 6.008050510576202,
       "unit": "% YoY",
       "source_id": "S01",
-      "publication_date": "2026-08-24",
+      "publication_date": "2026-09-09",
       "effective_start": null,
       "effective_end": null,
-      "ingested_at": "2026-09-09T03:31:39Z",
+      "ingested_at": "2026-09-09T06:52:54Z",
       "scope_version": "v1.0",
-      "qa_status": "seeded_verified",
-      "raw_source_ref": "https://www.eppo.go.th/wp-content/uploads/2026/08/Highlight_05-Jan-May2026.pdf",
-      "note": "Jan-May 2026 vs Jan-May 2025; EPPO overview reports 90,751 GWh.",
+      "qa_status": "pass",
+      "raw_source_ref": null,
+      "note": "YTD demand 109845.74; prior 103620.19",
       "details": {
-        "fy2025_growth_pct": -2.8,
-        "ytd_gwh": 90751.0
+        "prior_ytd_gwh": 103620.18682822098,
+        "ytd_gwh": 109845.73999201391
       },
-      "source_url": "https://www.eppo.go.th/wp-content/uploads/2026/08/Highlight_05-Jan-May2026.pdf",
+      "source_url": "https://catalog.eppo.go.th/dataset/dataset_11_37",
       "source_name": "National electricity consumption by sector",
       "source_tier": "1A",
       "provenance_type": "DIRECT_PUBLIC"
@@ -53,25 +53,25 @@
       "provenance_type": "DIRECT_PUBLIC"
     },
     "K03": {
-      "observation_id": 3,
+      "observation_id": 28,
       "metric_id": "K03",
-      "period_start": "2025-01-01",
-      "period_end": "2025-12-31",
-      "value": 13.8,
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "value": 12.91521501462428,
       "unit": "% of generation",
       "source_id": "S02",
-      "publication_date": "2026-01-01",
+      "publication_date": "2026-09-09",
       "effective_start": null,
       "effective_end": null,
-      "ingested_at": "2026-09-09T03:31:39Z",
+      "ingested_at": "2026-09-09T06:52:56Z",
       "scope_version": "v1.0",
-      "qa_status": "seeded_verified",
-      "raw_source_ref": "https://catalog.eppo.go.th/dataset/dataset_11_27",
-      "note": "10.4% renewable energy + 3.4% hydro.",
+      "qa_status": "pass",
+      "raw_source_ref": null,
+      "note": null,
       "details": {
-        "hydro_pct": 3.4,
-        "other_pct": 86.2,
-        "renewable_pct": 10.4
+        "hydro_pct": 2.911346886227258,
+        "other_pct": 87.08478498537572,
+        "renewable_pct": 10.003868128397022
       },
       "source_url": "https://catalog.eppo.go.th/dataset/dataset_11_27",
       "source_name": "Electricity generation by fuel",
@@ -106,25 +106,22 @@
       "provenance_type": "DIRECT_PUBLIC"
     },
     "K05": {
-      "observation_id": 5,
+      "observation_id": 29,
       "metric_id": "K05",
-      "period_start": "2025-01-01",
-      "period_end": "2025-12-31",
-      "value": 54.2,
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-30",
+      "value": 61.66317563838458,
       "unit": "% of generation",
       "source_id": "S02",
-      "publication_date": "2026-01-01",
+      "publication_date": "2026-09-09",
       "effective_start": null,
       "effective_end": null,
-      "ingested_at": "2026-09-09T03:31:39Z",
+      "ingested_at": "2026-09-09T06:52:56Z",
       "scope_version": "v1.0",
-      "qa_status": "seeded_verified",
-      "raw_source_ref": "https://catalog.eppo.go.th/dataset/dataset_11_27",
-      "note": "Natural gas share of 2025 generation.",
-      "details": {
-        "gas_generation_yoy_pct": -9.6,
-        "prior_share_pct": 59.7
-      },
+      "qa_status": "pass",
+      "raw_source_ref": null,
+      "note": null,
+      "details": {},
       "source_url": "https://catalog.eppo.go.th/dataset/dataset_11_27",
       "source_name": "Electricity generation by fuel",
       "source_tier": "1A",
@@ -150,28 +147,28 @@
         "prior_headline_thb_kwh": 3.95
       },
       "source_url": "https://www.erc.or.th/th/news-release/3472",
-      "source_name": "Tariff decisions / press releases",
-      "source_tier": "1B",
+      "source_name": "ERC news releases",
+      "source_tier": "official",
       "provenance_type": "DIRECT_PUBLIC"
     },
     "K07": {
-      "observation_id": 22,
+      "observation_id": 30,
       "metric_id": "K07",
       "period_start": "2026-09-01",
       "period_end": "2026-12-31",
       "value": 16.23,
       "unit": "satang/kWh",
       "source_id": "S08",
-      "publication_date": "2026-09-01",
+      "publication_date": "2026-09-09",
       "effective_start": "2026-09-01",
       "effective_end": "2026-12-31",
-      "ingested_at": "2026-09-09T03:31:39Z",
+      "ingested_at": "2026-09-09T06:52:58Z",
       "scope_version": "v1.0",
-      "qa_status": "seeded_verified",
-      "raw_source_ref": "https://erc.or.th/th/automatic/",
-      "note": "Seeded from ERC Ft history table.",
+      "qa_status": "pass",
+      "raw_source_ref": null,
+      "note": null,
       "details": {},
-      "source_url": "https://erc.or.th/th/automatic/",
+      "source_url": "https://www.erc.or.th/th/automatic/",
       "source_name": "Automatic tariff (Ft) history",
       "source_tier": "1A",
       "provenance_type": "DIRECT_PUBLIC"
@@ -343,10 +340,214 @@
   },
   "ft_history": [
     {
+      "period_start": "2011-09-01",
+      "period_end": "2011-12-31",
+      "value": -6.0,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2012-01-01",
+      "period_end": "2012-04-30",
+      "value": 0.0,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2012-09-01",
+      "period_end": "2012-12-31",
+      "value": 48.0,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2013-01-01",
+      "period_end": "2013-04-30",
+      "value": 52.04,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2013-05-01",
+      "period_end": "2013-08-31",
+      "value": 46.92,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2013-09-01",
+      "period_end": "2013-12-31",
+      "value": 54.0,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2014-01-01",
+      "period_end": "2014-04-30",
+      "value": 59.0,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2014-05-01",
+      "period_end": "2014-08-31",
+      "value": 69.0,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2014-09-01",
+      "period_end": "2014-12-31",
+      "value": 69.0,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2015-01-01",
+      "period_end": "2015-04-30",
+      "value": 58.96,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2015-05-01",
+      "period_end": "2015-08-31",
+      "value": 49.61,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2016-01-01",
+      "period_end": "2016-04-30",
+      "value": -4.8,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2016-05-01",
+      "period_end": "2016-08-31",
+      "value": -33.29,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2016-09-01",
+      "period_end": "2016-12-31",
+      "value": -33.29,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2017-01-01",
+      "period_end": "2017-04-30",
+      "value": -37.29,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2017-05-01",
+      "period_end": "2017-08-31",
+      "value": -24.77,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2017-09-01",
+      "period_end": "2017-12-31",
+      "value": -15.9,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2018-01-01",
+      "period_end": "2018-04-30",
+      "value": -15.9,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2018-05-01",
+      "period_end": "2018-08-31",
+      "value": -15.9,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2018-09-01",
+      "period_end": "2018-12-31",
+      "value": -15.9,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2019-01-01",
+      "period_end": "2019-04-30",
+      "value": -11.6,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2019-05-01",
+      "period_end": "2019-08-31",
+      "value": -11.6,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2019-09-01",
+      "period_end": "2019-12-31",
+      "value": -11.6,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2020-01-01",
+      "period_end": "2020-04-30",
+      "value": -11.6,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2020-05-01",
+      "period_end": "2020-08-31",
+      "value": -11.6,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2020-09-01",
+      "period_end": "2020-12-31",
+      "value": -12.43,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2021-01-01",
+      "period_end": "2021-04-30",
+      "value": -15.32,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2021-05-01",
+      "period_end": "2021-08-31",
+      "value": -15.32,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2021-09-01",
+      "period_end": "2021-12-31",
+      "value": -15.32,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2022-01-01",
+      "period_end": "2022-04-30",
+      "value": 1.39,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2022-05-01",
+      "period_end": "2022-08-31",
+      "value": 24.77,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2022-09-01",
+      "period_end": "2022-12-31",
+      "value": 93.43,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2023-05-01",
+      "period_end": "2023-08-31",
+      "value": 91.19,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2023-09-01",
       "period_end": "2023-12-31",
       "value": 20.48,
       "source_url": "https://erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2023-09-01",
+      "period_end": "2023-12-31",
+      "value": 20.48,
+      "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
       "period_start": "2024-01-01",
@@ -355,10 +556,22 @@
       "source_url": "https://erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2024-01-01",
+      "period_end": "2024-04-30",
+      "value": 39.72,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2024-05-01",
       "period_end": "2024-08-31",
       "value": 39.72,
       "source_url": "https://erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2024-05-01",
+      "period_end": "2024-08-31",
+      "value": 39.72,
+      "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
       "period_start": "2024-09-01",
@@ -367,10 +580,22 @@
       "source_url": "https://erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2024-09-01",
+      "period_end": "2024-12-31",
+      "value": 39.72,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2025-01-01",
       "period_end": "2025-04-30",
       "value": 36.72,
       "source_url": "https://erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2025-01-01",
+      "period_end": "2025-04-30",
+      "value": 36.72,
+      "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
       "period_start": "2025-05-01",
@@ -379,10 +604,22 @@
       "source_url": "https://erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2025-05-01",
+      "period_end": "2025-08-31",
+      "value": 19.72,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2025-09-01",
       "period_end": "2025-12-31",
       "value": 15.72,
       "source_url": "https://erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2025-09-01",
+      "period_end": "2025-12-31",
+      "value": 15.72,
+      "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
       "period_start": "2026-01-01",
@@ -391,12 +628,24 @@
       "source_url": "https://erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2026-01-01",
+      "period_end": "2026-04-30",
+      "value": 9.72,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2026-05-01",
       "period_end": "2026-08-31",
       "value": 16.23,
       "source_url": "https://erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2026-05-01",
+      "period_end": "2026-08-31",
+      "value": 16.23,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2026-09-01",
       "period_end": "2026-12-31",
       "value": 16.23,
@@ -407,6 +656,12 @@
       "period_end": "2026-12-31",
       "value": 16.23,
       "source_url": "https://erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2026-09-01",
+      "period_end": "2026-12-31",
+      "value": 16.23,
+      "source_url": "https://www.erc.or.th/th/automatic/"
     }
   ],
   "pool_gas_history": [
@@ -1332,10 +1587,10 @@
       "Project/company rows with an overlap_group are milestones/context and are excluded from national market sums."
     ],
     "csv_exports": {
-      "renewable_capacity_snapshot.csv": "/mnt/data/thailand_power_pipeline_v0_6/data/renewable_capacity_snapshot.csv",
-      "procurement_pipeline.csv": "/mnt/data/thailand_power_pipeline_v0_6/data/procurement_pipeline.csv",
-      "project_registry.csv": "/mnt/data/thailand_power_pipeline_v0_6/data/project_registry.csv",
-      "procurement_scod_schedule.csv": "/mnt/data/thailand_power_pipeline_v0_6/data/procurement_scod_schedule.csv"
+      "renewable_capacity_snapshot.csv": "/home/runner/work/thailand-power-dashboard/thailand-power-dashboard/data/renewable_capacity_snapshot.csv",
+      "procurement_pipeline.csv": "/home/runner/work/thailand-power-dashboard/thailand-power-dashboard/data/procurement_pipeline.csv",
+      "project_registry.csv": "/home/runner/work/thailand-power-dashboard/thailand-power-dashboard/data/project_registry.csv",
+      "procurement_scod_schedule.csv": "/home/runner/work/thailand-power-dashboard/thailand-power-dashboard/data/procurement_scod_schedule.csv"
     }
   },
   "weekly_digest": [
@@ -1388,6 +1643,45 @@
       "source_url": "https://www.nationthailand.com/sustaination/40070547"
     },
     {
+      "event_date": "2026-09-07",
+      "category": "Project & investment",
+      "topic": "Project COD",
+      "company": "GULF",
+      "title": "01 September 2026 Notification of the commercial operation commencement of two solar power projects Read More",
+      "capacity_mw": null,
+      "status_after": "COD",
+      "materiality_score": 8,
+      "confidence": 0.95,
+      "source_name": "GULF SET announcements",
+      "source_url": "https://investor.gulf.co.th/en/document/viewer/203067/notification-of-the-commercial-operation-commencement-of-two-solar-power-projects"
+    },
+    {
+      "event_date": "2026-09-07",
+      "category": "Project & investment",
+      "topic": "Project COD",
+      "company": "GULF",
+      "title": "06 August 2026 Financial Statement Quarter 2/2026 (Reviewed) Read More",
+      "capacity_mw": null,
+      "status_after": "COD",
+      "materiality_score": 8,
+      "confidence": 0.95,
+      "source_name": "GULF SET announcements",
+      "source_url": "javascript:;"
+    },
+    {
+      "event_date": "2026-09-07",
+      "category": "Project & investment",
+      "topic": "Project execution",
+      "company": "GULF",
+      "title": "24 August 2026 Entry into long-term project financing for three wind power projects Read More",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 5,
+      "confidence": 0.95,
+      "source_name": "GULF SET announcements",
+      "source_url": "https://investor.gulf.co.th/en/document/viewer/202816/entry-into-long-term-project-financing-for-three-wind-power-projects"
+    },
+    {
       "event_date": "2026-09-01",
       "category": "Project & investment",
       "topic": "Solar COD",
@@ -1399,6 +1693,58 @@
       "confidence": 0.99,
       "source_name": "GULF SET announcement",
       "source_url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&symbol=GULF"
+    },
+    {
+      "event_date": "2026-09-01",
+      "category": "Project & investment",
+      "topic": "Project PPA",
+      "company": "GUNKUL",
+      "title": "14 August 2026 Financial Statement Quarter 2/2026 (Reviewed) Read More",
+      "capacity_mw": null,
+      "status_after": "PPA signed",
+      "materiality_score": 7,
+      "confidence": 0.95,
+      "source_name": "GUNKUL SET announcements",
+      "source_url": "javascript:;"
+    },
+    {
+      "event_date": "2026-09-01",
+      "category": "Project & investment",
+      "topic": "Project PPA",
+      "company": "GUNKUL",
+      "title": "20 July 2026 Notification of the Execution of Power Purchase Agreements for Three Renewable Energy Power Projects Comprising Solar and Wind Power Projects Read More",
+      "capacity_mw": null,
+      "status_after": "PPA signed",
+      "materiality_score": 7,
+      "confidence": 0.95,
+      "source_name": "GUNKUL SET announcements",
+      "source_url": "https://hub.optiwise.io/en/documents/225047/644370581ADCC7382A43725E1ADAC538670F012F1DDEC03E124207571CD8C14B6F377B2819ADC34E153501566FAEB63E124B6C1E4E8DCF3A6643755C1AD9C3396440725F1BDBC33A66366C1E4E8D_200720261230110620E.pdf"
+    },
+    {
+      "event_date": "2026-09-01",
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": "GUNKUL",
+      "title": "07 July 2026 Notification of Investment in Solar Floating Power Plant Project in the Philippines Read More",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 5,
+      "confidence": 0.95,
+      "source_name": "GUNKUL SET announcements",
+      "source_url": "https://hub.optiwise.io/en/documents/224667/644370581ADCC53F2A43725E1ADAC538670F075A18AFCC3D10357A5A19AFC13C174B075D12D9B34B1237712D1FD8C04E60416C1E4E8DCF386143755C1AD9C3386E40755B13DFC63F66366C1E4E8D_070720260837594370E.pdf"
+    },
+    {
+      "event_date": "2026-09-01",
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": "GUNKUL",
+      "title": "15 June 2026 Clarification of Facts Regarding News Reports Concerning an Incident at the Group's Solar Power Project Site Read More",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 5,
+      "confidence": 0.95,
+      "source_name": "GUNKUL SET announcements",
+      "source_url": "https://hub.optiwise.io/en/documents/223720/644370581ADDC43D2A43725E1ADAC538670F755D19D2B7381547065C19DAB73C6435042B1CA8C4386431005C6FDEC34D17356C1E4E8DCF396343745C1AD9C33964467B5E19D9C63C66366C1E4E8D_150620261259032340E.pdf"
     },
     {
       "event_date": "2026-08-31",
@@ -1438,6 +1784,500 @@
       "confidence": 0.97,
       "source_name": "GUNKUL SET announcement",
       "source_url": "https://www.set.or.th/en/market/news-and-alert/newsdetails?id=105471800&symbol=GUNKUL"
+    },
+    {
+      "event_date": "2026-07-15",
+      "category": "Market design",
+      "topic": "Direct PPA / green procurement",
+      "company": null,
+      "title": "โครงการปรับปรุงระบบส่งไฟฟ้าเพื่อรองรับการรับซื้อไฟฟ้าจากพลังงานหมุนเวียนของการไฟฟ้าฝ่ายผลิตแห่งประเทศไทย 23 ก.ค. 2569 ถึง 06 ส.ค. 2569",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 9,
+      "confidence": 0.95,
+      "source_name": "ERC consultations",
+      "source_url": "https://www.erc.or.th/th/listen-to-opinions/602"
+    },
+    {
+      "event_date": null,
+      "category": "Policy & regulation",
+      "topic": "PDP2026",
+      "company": null,
+      "title": "นโยบายและแผนพลังงาน",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 10,
+      "confidence": 0.75,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/plan-policy/energy-plan/แผนพัฒนากำลังผลิตไฟฟ้า"
+    },
+    {
+      "event_date": null,
+      "category": "Tariff & economics",
+      "topic": "Tariff / Ft",
+      "company": null,
+      "title": "นโยบายการกำหนดโครงสร้างอัตราค่าไฟฟ้าของประเทศไทย",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 9,
+      "confidence": 0.75,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/plan-policy/energy-policy/electric/%e0%b8%99%e0%b9%82%e0%b8%a2%e0%b8%9a%e0%b8%b2%e0%b8%a2%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%81%e0%b8%b3%e0%b8%ab%e0%b8%99%e0%b8%94%e0%b9%82%e0%b8%84%e0%b8%a3%e0%b8%87%e0%b8%aa%e0%b8%a3%e0%b9%89%e0%b8%b2"
+    },
+    {
+      "event_date": null,
+      "category": "Tariff & economics",
+      "topic": "Tariff / Ft",
+      "company": null,
+      "title": "ราคาพลังงานและอัตราค่าไฟฟ้า",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 9,
+      "confidence": 0.75,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/category/information-services/advertise/news-eppo"
+    },
+    {
+      "event_date": null,
+      "category": "Tariff & economics",
+      "topic": "Tariff / Ft",
+      "company": null,
+      "title": "อัตราค่าไฟฟ้าขายส่ง",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 9,
+      "confidence": 0.75,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/data-energy-statistic/energy-price-th/%e0%b8%ad%e0%b8%b1%e0%b8%95%e0%b8%a3%e0%b8%b2%e0%b8%84%e0%b9%88%e0%b8%b2%e0%b9%84%e0%b8%9f%e0%b8%9f%e0%b9%89%e0%b8%b2%e0%b8%82%e0%b8%b2%e0%b8%a2%e0%b8%aa%e0%b9%88%e0%b8%87"
+    },
+    {
+      "event_date": null,
+      "category": "Tariff & economics",
+      "topic": "Tariff / Ft",
+      "company": null,
+      "title": "อัตราค่าไฟฟ้าขายปลีก",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 9,
+      "confidence": 0.75,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/data-energy-statistic/energy-price-th/%e0%b8%ad%e0%b8%b1%e0%b8%95%e0%b8%a3%e0%b8%b2%e0%b8%84%e0%b9%88%e0%b8%b2%e0%b9%84%e0%b8%9f%e0%b8%9f%e0%b9%89%e0%b8%b2%e0%b8%82%e0%b8%b2%e0%b8%a2%e0%b8%9b%e0%b8%a5%e0%b8%b5%e0%b8%81"
+    },
+    {
+      "event_date": null,
+      "category": "Tariff & economics",
+      "topic": "Tariff / Ft",
+      "company": null,
+      "title": "นโยบายด้านพลังงาน",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 9,
+      "confidence": 0.75,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/category/information-services/advertise/news-eppo"
+    },
+    {
+      "event_date": null,
+      "category": "Tariff & economics",
+      "topic": "Tariff / Ft",
+      "company": null,
+      "title": "เอกสารเผยแพร่",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 9,
+      "confidence": 0.75,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/category/information-services/advertise/news-eppo"
+    },
+    {
+      "event_date": null,
+      "category": "Tariff & economics",
+      "topic": "Tariff / Ft",
+      "company": null,
+      "title": "โปรแกรมคำนวณค่าไฟฟ้า",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 9,
+      "confidence": 0.75,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/category/information-services/advertise/news-eppo"
+    },
+    {
+      "event_date": null,
+      "category": "Grid & system",
+      "topic": "Grid / transmission",
+      "company": "GUNKUL",
+      "title": "Solar Rooftop",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 8,
+      "confidence": 0.75,
+      "source_name": "GUNKUL SET announcements",
+      "source_url": "https://www.gunkul.com/en/businesses/energy-business/solar-rooftop"
+    },
+    {
+      "event_date": null,
+      "category": "Grid & system",
+      "topic": "Grid / transmission",
+      "company": null,
+      "title": "แผนพัฒนากำลังผลิตไฟฟ้า (PDP) แผนอนุรักษ์พลังงาน (EEP) แผนพัฒนาพลังงานทดแทน (AEDP) แผน Smart grid",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 7,
+      "confidence": 0.75,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/category/information-services/advertise/news-eppo"
+    },
+    {
+      "event_date": null,
+      "category": "Grid & system",
+      "topic": "Grid / transmission",
+      "company": null,
+      "title": "แผน Smart grid",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 7,
+      "confidence": 0.75,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/plan-policy/energy-plan/energy-plan-smart-grid/smart-grid-2"
+    },
+    {
+      "event_date": null,
+      "category": "Grid & system",
+      "topic": "Grid / transmission",
+      "company": null,
+      "title": "เวทีเสวนา KT Dialogue New Horizon: Smart Grid",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 7,
+      "confidence": 0.75,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/information-services/advertise/news-eppo/%e0%b9%80%e0%b8%a7%e0%b8%97%e0%b8%b5%e0%b9%80%e0%b8%aa%e0%b8%a7%e0%b8%99%e0%b8%b2-kt-dialogue-new-horizon-smart-grid"
+    },
+    {
+      "event_date": null,
+      "category": "Grid & system",
+      "topic": "Grid / transmission",
+      "company": null,
+      "title": "แผนด้านพลังงาน",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 7,
+      "confidence": 0.75,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/plan-policy/energy-plan/แผนพัฒนากำลังผลิตไฟฟ้า"
+    },
+    {
+      "event_date": null,
+      "category": "Grid & system",
+      "topic": "Grid / transmission",
+      "company": "GUNKUL",
+      "title": "Energy Business",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 7,
+      "confidence": 0.75,
+      "source_name": "GUNKUL SET announcements",
+      "source_url": "https://www.gunkul.com/en/businesses/energy-business"
+    },
+    {
+      "event_date": null,
+      "category": "Grid & system",
+      "topic": "Grid / transmission",
+      "company": "GUNKUL",
+      "title": "Solar Farm",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 7,
+      "confidence": 0.75,
+      "source_name": "GUNKUL SET announcements",
+      "source_url": "https://www.gunkul.com/en/businesses/energy-business/solar-farm"
+    },
+    {
+      "event_date": null,
+      "category": "Grid & system",
+      "topic": "Grid / transmission",
+      "company": "GUNKUL",
+      "title": "Floating Solar Farm",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 7,
+      "confidence": 0.75,
+      "source_name": "GUNKUL SET announcements",
+      "source_url": "https://www.gunkul.com/en/businesses/energy-business/floating-solar-farm"
+    },
+    {
+      "event_date": null,
+      "category": "Grid & system",
+      "topic": "Grid / transmission",
+      "company": "GUNKUL",
+      "title": "High Voltage Equipment Business",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 7,
+      "confidence": 0.75,
+      "source_name": "GUNKUL SET announcements",
+      "source_url": "https://www.gunkul.com/en/businesses/high-voltage-equipment-business"
+    },
+    {
+      "event_date": null,
+      "category": "Grid & system",
+      "topic": "Grid / transmission",
+      "company": "GUNKUL",
+      "title": "Transmission Lines",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 7,
+      "confidence": 0.75,
+      "source_name": "GUNKUL SET announcements",
+      "source_url": "https://www.gunkul.com/en/businesses/high-voltage-equipment-business/transmission-lines"
+    },
+    {
+      "event_date": null,
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": "BGRIM",
+      "title": "Power Plants Overview",
+      "capacity_mw": 6640.0,
+      "status_after": null,
+      "materiality_score": 7,
+      "confidence": 0.75,
+      "source_name": "B.Grimm Power SET announcements",
+      "source_url": "https://www.bgrimmpower.com/en/power-plants/overview"
+    },
+    {
+      "event_date": null,
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": "BGRIM",
+      "title": "Code of Conduct",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 5,
+      "confidence": 0.75,
+      "source_name": "B.Grimm Power SET announcements",
+      "source_url": "https://www.bgrimmpower.com/en/corporate-governance/code-of-conduct"
+    },
+    {
+      "event_date": null,
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": null,
+      "title": "นโยบายการรับซื้อไฟฟ้าจากพลังงานหมุนเวียน",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 4,
+      "confidence": 0.75,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/plan-policy/energy-policy/electric/%e0%b8%99%e0%b9%82%e0%b8%a2%e0%b8%9a%e0%b8%b2%e0%b8%a2%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b1%e0%b8%9a%e0%b8%8b%e0%b8%b7%e0%b9%89%e0%b8%ad%e0%b9%84%e0%b8%9f%e0%b8%9f%e0%b9%89%e0%b8%b2%e0%b8%88"
+    },
+    {
+      "event_date": null,
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": "GUNKUL",
+      "title": "Businesses",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 4,
+      "confidence": 0.75,
+      "source_name": "GUNKUL SET announcements",
+      "source_url": "javascript:;"
+    },
+    {
+      "event_date": null,
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": "GUNKUL",
+      "title": "Wind Farm",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 4,
+      "confidence": 0.75,
+      "source_name": "GUNKUL SET announcements",
+      "source_url": "https://www.gunkul.com/en/businesses/energy-business/wind-farm"
+    },
+    {
+      "event_date": null,
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": "GUNKUL",
+      "title": "GRoof: Residential Solar Rooftop",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 4,
+      "confidence": 0.75,
+      "source_name": "GUNKUL SET announcements",
+      "source_url": "https://www.gunkul.com/en/businesses/energy-business/groof-residential-solar-rooftop"
+    },
+    {
+      "event_date": null,
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": "GUNKUL",
+      "title": "I-REC Service (International Renewable Energy Certificates)",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 4,
+      "confidence": 0.75,
+      "source_name": "GUNKUL SET announcements",
+      "source_url": "https://www.gunkul.com/en/businesses/energy-business/i-rec-service-international-renewable-energy-certificates"
+    },
+    {
+      "event_date": null,
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": "GUNKUL",
+      "title": "Ecosystem Business Platform and Innovations",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 4,
+      "confidence": 0.75,
+      "source_name": "GUNKUL SET announcements",
+      "source_url": "https://www.gunkul.com/en/businesses/ecosystem-business-platform-and-innovations"
+    },
+    {
+      "event_date": null,
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": "GUNKUL",
+      "title": "Battery Energy Storage System and Virtual Power Plant Business",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 4,
+      "confidence": 0.75,
+      "source_name": "GUNKUL SET announcements",
+      "source_url": "https://www.gunkul.com/en/businesses/ecosystem-business-platform-and-innovations/battery-energy-storage-system-and-virtual-power-plant-business"
+    },
+    {
+      "event_date": null,
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": "BGRIM",
+      "title": "Energy Solutions",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 4,
+      "confidence": 0.75,
+      "source_name": "B.Grimm Power SET announcements",
+      "source_url": "javascript:void(0)"
+    },
+    {
+      "event_date": null,
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": "BGRIM",
+      "title": "Solar Rooftop",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 4,
+      "confidence": 0.75,
+      "source_name": "B.Grimm Power SET announcements",
+      "source_url": "https://www.bgrimmpower.com/en/energy-solutions/solar-rooftop"
+    },
+    {
+      "event_date": null,
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": "BGRIM",
+      "title": "Head Office & Power Plants",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 4,
+      "confidence": 0.75,
+      "source_name": "B.Grimm Power SET announcements",
+      "source_url": "https://www.bgrimmpower.com/en/contact-us/head-office-power-plants"
+    },
+    {
+      "event_date": null,
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": "GPSC",
+      "title": "Our Business",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 4,
+      "confidence": 0.75,
+      "source_name": "GPSC SET announcements",
+      "source_url": "javascript:void(0);"
+    },
+    {
+      "event_date": null,
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": "GPSC",
+      "title": "Renewable Energy",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 4,
+      "confidence": 0.75,
+      "source_name": "GPSC SET announcements",
+      "source_url": "https://www.gpscgroup.com/en/business/project?category=3"
+    },
+    {
+      "event_date": null,
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": "GPSC",
+      "title": "Good Corporate Governance Policy and Code of Conduct",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 4,
+      "confidence": 0.75,
+      "source_name": "GPSC SET announcements",
+      "source_url": "https://www.gpscgroup.com/en/cg/good-corporate-governance-policy-and-code-of-conduct"
+    },
+    {
+      "event_date": null,
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": "GPSC",
+      "title": "Energy Storage System",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 4,
+      "confidence": 0.75,
+      "source_name": "GPSC SET announcements",
+      "source_url": "https://www.gpscgroup.com/en/search?q=Energy%20Storage%20System"
+    },
+    {
+      "event_date": null,
+      "category": "Other",
+      "topic": null,
+      "company": null,
+      "title": "ประมวลหลักการปฏิบัติ (Code of Practice)",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 2,
+      "confidence": 0.75,
+      "source_name": "ERC news releases",
+      "source_url": "https://www.erc.or.th/th/code-of-practice"
+    },
+    {
+      "event_date": null,
+      "category": "Other",
+      "topic": null,
+      "company": null,
+      "title": "กฎหมายการรับซื้อไฟฟ้า",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 2,
+      "confidence": 0.75,
+      "source_name": "ERC news releases",
+      "source_url": "https://www.erc.or.th/th/news-release"
+    },
+    {
+      "event_date": null,
+      "category": "Other",
+      "topic": null,
+      "company": null,
+      "title": "ประมวลหลักการปฏิบัติ (Code Of Practice: CoP)",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 2,
+      "confidence": 0.75,
+      "source_name": "ERC news releases",
+      "source_url": "https://www.erc.or.th/th/news-release"
     }
   ],
   "applicable_tariff_event": {
@@ -1453,6 +2293,6 @@
     "source_url": "https://www.erc.or.th/th/news-release/3472",
     "title": "Residential progressive-rate structure; average billed rate across all categories",
     "supersedes_event_id": "ERC-2026-07-23-FT",
-    "ingested_at": "2026-09-09T03:31:39Z"
+    "ingested_at": "2026-09-09T06:52:52Z"
   }
 }
