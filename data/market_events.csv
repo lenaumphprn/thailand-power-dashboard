@@ -1,4 +1,9 @@
 ﻿event_date,category,topic,company,title,capacity_mw,status_after,materiality_score,confidence,review_status,source_name,source_url
+2026-09-14,Grid & system,Grid / transmission,,ข้อมูลสถิติพลังงาน,,,8,0.95,auto,EPPO news,https://www.eppo.go.th/category/information-services/advertise/news-eppo
+2026-09-11,Project & investment,Project PPA,GULF,11 September 2026 Execution of Power Purchase Agreements for four wind power projects Read More,,PPA signed,7,0.95,auto,GULF SET announcements,https://investor.gulf.co.th/en/document/viewer/203442/execution-of-power-purchase-agreements-for-four-wind-power-projects
+2026-09-09,Grid & system,Grid / transmission,,Skip to content,,,8,0.95,auto,EPPO news,https://www.eppo.go.th/category/information-services/advertise/news-eppo
+2026-09-09,Grid & system,Grid / transmission,,นโยบายและแผนพลังงาน,,,8,0.95,auto,EPPO news,https://www.eppo.go.th/category/information-services/advertise/news-eppo
+2026-09-09,Grid & system,Grid / transmission,,Page load link,,,8,0.95,auto,EPPO news,https://www.eppo.go.th/category/information-services/advertise/news-eppo
 2026-09-08,Policy & regulation,PDP2026,,PDP2026 hearing sets a 50.9 GW first-stage build envelope,50900.0,,13,0.98,verified_seed,Thai PBS — PDP2026 public-hearing coverage,https://www.thaipbs.th/news/content/557632
 2026-09-08,Policy & regulation,PDP2026,,EPPO opens public hearing on draft PDP2026,24300.0,,12,0.98,verified_seed,The Nation — PDP2026 consultation coverage,https://www.nationthailand.com/sustaination/40070547
 2026-09-07,Project & investment,Project COD,GULF,01 September 2026 Notification of the commercial operation commencement of two solar power projects Read More,,COD,8,0.95,auto,GULF SET announcements,https://investor.gulf.co.th/en/document/viewer/203067/notification-of-the-commercial-operation-commencement-of-two-solar-power-projects
@@ -13,6 +18,7 @@
 2026-08-24,Project & investment,Wind financing,GULF,GULF secures long-term project financing for three wind projects,,,7,0.92,verified_seed,GULF SET announcement,https://investor.gulf.co.th/en/newsroom/set-announcements?page=1
 2026-07-20,Project & investment,Renewable PPA,GUNKUL,GUNKUL signs PPAs for three solar and wind projects,,PPA signed,7,0.97,verified_seed,GUNKUL SET announcement,https://www.set.or.th/en/market/news-and-alert/newsdetails?id=105471800&symbol=GUNKUL
 2026-07-15,Market design,Direct PPA / green procurement,,โครงการปรับปรุงระบบส่งไฟฟ้าเพื่อรองรับการรับซื้อไฟฟ้าจากพลังงานหมุนเวียนของการไฟฟ้าฝ่ายผลิตแห่งประเทศไทย 23 ก.ค. 2569 ถึง 06 ส.ค. 2569,,,9,0.95,auto,ERC consultations,https://www.erc.or.th/th/listen-to-opinions/602
+,Policy & regulation,PDP2026,,สนพ. เปิดรับฟังความคิดเห็นร่าง “แผน PDP2026”,,,11,0.75,auto,EPPO news,https://www.eppo.go.th/information-services/advertise/news-eppo/%e0%b8%aa%e0%b8%99%e0%b8%9e-%e0%b9%80%e0%b8%9b%e0%b8%b4%e0%b8%94%e0%b8%a3%e0%b8%b1%e0%b8%9a%e0%b8%9f%e0%b8%b1%e0%b8%87%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b8%84%e0%b8%b4%e0%b8%94%e0%b9%80-4
 ,Policy & regulation,PDP2026,,นโยบายและแผนพลังงาน,,,10,0.75,auto,EPPO news,https://www.eppo.go.th/plan-policy/energy-plan/แผนพัฒนากำลังผลิตไฟฟ้า
 ,Policy & regulation,PDP2026,,ผอ. สนพ. ร่วมงาน BIG ISSUE : PDP 2026 ENERGY GREEN POWER,,,10,0.75,auto,EPPO news,https://www.eppo.go.th/information-services/advertise/news-eppo/%e0%b8%9c%e0%b8%ad-%e0%b8%aa%e0%b8%99%e0%b8%9e-%e0%b8%a3%e0%b9%88%e0%b8%a7%e0%b8%a1%e0%b8%87%e0%b8%b2%e0%b8%99-big-issue-pdp-2026-energy-green-power
 ,Tariff & economics,Tariff / Ft,,นโยบายการกำหนดโครงสร้างอัตราค่าไฟฟ้าของประเทศไทย,,,9,0.75,auto,EPPO news,https://www.eppo.go.th/plan-policy/energy-policy/electric/%e0%b8%99%e0%b9%82%e0%b8%a2%e0%b8%9a%e0%b8%b2%e0%b8%a2%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%81%e0%b8%b3%e0%b8%ab%e0%b8%99%e0%b8%94%e0%b9%82%e0%b8%84%e0%b8%a3%e0%b8%87%e0%b8%aa%e0%b8%a3%e0%b9%89%e0%b8%b2
@@ -25,7 +31,9 @@
 ,Grid & system,Grid / transmission,GUNKUL,Solar Rooftop,,,8,0.75,auto,GUNKUL SET announcements,https://www.gunkul.com/en/businesses/energy-business/solar-rooftop
 ,Grid & system,Grid / transmission,,แผนพัฒนากำลังผลิตไฟฟ้า (PDP) แผนอนุรักษ์พลังงาน (EEP) แผนพัฒนาพลังงานทดแทน (AEDP) แผน Smart grid,,,7,0.75,auto,EPPO news,https://www.eppo.go.th/category/information-services/advertise/news-eppo
 ,Grid & system,Grid / transmission,,แผน Smart grid,,,7,0.75,auto,EPPO news,https://www.eppo.go.th/plan-policy/energy-plan/energy-plan-smart-grid/smart-grid-2
+,Project & investment,Power / renewables project,,นโยบายการรับซื้อไฟฟ้าจากพลังงานหมุนเวียน,,,7,0.75,auto,EPPO news,https://www.eppo.go.th/plan-policy/energy-policy/electric/%e0%b8%99%e0%b9%82%e0%b8%a2%e0%b8%9a%e0%b8%b2%e0%b8%a2%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b1%e0%b8%9a%e0%b8%8b%e0%b8%b7%e0%b9%89%e0%b8%ad%e0%b9%84%e0%b8%9f%e0%b8%9f%e0%b9%89%e0%b8%b2%e0%b8%88
 ,Grid & system,Grid / transmission,,เวทีเสวนา KT Dialogue New Horizon: Smart Grid,,,7,0.75,auto,EPPO news,https://www.eppo.go.th/information-services/advertise/news-eppo/%e0%b9%80%e0%b8%a7%e0%b8%97%e0%b8%b5%e0%b9%80%e0%b8%aa%e0%b8%a7%e0%b8%99%e0%b8%b2-kt-dialogue-new-horizon-smart-grid
+,Other,,,ราคาไฟฟ้าโดยอัตโนมัติ (Ft),,,7,0.75,auto,EPPO news,https://www.eppo.go.th/data-energy-statistic/energy-price-th/%e0%b8%a3%e0%b8%b2%e0%b8%84%e0%b8%b2%e0%b9%84%e0%b8%9f%e0%b8%9f%e0%b9%89%e0%b8%b2%e0%b9%82%e0%b8%94%e0%b8%a2%e0%b8%ad%e0%b8%b1%e0%b8%95%e0%b9%82%e0%b8%99%e0%b8%a1%e0%b8%b1%e0%b8%95%e0%b8%b4-ft
 ,Grid & system,Grid / transmission,,แผนด้านพลังงาน,,,7,0.75,auto,EPPO news,https://www.eppo.go.th/plan-policy/energy-plan/แผนพัฒนากำลังผลิตไฟฟ้า
 ,Grid & system,Grid / transmission,GUNKUL,Energy Business,,,7,0.75,auto,GUNKUL SET announcements,https://www.gunkul.com/en/businesses/energy-business
 ,Grid & system,Grid / transmission,GUNKUL,Solar Farm,,,7,0.75,auto,GUNKUL SET announcements,https://www.gunkul.com/en/businesses/energy-business/solar-farm
@@ -34,7 +42,6 @@
 ,Grid & system,Grid / transmission,GUNKUL,Transmission Lines,,,7,0.75,auto,GUNKUL SET announcements,https://www.gunkul.com/en/businesses/high-voltage-equipment-business/transmission-lines
 ,Project & investment,Power / renewables project,BGRIM,Power Plants Overview,6640.0,,7,0.75,auto,B.Grimm Power SET announcements,https://www.bgrimmpower.com/en/power-plants/overview
 ,Project & investment,Power / renewables project,BGRIM,Code of Conduct,,,5,0.75,auto,B.Grimm Power SET announcements,https://www.bgrimmpower.com/en/corporate-governance/code-of-conduct
-,Project & investment,Power / renewables project,,นโยบายการรับซื้อไฟฟ้าจากพลังงานหมุนเวียน,,,4,0.75,auto,EPPO news,https://www.eppo.go.th/plan-policy/energy-policy/electric/%e0%b8%99%e0%b9%82%e0%b8%a2%e0%b8%9a%e0%b8%b2%e0%b8%a2%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b1%e0%b8%9a%e0%b8%8b%e0%b8%b7%e0%b9%89%e0%b8%ad%e0%b9%84%e0%b8%9f%e0%b8%9f%e0%b9%89%e0%b8%b2%e0%b8%88
 ,Project & investment,Power / renewables project,GUNKUL,Businesses,,,4,0.75,auto,GUNKUL SET announcements,javascript:;
 ,Project & investment,Power / renewables project,GUNKUL,Wind Farm,,,4,0.75,auto,GUNKUL SET announcements,https://www.gunkul.com/en/businesses/energy-business/wind-farm
 ,Project & investment,Power / renewables project,GUNKUL,GRoof: Residential Solar Rooftop,,,4,0.75,auto,GUNKUL SET announcements,https://www.gunkul.com/en/businesses/energy-business/groof-residential-solar-rooftop
@@ -52,7 +59,6 @@
 ,Other,,,กฎหมายการรับซื้อไฟฟ้า,,,2,0.75,auto,ERC news releases,https://www.erc.or.th/th/news-release
 ,Other,,,ประมวลหลักการปฏิบัติ (Code Of Practice: CoP),,,2,0.75,auto,ERC news releases,https://www.erc.or.th/th/news-release
 ,Other,,,รายงานการรับซื้อไฟฟ้า,,,2,0.75,auto,ERC news releases,https://www.erc.or.th/th/electricity-purchase
-,Other,,,ราคาไฟฟ้าโดยอัตโนมัติ (Ft),,,2,0.75,auto,EPPO news,https://www.eppo.go.th/data-energy-statistic/energy-price-th/%e0%b8%a3%e0%b8%b2%e0%b8%84%e0%b8%b2%e0%b9%84%e0%b8%9f%e0%b8%9f%e0%b9%89%e0%b8%b2%e0%b9%82%e0%b8%94%e0%b8%a2%e0%b8%ad%e0%b8%b1%e0%b8%95%e0%b9%82%e0%b8%99%e0%b8%a1%e0%b8%b1%e0%b8%95%e0%b8%b4-ft
 ,Other,,,การส่งเสริมการผลิตไฟฟ้าภาคเอกชน,,,2,0.75,auto,EPPO news,https://www.eppo.go.th/category/information-services/advertise/news-eppo
 ,Other,,,แนวทางการรับซื้อไฟฟ้า,,,2,0.75,auto,EPPO news,https://www.eppo.go.th/plan-policy/energy-policy/electric/%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%aa%e0%b9%88%e0%b8%87%e0%b9%80%e0%b8%aa%e0%b8%a3%e0%b8%b4%e0%b8%a1%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%9c%e0%b8%a5%e0%b8%b4%e0%b8%95%e0%b9%84%e0%b8%9f%e0%b8%9f%e0%b9%89
 ,Other,,GUNKUL,Private PPA,,,2,0.75,auto,GUNKUL SET announcements,https://www.gunkul.com/en/businesses/energy-business/private-ppa

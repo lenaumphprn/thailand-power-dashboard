@@ -1,23 +1,24 @@
 {
-  "generated_at": "2026-09-09T07:42:25Z",
+  "generated_at": "2026-09-14T06:18:32Z",
   "metrics": {
     "K01": {
-      "observation_id": 27,
+      "observation_id": 79,
       "metric_id": "K01",
       "period_start": "2026-01-01",
       "period_end": "2026-06-30",
       "value": 6.008050510576202,
       "unit": "% YoY",
       "source_id": "S01",
-      "publication_date": "2026-09-09",
+      "publication_date": "2026-09-14",
       "effective_start": null,
       "effective_end": null,
-      "ingested_at": "2026-09-09T06:52:54Z",
+      "ingested_at": "2026-09-14T06:16:15Z",
       "scope_version": "v1.0",
       "qa_status": "pass",
       "raw_source_ref": null,
       "note": "YTD demand 109845.74; prior 103620.19",
       "details": {
+        "fy2025_growth_pct": -2.816547312158635,
         "prior_ytd_gwh": 103620.18682822098,
         "ytd_gwh": 109845.73999201391
       },
@@ -27,17 +28,17 @@
       "provenance_type": "DIRECT_PUBLIC"
     },
     "K02": {
-      "observation_id": 78,
+      "observation_id": 82,
       "metric_id": "K02",
       "period_start": "2026-01-01",
       "period_end": "2026-04-22",
       "value": 35991.6,
       "unit": "MW",
       "source_id": "S07",
-      "publication_date": "2026-09-09",
+      "publication_date": "2026-09-14",
       "effective_start": null,
       "effective_end": null,
-      "ingested_at": "2026-09-09T07:40:54Z",
+      "ingested_at": "2026-09-14T06:16:18Z",
       "scope_version": "v1.0",
       "qa_status": "pass",
       "raw_source_ref": "https://www.egat.co.th/home/statistics-demand-latest/",
@@ -59,17 +60,17 @@
       "provenance_type": "DIRECT_PUBLIC"
     },
     "K03": {
-      "observation_id": 76,
+      "observation_id": 80,
       "metric_id": "K03",
       "period_start": "2026-01-01",
       "period_end": "2026-06-30",
       "value": 14.994946375213598,
       "unit": "% of generation",
       "source_id": "S02",
-      "publication_date": "2026-09-09",
+      "publication_date": "2026-09-14",
       "effective_start": null,
       "effective_end": null,
-      "ingested_at": "2026-09-09T07:40:52Z",
+      "ingested_at": "2026-09-14T06:16:16Z",
       "scope_version": "v1.0",
       "qa_status": "pass",
       "raw_source_ref": "https://catalog.eppo.go.th/dataset/dataset_11_27",
@@ -122,17 +123,17 @@
       "provenance_type": "DIRECT_PUBLIC"
     },
     "K05": {
-      "observation_id": 77,
+      "observation_id": 81,
       "metric_id": "K05",
       "period_start": "2026-01-01",
       "period_end": "2026-06-30",
       "value": 60.96768726473813,
       "unit": "% of generation",
       "source_id": "S02",
-      "publication_date": "2026-09-09",
+      "publication_date": "2026-09-14",
       "effective_start": null,
       "effective_end": null,
-      "ingested_at": "2026-09-09T07:40:52Z",
+      "ingested_at": "2026-09-14T06:16:16Z",
       "scope_version": "v1.0",
       "qa_status": "pass",
       "raw_source_ref": "https://catalog.eppo.go.th/dataset/dataset_11_27",
@@ -177,17 +178,17 @@
       "provenance_type": "DIRECT_PUBLIC"
     },
     "K07": {
-      "observation_id": 30,
+      "observation_id": 83,
       "metric_id": "K07",
       "period_start": "2026-09-01",
       "period_end": "2026-12-31",
       "value": 16.23,
       "unit": "satang/kWh",
       "source_id": "S08",
-      "publication_date": "2026-09-09",
+      "publication_date": "2026-09-14",
       "effective_start": "2026-09-01",
       "effective_end": "2026-12-31",
-      "ingested_at": "2026-09-09T06:52:58Z",
+      "ingested_at": "2026-09-14T06:16:20Z",
       "scope_version": "v1.0",
       "qa_status": "pass",
       "raw_source_ref": null,
@@ -371,9 +372,27 @@
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2011-09-01",
+      "period_end": "2011-12-31",
+      "value": -6.0,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2012-01-01",
       "period_end": "2012-04-30",
       "value": 0.0,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2012-01-01",
+      "period_end": "2012-04-30",
+      "value": 0.0,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2012-09-01",
+      "period_end": "2012-12-31",
+      "value": 48.0,
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
@@ -389,9 +408,27 @@
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2013-01-01",
+      "period_end": "2013-04-30",
+      "value": 52.04,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2013-05-01",
       "period_end": "2013-08-31",
       "value": 46.92,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2013-05-01",
+      "period_end": "2013-08-31",
+      "value": 46.92,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2013-09-01",
+      "period_end": "2013-12-31",
+      "value": 54.0,
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
@@ -407,8 +444,26 @@
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2014-01-01",
+      "period_end": "2014-04-30",
+      "value": 59.0,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2014-05-01",
       "period_end": "2014-08-31",
+      "value": 69.0,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2014-05-01",
+      "period_end": "2014-08-31",
+      "value": 69.0,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2014-09-01",
+      "period_end": "2014-12-31",
       "value": 69.0,
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
@@ -425,6 +480,18 @@
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2015-01-01",
+      "period_end": "2015-04-30",
+      "value": 58.96,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2015-05-01",
+      "period_end": "2015-08-31",
+      "value": 49.61,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2015-05-01",
       "period_end": "2015-08-31",
       "value": 49.61,
@@ -437,8 +504,26 @@
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2016-01-01",
+      "period_end": "2016-04-30",
+      "value": -4.8,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2016-05-01",
       "period_end": "2016-08-31",
+      "value": -33.29,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2016-05-01",
+      "period_end": "2016-08-31",
+      "value": -33.29,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2016-09-01",
+      "period_end": "2016-12-31",
       "value": -33.29,
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
@@ -455,6 +540,18 @@
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2017-01-01",
+      "period_end": "2017-04-30",
+      "value": -37.29,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2017-05-01",
+      "period_end": "2017-08-31",
+      "value": -24.77,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2017-05-01",
       "period_end": "2017-08-31",
       "value": -24.77,
@@ -463,6 +560,18 @@
     {
       "period_start": "2017-09-01",
       "period_end": "2017-12-31",
+      "value": -15.9,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2017-09-01",
+      "period_end": "2017-12-31",
+      "value": -15.9,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2018-01-01",
+      "period_end": "2018-04-30",
       "value": -15.9,
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
@@ -479,6 +588,18 @@
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2018-05-01",
+      "period_end": "2018-08-31",
+      "value": -15.9,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2018-09-01",
+      "period_end": "2018-12-31",
+      "value": -15.9,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2018-09-01",
       "period_end": "2018-12-31",
       "value": -15.9,
@@ -487,6 +608,18 @@
     {
       "period_start": "2019-01-01",
       "period_end": "2019-04-30",
+      "value": -11.6,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2019-01-01",
+      "period_end": "2019-04-30",
+      "value": -11.6,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2019-05-01",
+      "period_end": "2019-08-31",
       "value": -11.6,
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
@@ -503,8 +636,26 @@
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2019-09-01",
+      "period_end": "2019-12-31",
+      "value": -11.6,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2020-01-01",
       "period_end": "2020-04-30",
+      "value": -11.6,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2020-01-01",
+      "period_end": "2020-04-30",
+      "value": -11.6,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2020-05-01",
+      "period_end": "2020-08-31",
       "value": -11.6,
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
@@ -521,8 +672,26 @@
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2020-09-01",
+      "period_end": "2020-12-31",
+      "value": -12.43,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2021-01-01",
       "period_end": "2021-04-30",
+      "value": -15.32,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2021-01-01",
+      "period_end": "2021-04-30",
+      "value": -15.32,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2021-05-01",
+      "period_end": "2021-08-31",
       "value": -15.32,
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
@@ -539,6 +708,18 @@
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2021-09-01",
+      "period_end": "2021-12-31",
+      "value": -15.32,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2022-01-01",
+      "period_end": "2022-04-30",
+      "value": 1.39,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2022-01-01",
       "period_end": "2022-04-30",
       "value": 1.39,
@@ -551,9 +732,27 @@
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2022-05-01",
+      "period_end": "2022-08-31",
+      "value": 24.77,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2022-09-01",
       "period_end": "2022-12-31",
       "value": 93.43,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2022-09-01",
+      "period_end": "2022-12-31",
+      "value": 93.43,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2023-05-01",
+      "period_end": "2023-08-31",
+      "value": 91.19,
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
@@ -575,10 +774,22 @@
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2023-09-01",
+      "period_end": "2023-12-31",
+      "value": 20.48,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2024-01-01",
       "period_end": "2024-04-30",
       "value": 39.72,
       "source_url": "https://erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2024-01-01",
+      "period_end": "2024-04-30",
+      "value": 39.72,
+      "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
       "period_start": "2024-01-01",
@@ -599,10 +810,22 @@
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2024-05-01",
+      "period_end": "2024-08-31",
+      "value": 39.72,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2024-09-01",
       "period_end": "2024-12-31",
       "value": 39.72,
       "source_url": "https://erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2024-09-01",
+      "period_end": "2024-12-31",
+      "value": 39.72,
+      "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
       "period_start": "2024-09-01",
@@ -623,10 +846,22 @@
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2025-01-01",
+      "period_end": "2025-04-30",
+      "value": 36.72,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2025-05-01",
       "period_end": "2025-08-31",
       "value": 19.72,
       "source_url": "https://erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2025-05-01",
+      "period_end": "2025-08-31",
+      "value": 19.72,
+      "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
       "period_start": "2025-05-01",
@@ -647,10 +882,22 @@
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2025-09-01",
+      "period_end": "2025-12-31",
+      "value": 15.72,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2026-01-01",
       "period_end": "2026-04-30",
       "value": 9.72,
       "source_url": "https://erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2026-01-01",
+      "period_end": "2026-04-30",
+      "value": 9.72,
+      "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
       "period_start": "2026-01-01",
@@ -671,6 +918,12 @@
       "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
+      "period_start": "2026-05-01",
+      "period_end": "2026-08-31",
+      "value": 16.23,
+      "source_url": "https://www.erc.or.th/th/automatic/"
+    },
+    {
       "period_start": "2026-09-01",
       "period_end": "2026-12-31",
       "value": 16.23,
@@ -681,6 +934,12 @@
       "period_end": "2026-12-31",
       "value": 16.23,
       "source_url": "https://erc.or.th/th/automatic/"
+    },
+    {
+      "period_start": "2026-09-01",
+      "period_end": "2026-12-31",
+      "value": 16.23,
+      "source_url": "https://www.erc.or.th/th/automatic/"
     },
     {
       "period_start": "2026-09-01",
@@ -1620,7 +1879,7 @@
   },
   "weekly_digest": [
     {
-      "refresh_date": "2026-09-09",
+      "refresh_date": "2026-09-14",
       "rank": 1,
       "category": "Policy & regulation",
       "headline": "PDP2026 hearing sets a 50.9 GW first-stage build envelope",
@@ -1631,7 +1890,7 @@
       "event_date": "2026-09-08"
     },
     {
-      "refresh_date": "2026-09-09",
+      "refresh_date": "2026-09-14",
       "rank": 2,
       "category": "Market design",
       "headline": "Direct PPA policy direction broadens clean-power access for industry",
@@ -1642,7 +1901,7 @@
       "event_date": "2026-08-31"
     },
     {
-      "refresh_date": "2026-09-09",
+      "refresh_date": "2026-09-14",
       "rank": 3,
       "category": "Project & investment",
       "headline": "GULF starts commercial operation of two solar projects",
@@ -1654,6 +1913,71 @@
     }
   ],
   "market_events": [
+    {
+      "event_date": "2026-09-14",
+      "category": "Grid & system",
+      "topic": "Grid / transmission",
+      "company": null,
+      "title": "ข้อมูลสถิติพลังงาน",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 8,
+      "confidence": 0.95,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/category/information-services/advertise/news-eppo"
+    },
+    {
+      "event_date": "2026-09-11",
+      "category": "Project & investment",
+      "topic": "Project PPA",
+      "company": "GULF",
+      "title": "11 September 2026 Execution of Power Purchase Agreements for four wind power projects Read More",
+      "capacity_mw": null,
+      "status_after": "PPA signed",
+      "materiality_score": 7,
+      "confidence": 0.95,
+      "source_name": "GULF SET announcements",
+      "source_url": "https://investor.gulf.co.th/en/document/viewer/203442/execution-of-power-purchase-agreements-for-four-wind-power-projects"
+    },
+    {
+      "event_date": "2026-09-09",
+      "category": "Grid & system",
+      "topic": "Grid / transmission",
+      "company": null,
+      "title": "Skip to content",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 8,
+      "confidence": 0.95,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/category/information-services/advertise/news-eppo"
+    },
+    {
+      "event_date": "2026-09-09",
+      "category": "Grid & system",
+      "topic": "Grid / transmission",
+      "company": null,
+      "title": "นโยบายและแผนพลังงาน",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 8,
+      "confidence": 0.95,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/category/information-services/advertise/news-eppo"
+    },
+    {
+      "event_date": "2026-09-09",
+      "category": "Grid & system",
+      "topic": "Grid / transmission",
+      "company": null,
+      "title": "Page load link",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 8,
+      "confidence": 0.95,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/category/information-services/advertise/news-eppo"
+    },
     {
       "event_date": "2026-09-08",
       "category": "Policy & regulation",
@@ -1841,6 +2165,19 @@
       "category": "Policy & regulation",
       "topic": "PDP2026",
       "company": null,
+      "title": "สนพ. เปิดรับฟังความคิดเห็นร่าง “แผน PDP2026”",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 11,
+      "confidence": 0.75,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/information-services/advertise/news-eppo/%e0%b8%aa%e0%b8%99%e0%b8%9e-%e0%b9%80%e0%b8%9b%e0%b8%b4%e0%b8%94%e0%b8%a3%e0%b8%b1%e0%b8%9a%e0%b8%9f%e0%b8%b1%e0%b8%87%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b8%84%e0%b8%b4%e0%b8%94%e0%b9%80-4"
+    },
+    {
+      "event_date": null,
+      "category": "Policy & regulation",
+      "topic": "PDP2026",
+      "company": null,
       "title": "นโยบายและแผนพลังงาน",
       "capacity_mw": null,
       "status_after": null,
@@ -1994,6 +2331,19 @@
     },
     {
       "event_date": null,
+      "category": "Project & investment",
+      "topic": "Power / renewables project",
+      "company": null,
+      "title": "นโยบายการรับซื้อไฟฟ้าจากพลังงานหมุนเวียน",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 7,
+      "confidence": 0.75,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/plan-policy/energy-policy/electric/%e0%b8%99%e0%b9%82%e0%b8%a2%e0%b8%9a%e0%b8%b2%e0%b8%a2%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b1%e0%b8%9a%e0%b8%8b%e0%b8%b7%e0%b9%89%e0%b8%ad%e0%b9%84%e0%b8%9f%e0%b8%9f%e0%b9%89%e0%b8%b2%e0%b8%88"
+    },
+    {
+      "event_date": null,
       "category": "Grid & system",
       "topic": "Grid / transmission",
       "company": null,
@@ -2004,6 +2354,19 @@
       "confidence": 0.75,
       "source_name": "EPPO news",
       "source_url": "https://www.eppo.go.th/information-services/advertise/news-eppo/%e0%b9%80%e0%b8%a7%e0%b8%97%e0%b8%b5%e0%b9%80%e0%b8%aa%e0%b8%a7%e0%b8%99%e0%b8%b2-kt-dialogue-new-horizon-smart-grid"
+    },
+    {
+      "event_date": null,
+      "category": "Other",
+      "topic": null,
+      "company": null,
+      "title": "ราคาไฟฟ้าโดยอัตโนมัติ (Ft)",
+      "capacity_mw": null,
+      "status_after": null,
+      "materiality_score": 7,
+      "confidence": 0.75,
+      "source_name": "EPPO news",
+      "source_url": "https://www.eppo.go.th/data-energy-statistic/energy-price-th/%e0%b8%a3%e0%b8%b2%e0%b8%84%e0%b8%b2%e0%b9%84%e0%b8%9f%e0%b8%9f%e0%b9%89%e0%b8%b2%e0%b9%82%e0%b8%94%e0%b8%a2%e0%b8%ad%e0%b8%b1%e0%b8%95%e0%b9%82%e0%b8%99%e0%b8%a1%e0%b8%b1%e0%b8%95%e0%b8%b4-ft"
     },
     {
       "event_date": null,
@@ -2113,19 +2476,6 @@
       "event_date": null,
       "category": "Project & investment",
       "topic": "Power / renewables project",
-      "company": null,
-      "title": "นโยบายการรับซื้อไฟฟ้าจากพลังงานหมุนเวียน",
-      "capacity_mw": null,
-      "status_after": null,
-      "materiality_score": 4,
-      "confidence": 0.75,
-      "source_name": "EPPO news",
-      "source_url": "https://www.eppo.go.th/plan-policy/energy-policy/electric/%e0%b8%99%e0%b9%82%e0%b8%a2%e0%b8%9a%e0%b8%b2%e0%b8%a2%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%a3%e0%b8%b1%e0%b8%9a%e0%b8%8b%e0%b8%b7%e0%b9%89%e0%b8%ad%e0%b9%84%e0%b8%9f%e0%b8%9f%e0%b9%89%e0%b8%b2%e0%b8%88"
-    },
-    {
-      "event_date": null,
-      "category": "Project & investment",
-      "topic": "Power / renewables project",
       "company": "GUNKUL",
       "title": "Businesses",
       "capacity_mw": null,
@@ -2212,97 +2562,6 @@
       "confidence": 0.75,
       "source_name": "B.Grimm Power SET announcements",
       "source_url": "javascript:void(0)"
-    },
-    {
-      "event_date": null,
-      "category": "Project & investment",
-      "topic": "Power / renewables project",
-      "company": "BGRIM",
-      "title": "Solar Rooftop",
-      "capacity_mw": null,
-      "status_after": null,
-      "materiality_score": 4,
-      "confidence": 0.75,
-      "source_name": "B.Grimm Power SET announcements",
-      "source_url": "https://www.bgrimmpower.com/en/energy-solutions/solar-rooftop"
-    },
-    {
-      "event_date": null,
-      "category": "Project & investment",
-      "topic": "Power / renewables project",
-      "company": "BGRIM",
-      "title": "Head Office & Power Plants",
-      "capacity_mw": null,
-      "status_after": null,
-      "materiality_score": 4,
-      "confidence": 0.75,
-      "source_name": "B.Grimm Power SET announcements",
-      "source_url": "https://www.bgrimmpower.com/en/contact-us/head-office-power-plants"
-    },
-    {
-      "event_date": null,
-      "category": "Project & investment",
-      "topic": "Power / renewables project",
-      "company": "GPSC",
-      "title": "Our Business",
-      "capacity_mw": null,
-      "status_after": null,
-      "materiality_score": 4,
-      "confidence": 0.75,
-      "source_name": "GPSC SET announcements",
-      "source_url": "javascript:void(0);"
-    },
-    {
-      "event_date": null,
-      "category": "Project & investment",
-      "topic": "Power / renewables project",
-      "company": "GPSC",
-      "title": "Renewable Energy",
-      "capacity_mw": null,
-      "status_after": null,
-      "materiality_score": 4,
-      "confidence": 0.75,
-      "source_name": "GPSC SET announcements",
-      "source_url": "https://www.gpscgroup.com/en/business/project?category=3"
-    },
-    {
-      "event_date": null,
-      "category": "Project & investment",
-      "topic": "Power / renewables project",
-      "company": "GPSC",
-      "title": "Good Corporate Governance Policy and Code of Conduct",
-      "capacity_mw": null,
-      "status_after": null,
-      "materiality_score": 4,
-      "confidence": 0.75,
-      "source_name": "GPSC SET announcements",
-      "source_url": "https://www.gpscgroup.com/en/cg/good-corporate-governance-policy-and-code-of-conduct"
-    },
-    {
-      "event_date": null,
-      "category": "Project & investment",
-      "topic": "Power / renewables project",
-      "company": "GPSC",
-      "title": "Energy Storage System",
-      "capacity_mw": null,
-      "status_after": null,
-      "materiality_score": 4,
-      "confidence": 0.75,
-      "source_name": "GPSC SET announcements",
-      "source_url": "https://www.gpscgroup.com/en/search?q=Energy%20Storage%20System"
-    },
-    {
-      "event_date": null,
-      "category": "Other",
-      "topic": null,
-      "company": null,
-      "title": "ประมวลหลักการปฏิบัติ (Code of Practice)",
-      "capacity_mw": null,
-      "status_after": null,
-      "materiality_score": 2,
-      "confidence": 0.75,
-      "source_name": "ERC news releases",
-      "source_url": "https://www.erc.or.th/th/code-of-practice"
     }
   ],
   "applicable_tariff_event": {
@@ -2318,6 +2577,6 @@
     "source_url": "https://www.erc.or.th/th/news-release/3472",
     "title": "Residential progressive-rate structure; average billed rate across all categories",
     "supersedes_event_id": "ERC-2026-07-23-FT",
-    "ingested_at": "2026-09-09T07:40:49Z"
+    "ingested_at": "2026-09-14T06:16:12Z"
   }
 }
