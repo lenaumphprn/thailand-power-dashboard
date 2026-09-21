@@ -1,11 +1,11 @@
 ﻿source_id,last_success_at,last_item_date,last_item_url,last_hash,consecutive_failures,last_error
-S09,2026-09-14T06:16:42Z,,,91355ceb30c40e62e68957c25333ea9a1964e0508e6edab43a2f4f26891b9353,0,
-S16,2026-09-14T06:17:48Z,2026-09-11,https://investor.gulf.co.th/en/document/viewer/203442/execution-of-power-purchase-agreements-for-four-wind-power-projects,4dc916eed49b56e66359dac8480a25f2b11049ad0e25da26d7e4c277df0c0540,0,
-S18,2026-09-14T06:17:40Z,2026-09-14,https://www.eppo.go.th/category/information-services/advertise/news-eppo,b24dd3d676e3d07d0284a21a4b312d4fc8e0caacab734b75d9901755db484e75,0,
-S19,2026-09-14T06:17:42Z,,,3ad6f1c41892f6b5c47be22ba7244541cb31df840f2ae426e7e0e3ee16a2078f,0,
-S20,2026-09-14T06:17:55Z,2026-09-01,javascript:;,eaa7afecc8aa02befb8e2441ac54afe4ba12355a8f97e2a724d5f99b75db2434,0,
-S21,2026-09-14T06:17:57Z,,,690114aa38f88c290a77560dc6a666fbb69cf85efd08faae06919cebc1451848,0,
-S22,2026-09-14T06:18:01Z,,,b153dc1f2318c87c7fa6c0fd03c87bba642f7c1280015a5f42c251bc8aae1d80,0,
-S23,2026-09-14T06:18:30Z,,,54e79cc3e9739e5ad4403f1f675253c08b7904187798b0adc97914706de414b1,0,
-S24,2026-09-14T06:18:32Z,,,40f3593a8ea4c65fba0bd55d24ba089bddc75e7d15ada9b172fd884a9d507b25,0,
-S26,2026-09-14T06:17:08Z,2026-07-15,https://www.erc.or.th/th/listen-to-opinions/602,3f36c3213adf8ba27fc8a59497064dc0c68ba943b6fb66e8e6c50af5f2bbdd48,0,
+S09,2026-09-14T06:16:42Z,,,91355ceb30c40e62e68957c25333ea9a1964e0508e6edab43a2f4f26891b9353,1,403 Client Error: Forbidden for url: https://www.erc.or.th/th/news-release
+S16,2026-09-21T06:19:43Z,2026-09-11,https://investor.gulf.co.th/en/document/viewer/203442/execution-of-power-purchase-agreements-for-four-wind-power-projects,307f54b59144bcf14d3edc20d7eed71479e5d2229bf7dd9217921c04395feb93,0,
+S18,2026-09-21T06:19:34Z,2026-09-21,https://www.eppo.go.th/category/information-services/advertise/news-eppo,8da3b265d5b515ccfcacf5b3c294f150dd782bac2f120f8e461c0d57d2c0fc1d,0,
+S19,2026-09-21T06:19:37Z,,,6add0729e2f19ddf6eefaabb79f33425cdc55ef69330d6378bb4abc96c7726ce,0,
+S20,2026-09-21T06:19:50Z,2026-09-01,javascript:;,32ab3b3535b8882e330c5dcd848915b8aecbc5359424bb1e0c41c1357093503a,0,
+S21,2026-09-21T06:19:52Z,,,b1b27e77773faceba72053156831c966f14f28da502f0624354c900c6b9a6980,0,
+S22,2026-09-21T06:19:55Z,,,d12a6ef3ba0ea02f04e30172d34b4a4fffbe0378f6f720aadec641f18865faef,0,
+S23,2026-09-21T06:19:58Z,,,54e79cc3e9739e5ad4403f1f675253c08b7904187798b0adc97914706de414b1,0,
+S24,2026-09-21T06:20:01Z,,,dcacbdfb308f0b4e023f14c0525169a5dd57404327f0284f0c25070eee6c6022,0,
+S26,2026-09-14T06:17:08Z,2026-07-15,https://www.erc.or.th/th/listen-to-opinions/602,3f36c3213adf8ba27fc8a59497064dc0c68ba943b6fb66e8e6c50af5f2bbdd48,1,403 Client Error: Forbidden for url: https://www.erc.or.th/th/listen-to-opinions/content

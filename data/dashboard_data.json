@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-14T06:18:32Z",
+  "generated_at": "2026-09-21T06:20:01Z",
   "metrics": {
     "K01": {
-      "observation_id": 79,
+      "observation_id": 126,
       "metric_id": "K01",
       "period_start": "2026-01-01",
       "period_end": "2026-06-30",
       "value": 6.008050510576202,
       "unit": "% YoY",
       "source_id": "S01",
-      "publication_date": "2026-09-14",
+      "publication_date": "2026-09-21",
       "effective_start": null,
       "effective_end": null,
-      "ingested_at": "2026-09-14T06:16:15Z",
+      "ingested_at": "2026-09-21T06:18:54Z",
       "scope_version": "v1.0",
       "qa_status": "pass",
       "raw_source_ref": null,
@@ -28,17 +28,17 @@
       "provenance_type": "DIRECT_PUBLIC"
     },
     "K02": {
-      "observation_id": 82,
+      "observation_id": 129,
       "metric_id": "K02",
       "period_start": "2026-01-01",
       "period_end": "2026-04-22",
       "value": 35991.6,
       "unit": "MW",
       "source_id": "S07",
-      "publication_date": "2026-09-14",
+      "publication_date": "2026-09-21",
       "effective_start": null,
       "effective_end": null,
-      "ingested_at": "2026-09-14T06:16:18Z",
+      "ingested_at": "2026-09-21T06:18:57Z",
       "scope_version": "v1.0",
       "qa_status": "pass",
       "raw_source_ref": "https://www.egat.co.th/home/statistics-demand-latest/",
@@ -60,17 +60,17 @@
       "provenance_type": "DIRECT_PUBLIC"
     },
     "K03": {
-      "observation_id": 80,
+      "observation_id": 127,
       "metric_id": "K03",
       "period_start": "2026-01-01",
       "period_end": "2026-06-30",
       "value": 14.994946375213598,
       "unit": "% of generation",
       "source_id": "S02",
-      "publication_date": "2026-09-14",
+      "publication_date": "2026-09-21",
       "effective_start": null,
       "effective_end": null,
-      "ingested_at": "2026-09-14T06:16:16Z",
+      "ingested_at": "2026-09-21T06:18:55Z",
       "scope_version": "v1.0",
       "qa_status": "pass",
       "raw_source_ref": "https://catalog.eppo.go.th/dataset/dataset_11_27",
@@ -123,17 +123,17 @@
       "provenance_type": "DIRECT_PUBLIC"
     },
     "K05": {
-      "observation_id": 81,
+      "observation_id": 128,
       "metric_id": "K05",
       "period_start": "2026-01-01",
       "period_end": "2026-06-30",
       "value": 60.96768726473813,
       "unit": "% of generation",
       "source_id": "S02",
-      "publication_date": "2026-09-14",
+      "publication_date": "2026-09-21",
       "effective_start": null,
       "effective_end": null,
-      "ingested_at": "2026-09-14T06:16:16Z",
+      "ingested_at": "2026-09-21T06:18:55Z",
       "scope_version": "v1.0",
       "qa_status": "pass",
       "raw_source_ref": "https://catalog.eppo.go.th/dataset/dataset_11_27",
@@ -1879,7 +1879,7 @@
   },
   "weekly_digest": [
     {
-      "refresh_date": "2026-09-14",
+      "refresh_date": "2026-09-21",
       "rank": 1,
       "category": "Policy & regulation",
       "headline": "PDP2026 hearing sets a 50.9 GW first-stage build envelope",
@@ -1890,7 +1890,7 @@
       "event_date": "2026-09-08"
     },
     {
-      "refresh_date": "2026-09-14",
+      "refresh_date": "2026-09-21",
       "rank": 2,
       "category": "Market design",
       "headline": "Direct PPA policy direction broadens clean-power access for industry",
@@ -1901,15 +1901,15 @@
       "event_date": "2026-08-31"
     },
     {
-      "refresh_date": "2026-09-14",
+      "refresh_date": "2026-09-21",
       "rank": 3,
       "category": "Project & investment",
-      "headline": "GULF starts commercial operation of two solar projects",
-      "one_fact": "Two Suphan Buri projects reached COD on 1 Sep 2026 with 135 MW of contracted capacity; additional solar and solar+BESS capacity is scheduled later in 2026.",
+      "headline": "01 September 2026 Notification of the commercial operation commencement of two solar power projects Read More",
+      "one_fact": "Notification of the commercial operation commencement of two solar power projects | Gulf Development",
       "why_it_matters": "It is evidence that the contracted renewable pipeline is converting into operating capacity rather than remaining only an award or announcement.",
-      "score": 9,
-      "source_url": "https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&symbol=GULF",
-      "event_date": "2026-09-01"
+      "score": 8,
+      "source_url": "https://investor.gulf.co.th/en/document/viewer/203067/notification-of-the-commercial-operation-commencement-of-two-solar-power-projects",
+      "event_date": "2026-09-07"
     }
   ],
   "market_events": [
@@ -2565,18 +2565,18 @@
     }
   ],
   "applicable_tariff_event": {
-    "event_id": "ERC-2026-08-13-RATE",
+    "event_id": "ERC-1c118a61dc73",
     "metric_id": "K06",
     "publication_date": "2026-08-13",
     "effective_start": "2026-09-01",
     "effective_end": null,
     "value": 3.86,
     "unit": "THB/kWh",
-    "customer_scope": "average billed rate across all categories",
+    "customer_scope": "as stated by ERC",
     "source_id": "S09",
     "source_url": "https://www.erc.or.th/th/news-release/3472",
-    "title": "Residential progressive-rate structure; average billed rate across all categories",
-    "supersedes_event_id": "ERC-2026-07-23-FT",
-    "ingested_at": "2026-09-14T06:16:12Z"
+    "title": "“กกพ.” เห็นชอบค่าไฟบ้านโครงสร้างใหม่ เริ่มบิล ก.ย. 69 ส่งผลให้ค่าไฟฟ้าเรียกเก็บเฉลี่ยทุกประเภทลดจาก 3.95 บาทต่อหน่วย เหลือ 3.86 บาทต่อหน่วย - สำนักงานคณะกรรมการกำกับกิจการพลังงาน ส",
+    "supersedes_event_id": null,
+    "ingested_at": "2026-09-14T06:16:26Z"
   }
 }

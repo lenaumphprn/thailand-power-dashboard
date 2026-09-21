@@ -49,6 +49,9 @@ PASS,weekly_digest,3,PASS,https://www.set.or.th/th/market/news-and-alert/newsdet
 PASS,weekly_digest,1,PASS,https://www.thaipbs.th/news/content/557632,Public row-level source
 PASS,weekly_digest,2,PASS,https://www.energy.go.th/th/minister-news/30493,Public row-level source
 PASS,weekly_digest,3,PASS,https://www.set.or.th/th/market/news-and-alert/newsdetails?id=106626501&symbol=GULF,Public row-level source
+PASS,weekly_digest,1,PASS,https://www.thaipbs.th/news/content/557632,Public row-level source
+PASS,weekly_digest,2,PASS,https://www.energy.go.th/th/minister-news/30493,Public row-level source
+PASS,weekly_digest,3,PASS,https://investor.gulf.co.th/en/document/viewer/203067/notification-of-the-commercial-operation-commencement-of-two-solar-power-projects,Public row-level source
 PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Total:selected,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
 PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Total:ppa,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
 PASS,procurement_stage_snapshot,FIT2022_NO_FUEL:Total:cop,PASS,https://www.erc.or.th/th/annual-report/download?did=3801,Public source registry lineage
